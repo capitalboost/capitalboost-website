@@ -1263,6 +1263,26 @@
     window.addEventListener('resize', () => goTo(current, false), { passive: true });
   })();
 
+  // Hide WA floater when contact form is visible (all screen sizes)
+  (function() {
+    var floater = document.getElementById('wa-floater');
+    var popup = document.getElementById('wa-popup');
+    if (!floater) return;
+    var targets = Array.from(document.querySelectorAll('#contact, form'));
+    if (!targets.length) return;
+    var visible = new Set();
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) visible.add(e.target);
+        else visible.delete(e.target);
+      });
+      var hide = visible.size > 0;
+      floater.classList.toggle('hero-hidden', hide);
+      popup.classList.toggle('hero-hidden', hide);
+    }, { threshold: 0.05 });
+    targets.forEach(function(t) { obs.observe(t); });
+  })();
+
   // Hide WA floater while hero is visible on mobile
   (function() {
     const hero = document.querySelector('section');
