@@ -104,14 +104,86 @@
       .score-grid { grid-template-columns: 1fr 1fr; }
       .hero { padding: 3rem 1.2rem 2rem; }
     }
+
+    /* NEW NAV */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      padding: 0 clamp(16px,4vw,40px);
+    }
+    #navbar.scrolled {
+      border-color: #DDE1EA;
+      box-shadow: 0 1px 20px rgba(27,42,74,0.06);
+    }
+    #navbar-inner {
+      max-width: 1152px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-link-new { color: #475569; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+    .nav-link-new:hover { color: #1B2A4A; }
+    .btn-primary-new {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #C75B2A; color: #fff;
+      font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.875rem;
+      padding: 10px 20px; border-radius: 8px; cursor: pointer; border: none;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 3px rgba(199,91,42,0.25), 0 4px 12px rgba(199,91,42,0.2);
+    }
+    .btn-primary-new:hover { background: #A84820; transform: translateY(-1px); }
+    #mobile-menu-new { display: none; background: #fff; border-top: 1px solid #DDE1EA; }
+    #mobile-menu-new.open { display: block; }
+    .nav-desktop { display: none; align-items: center; gap: 28px; }
+    @media(min-width:768px) {
+      .nav-desktop { display: flex; }
+      #nav-hamburger-new { display: none; }
+      #mobile-menu-new { display: none !important; }
+    }
+
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="https://capitalboost.ro" class="nav-logo">Capital<span>Boost</span></a>
-  <a href="https://capitalboost.ro/#contact" class="nav-cta">Ofertă gratuită</a>
+<nav id="navbar">
+  <div id="navbar-inner">
+    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;" aria-label="CapitalBoost">
+      <div style="display:flex;align-items:flex-end;gap:2px;height:24px;">
+        <div style="width:6px;height:38%;background:#C75B2A;border-radius:2px;"></div>
+        <div style="width:6px;height:62%;background:#C75B2A;border-radius:2px;"></div>
+        <div style="width:6px;height:82%;background:#C75B2A;border-radius:2px;"></div>
+        <div style="width:6px;height:100%;background:#C75B2A;border-radius:2px;"></div>
+        <div style="margin-left:2px;width:10px;height:10px;border-top:2px solid #C75B2A;border-right:2px solid #C75B2A;transform:rotate(45deg);margin-bottom:1px;"></div>
+      </div>
+      <span style="font-family:'Playfair Display',serif;font-weight:700;color:#1B2A4A;font-size:1.1rem;letter-spacing:-0.02em;">Capital<span style="color:#C75B2A;">Boost</span></span>
+    </a>
+    <div class="nav-desktop">
+      <a href="/servicii" class="nav-link-new">Servicii</a>
+      <a href="/portofoliu" class="nav-link-new">Portofoliu</a>
+      <a href="/despre-noi" class="nav-link-new">Despre noi</a>
+      <a href="/blog" class="nav-link-new">Blog</a>
+    </div>
+    <a href="/contact" class="btn-primary-new nav-desktop" style="display:inline-flex;">
+      Solicita oferta gratuita
+    </a>
+    <button id="nav-hamburger-new" onclick="document.getElementById('mobile-menu-new').classList.toggle('open')" style="background:none;border:none;cursor:pointer;padding:4px;" aria-label="Meniu">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="#1B2A4A" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu-new">
+    <div style="padding:20px 24px;display:flex;flex-direction:column;gap:16px;">
+      <a href="/servicii" class="nav-link-new" style="font-size:1rem;">Servicii</a>
+      <a href="/portofoliu" class="nav-link-new" style="font-size:1rem;">Portofoliu</a>
+      <a href="/despre-noi" class="nav-link-new" style="font-size:1rem;">Despre noi</a>
+      <a href="/blog" class="nav-link-new" style="font-size:1rem;">Blog</a>
+      <a href="/contact" class="btn-primary-new" style="justify-content:center;margin-top:8px;">Solicita oferta gratuita</a>
+    </div>
+  </div>
 </nav>
+
 
 <div class="hero">
   <div class="hero-tag">Ghid pentru antreprenori</div>
@@ -231,9 +303,54 @@
   </article>
 </div>
 
-<footer>
-  <p>© 2026 <a href="https://capitalboost.ro">CapitalBoost România</a> · Website-uri profesionale de la €499</p>
+<footer style="background:#1B2A4A;padding:32px clamp(16px,4vw,40px);border-top:1px solid rgba(255,255,255,0.05);">
+  <div style="max-width:1152px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:16px;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="display:flex;align-items:flex-end;gap:2px;height:20px;">
+        <div style="width:4px;height:38%;background:#C75B2A;border-radius:2px;"></div>
+        <div style="width:4px;height:62%;background:#C75B2A;border-radius:2px;"></div>
+        <div style="width:4px;height:82%;background:#C75B2A;border-radius:2px;"></div>
+        <div style="width:4px;height:100%;background:#C75B2A;border-radius:2px;"></div>
+        <div style="margin-left:2px;width:8px;height:8px;border-top:2px solid #C75B2A;border-right:2px solid #C75B2A;transform:rotate(45deg);margin-bottom:1px;"></div>
+      </div>
+      <span style="font-family:'Playfair Display',serif;color:#fff;font-size:1rem;font-weight:600;">Capital<span style="color:#C75B2A;">Boost</span></span>
+    </div>
+    <p style="font-family:'DM Sans',sans-serif;color:rgba(100,116,139,1);font-size:0.75rem;text-align:center;margin:0;">Capital Boost &copy; 2026 &middot; Toate drepturile rezervate</p>
+    <div style="display:flex;gap:20px;">
+      <a href="/termeni-si-conditii#politica-gdpr" style="font-family:'DM Sans',sans-serif;color:rgba(100,116,139,1);font-size:0.75rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#94a3b8'" onmouseout="this.style.color='rgba(100,116,139,1)'">Politica confidentialitate</a>
+      <a href="/termeni-si-conditii#termeni" style="font-family:'DM Sans',sans-serif;color:rgba(100,116,139,1);font-size:0.75rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#94a3b8'" onmouseout="this.style.color='rgba(100,116,139,1)'">Termeni si conditii</a>
+    </div>
+  </div>
 </footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+  }
+</script>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:24px;left:24px;right:24px;z-index:1000;max-width:520px;background:#fff;border:1.5px solid #DDE1EA;border-radius:16px;padding:20px 24px;box-shadow:0 8px 40px rgba(27,42,74,0.12),0 2px 8px rgba(27,42,74,0.06);font-family:'DM Sans',sans-serif;">
+  <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;">
+    <div style="width:36px;height:36px;background:#FFF3EE;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="7" stroke="#C75B2A" stroke-width="1.6"/><path d="M9 8v4M9 6h.01" stroke="#C75B2A" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </div>
+    <div>
+      <p style="font-weight:700;color:#1B2A4A;font-size:0.9rem;margin:0 0 4px;">Folosim cookie-uri</p>
+      <p style="color:#64748B;font-size:0.82rem;line-height:1.6;margin:0;">Site-ul nostru folosește cookie-uri esențiale pentru funcționare și cookie-uri analitice pentru a înțelege cum îl folosești. Citește <a href="/termeni-si-conditii#politica-gdpr" style="color:#C75B2A;text-decoration:underline;">Politica de confidențialitate</a>.</p>
+    </div>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;">
+    <button id="cookie-accept" style="flex:1;min-width:120px;background:#C75B2A;color:#fff;font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.85rem;padding:10px 20px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;" onmouseover="this.style.background='#A84820'" onmouseout="this.style.background='#C75B2A'">Accept toate</button>
+    <button id="cookie-reject" style="flex:1;min-width:120px;background:transparent;color:#475569;font-family:'DM Sans',sans-serif;font-weight:500;font-size:0.85rem;padding:10px 20px;border-radius:8px;border:1.5px solid #DDE1EA;cursor:pointer;transition:border-color 0.2s,color 0.2s;" onmouseover="this.style.borderColor='#94A3B8';this.style.color='#1B2A4A'" onmouseout="this.style.borderColor='#DDE1EA';this.style.color='#475569'">Doar esențiale</button>
+  </div>
+</div>
+<script>
+  (function(){var b=document.getElementById('cookie-banner');var c=localStorage.getItem('cb_cookie_consent');if(!c){setTimeout(function(){b.style.display='block';},800);}document.getElementById('cookie-accept').addEventListener('click',function(){localStorage.setItem('cb_cookie_consent','all');b.style.opacity='0';b.style.transition='opacity 0.3s';setTimeout(function(){b.style.display='none';},300);});document.getElementById('cookie-reject').addEventListener('click',function(){localStorage.setItem('cb_cookie_consent','essential');b.style.opacity='0';b.style.transition='opacity 0.3s';setTimeout(function(){b.style.display='none';},300);});})();
+<\/script>
 
 </body>
 </html>

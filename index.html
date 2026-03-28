@@ -4,8 +4,6 @@
   <!-- ═══════════════════════════════════════
        META TAGS SEO — CapitalBoost
        ═══════════════════════════════════════ -->
-
-  <!-- Esențiale -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CapitalBoost România — Website Ieftin pentru Firme Mici | De la €499</title>
@@ -17,9 +15,6 @@
   <meta name="keywords" content="website ieftin firme mici, creare site web Romania, web design accesibil, website profesional pret mic, agentie web design Romania">
   <meta name="author" content="CapitalBoost">
 
-  <!-- ═══════════════════════════
-       OPEN GRAPH — Facebook, WhatsApp, LinkedIn
-       ═══════════════════════════ -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="CapitalBoost România">
   <meta property="og:title" content="CapitalBoost România — Website Ieftin pentru Firme Mici | De la €499">
@@ -30,17 +25,11 @@
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="ro_RO">
 
-  <!-- ═══════════════════════════
-       TWITTER / X CARD
-       ═══════════════════════════ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CapitalBoost România — Website Ieftin pentru Firme Mici">
   <meta name="twitter:description" content="Website-uri profesionale de la €499. Livrare în 5–15 zile, SEO inclus, suport post-lansare.">
   <meta name="twitter:image" content="https://capitalboost.ro/images/og-capitalboost.jpg">
 
-  <!-- ═══════════════════════════
-       SCHEMA.ORG — date structurate
-       ═══════════════════════════ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,59 +37,19 @@
     "name": "CapitalBoost România",
     "url": "https://capitalboost.ro",
     "description": "Agenție web specializată în website-uri profesionale și accesibile pentru firme mici din România",
-    "areaServed": {
-      "@type": "Country",
-      "name": "Romania"
-    },
+    "areaServed": { "@type": "Country", "name": "Romania" },
     "priceRange": "€€",
     "serviceType": ["Web Design", "Web Development", "SEO"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Pachete website profesional",
       "itemListElement": [
-        {
-          "@type": "Offer",
-          "name": "Starter — Website firmă mică",
-          "description": "1–3 pagini, design responsive, SEO de bază, livrare în 5 zile",
-          "price": "499",
-          "priceCurrency": "EUR"
-        },
-        {
-          "@type": "Offer",
-          "name": "Business — Website profesional",
-          "description": "5–8 pagini, design unic, SEO avansat, blog, livrare în 10 zile",
-          "price": "999",
-          "priceCurrency": "EUR"
-        },
-        {
-          "@type": "Offer",
-          "name": "Growth — Website complet cu e-commerce",
-          "description": "10–15 pagini, e-commerce, SEO avansat, livrare în 15 zile",
-          "price": "1899",
-          "priceCurrency": "EUR"
-        }
+        { "@type": "Offer", "name": "Starter", "price": "499", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Business", "price": "999", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Growth", "price": "1899", "priceCurrency": "EUR" }
       ]
     },
-    "review": [
-      {
-        "@type": "Review",
-        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-        "author": {"@type": "Person", "name": "Nelu"},
-        "reviewBody": "Am ajuns printr-o recomandare la CapitalBoost și cred că a fost un punct de cotitură pentru businessul meu."
-      },
-      {
-        "@type": "Review",
-        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-        "author": {"@type": "Person", "name": "Miruna"},
-        "reviewBody": "Profesionalism. Seriozitate. Iar calitatea serviciilor se ridică la cele mai înalte standarde."
-      }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "50",
-      "bestRating": "5"
-    }
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "50", "bestRating": "5" }
   }
   </script>
 
@@ -114,26 +63,27 @@
       theme: {
         extend: {
           colors: {
-            navy: '#1B2A4A',
+            navy:   '#1B2A4A',
             'navy-dark': '#111D35',
-            'navy-light': '#243660',
+            'navy-2':'#243660',
+            muted:  '#5A6880',
             orange: '#C75B2A',
-            'orange-light': '#D96E3D',
-            'orange-dark': '#A84820',
-            cloud: '#F7F8FA',
-            'cloud-dark': '#ECEEF2',
+            'orange-h': '#A84820',
+            surface:'#F7F8FA',
+            'surface-2':'#ECEEF2',
+            border: '#DDE1EA',
           },
           fontFamily: {
             display: ['Playfair Display', 'Georgia', 'serif'],
-            body: ['DM Sans', 'sans-serif'],
-            mono: ['Space Grotesk', 'monospace'],
+            body:    ['DM Sans', 'sans-serif'],
+            mono:    ['Space Grotesk', 'monospace'],
           },
           letterSpacing: {
-            tightest: '-0.04em',
-            tighter: '-0.03em',
+            tight2: '-0.03em',
+            tight3: '-0.04em',
           },
           lineHeight: {
-            relaxed2: '1.7',
+            body: '1.75',
           },
         }
       }
@@ -143,287 +93,305 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: #FFFFFF; color: #1B2A4A; overflow-x: hidden; }
+    body { font-family: 'DM Sans', sans-serif; background: #fff; color: #1B2A4A; overflow-x: hidden; }
 
-    /* Grain texture */
-    .grain::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      background-repeat: repeat;
-      background-size: 256px 256px;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    /* Reveal animation */
+    /* ── Reveal ── */
     .reveal {
       opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(24px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
-    .reveal-delay-5 { transition-delay: 0.5s; }
+    .reveal-delay-1 { transition-delay: 0.08s; }
+    .reveal-delay-2 { transition-delay: 0.16s; }
+    .reveal-delay-3 { transition-delay: 0.24s; }
+    .reveal-delay-4 { transition-delay: 0.32s; }
+    .reveal-delay-5 { transition-delay: 0.40s; }
 
-    /* Nav */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; transition: background 0.4s, box-shadow 0.4s; }
-    nav.scrolled { background: rgba(27,42,74,0.97); box-shadow: 0 4px 32px rgba(27,42,74,0.25); backdrop-filter: blur(12px); }
-
-    /* Hero */
-    .hero-bg {
-      background: radial-gradient(ellipse 80% 60% at 70% 40%, #243660 0%, transparent 70%),
-                  radial-gradient(ellipse 50% 50% at 20% 80%, rgba(199,91,42,0.15) 0%, transparent 60%),
-                  #1B2A4A;
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s, box-shadow 0.3s;
     }
-
-    /* Orange CTA button */
-    .btn-orange {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #C75B2A;
-      color: #fff;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      font-size: 0.95rem;
-      padding: 14px 28px;
-      border-radius: 6px;
-      cursor: pointer;
-      border: none;
-      box-shadow: 0 4px 16px rgba(199,91,42,0.35), 0 1px 3px rgba(199,91,42,0.2);
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s;
-      text-decoration: none;
+    nav.scrolled {
+      border-color: #E2E8F0;
+      box-shadow: 0 1px 20px rgba(15,23,42,0.06);
     }
-    .btn-orange:hover { background: #D96E3D; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(199,91,42,0.45), 0 2px 6px rgba(199,91,42,0.25); }
-    .btn-orange:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(199,91,42,0.3); }
-    .btn-orange:focus-visible { outline: 3px solid #C75B2A; outline-offset: 3px; }
-
-    /* Ghost button */
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      color: #fff;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      font-size: 0.95rem;
-      padding: 13px 26px;
-      border-radius: 6px;
-      cursor: pointer;
-      border: 1.5px solid rgba(255,255,255,0.35);
-      transition: border-color 0.2s, background 0.2s, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      text-decoration: none;
-    }
-    .btn-ghost:hover { border-color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.07); transform: translateY(-2px); }
-    .btn-ghost:active { transform: translateY(0); }
-    .btn-ghost:focus-visible { outline: 3px solid rgba(255,255,255,0.5); outline-offset: 3px; }
-
-    /* Pricing card */
-    .price-card {
-      background: #fff;
-      border: 1.5px solid #ECEEF2;
-      border-radius: 16px;
-      padding: 36px 32px;
-      box-shadow: 0 2px 8px rgba(27,42,74,0.06), 0 8px 32px rgba(27,42,74,0.04);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-    }
-    .price-card:hover { transform: translateY(-6px); box-shadow: 0 4px 16px rgba(27,42,74,0.1), 0 16px 48px rgba(27,42,74,0.08); }
-    .price-card.featured {
-      border-color: #C75B2A;
-      box-shadow: 0 4px 20px rgba(199,91,42,0.15), 0 16px 48px rgba(199,91,42,0.08);
-    }
-    .price-card.featured:hover { box-shadow: 0 8px 32px rgba(199,91,42,0.2), 0 24px 64px rgba(199,91,42,0.12); }
-
-    /* Benefit card */
-    .benefit-card {
-      background: #fff;
-      border: 1px solid #ECEEF2;
-      border-radius: 14px;
-      padding: 32px 28px;
-      box-shadow: 0 2px 8px rgba(27,42,74,0.05), 0 6px 24px rgba(27,42,74,0.03);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 4px 16px rgba(27,42,74,0.09), 0 12px 40px rgba(27,42,74,0.06); }
-
-    /* Step connector */
-    .step-line { position: absolute; top: 28px; left: calc(50% + 32px); width: calc(100% - 8px); height: 1px; background: linear-gradient(90deg, rgba(199,91,42,0.5), rgba(199,91,42,0.1)); }
-
-    /* Testimonial card */
-    .testimonial-card {
-      background: #fff;
-      border: 1px solid #ECEEF2;
-      border-radius: 14px;
-      padding: 32px;
-      box-shadow: 0 2px 12px rgba(27,42,74,0.05), 0 8px 32px rgba(27,42,74,0.03);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .testimonial-card:hover { transform: translateY(-4px); }
-
-    /* Check icon */
-    .check { color: #C75B2A; font-size: 1rem; margin-right: 8px; flex-shrink: 0; }
-
-    /* Nav link */
     .nav-link {
-      color: rgba(255,255,255,0.75);
-      font-family: 'DM Sans', sans-serif;
+      color: #475569;
       font-size: 0.9rem;
       font-weight: 500;
       text-decoration: none;
       transition: color 0.2s;
     }
-    .nav-link:hover { color: #fff; }
-    .nav-link:focus-visible { outline: 2px solid rgba(255,255,255,0.5); outline-offset: 3px; border-radius: 3px; }
+    .nav-link:hover { color: #1B2A4A; }
+    .nav-link:focus-visible { outline: 2px solid #C75B2A; outline-offset: 3px; border-radius: 3px; }
 
-    /* Section label */
-    .section-label {
-      display: inline-block;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.7rem;
+    /* ── Buttons ── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #C75B2A;
+      color: #fff;
       font-weight: 600;
-      letter-spacing: 0.12em;
+      font-size: 0.95rem;
+      padding: 13px 26px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s;
+      box-shadow: 0 1px 3px rgba(199,91,42,0.25), 0 4px 12px rgba(199,91,42,0.2);
+    }
+    .btn-primary:hover {
+      background: #B84E20;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(199,91,42,0.3), 0 8px 20px rgba(199,91,42,0.2);
+    }
+    .btn-primary:active { transform: translateY(0); box-shadow: 0 1px 3px rgba(199,91,42,0.2); }
+    .btn-primary:focus-visible { outline: 3px solid #C75B2A; outline-offset: 3px; }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #1B2A4A;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 1.5px solid #CBD5E1;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s, transform 0.2s cubic-bezier(0.16,1,0.3,1);
+    }
+    .btn-outline:hover { border-color: #1B2A4A; background: #F7F8FA; transform: translateY(-1px); }
+    .btn-outline:active { transform: translateY(0); }
+    .btn-outline:focus-visible { outline: 3px solid #C75B2A; outline-offset: 3px; }
+
+    /* ── Pill label ── */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: #C75B2A;
-      background: rgba(199,91,42,0.08);
-      padding: 6px 14px;
+      background: #FFF3EE;
+      border: 1px solid #FDDDD1;
+      padding: 5px 12px;
       border-radius: 100px;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
-    /* Addon card */
+    /* ── Pricing card ── */
+    .price-card {
+      background: #fff;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 36px 32px;
+      position: relative;
+      transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s, border-color 0.25s;
+    }
+    .price-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(15,23,42,0.08), 0 2px 8px rgba(15,23,42,0.04);
+    }
+    .price-card.featured {
+      border-color: #C75B2A;
+      box-shadow: 0 4px 24px rgba(199,91,42,0.12);
+    }
+    .price-card.featured:hover {
+      box-shadow: 0 8px 40px rgba(199,91,42,0.18);
+    }
+
+    /* ── Benefit card ── */
+    .benefit-card {
+      background: #fff;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 28px 24px;
+      transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s, border-color 0.25s;
+      cursor: default;
+    }
+    .benefit-card:hover {
+      transform: translateY(-3px);
+      border-color: #CBD5E1;
+      box-shadow: 0 4px 20px rgba(15,23,42,0.07);
+    }
+
+    /* ── Addon card ── */
     .addon-card {
       display: flex;
       align-items: center;
       gap: 16px;
       background: #fff;
-      border: 1px solid #ECEEF2;
+      border: 1.5px solid #E2E8F0;
       border-radius: 12px;
-      padding: 20px 24px;
-      box-shadow: 0 1px 4px rgba(27,42,74,0.04), 0 4px 16px rgba(27,42,74,0.03);
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s;
+      padding: 18px 22px;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
     }
-    .addon-card:hover { transform: translateY(-3px); box-shadow: 0 4px 16px rgba(27,42,74,0.08), 0 10px 32px rgba(27,42,74,0.05); }
-
-    /* Mobile menu */
-    #mobile-menu { display: none; }
-    #mobile-menu.open { display: block; }
-
-    @media (max-width: 768px) {
-      .step-line { display: none; }
+    .addon-card:hover {
+      border-color: #CBD5E1;
+      box-shadow: 0 2px 12px rgba(15,23,42,0.06);
+      transform: translateY(-2px);
     }
 
-    /* Nav button pulse */
-    @keyframes btn-ring-pulse {
-      0%   { box-shadow: 0 0 0 0 rgba(199,91,42,0.55), 0 4px 16px rgba(199,91,42,0.35); }
-      70%  { box-shadow: 0 0 0 10px rgba(199,91,42,0), 0 4px 16px rgba(199,91,42,0.35); }
-      100% { box-shadow: 0 0 0 0 rgba(199,91,42,0), 0 4px 16px rgba(199,91,42,0.35); }
+    /* ── Testimonial card ── */
+    .testi-card {
+      background: #fff;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 28px;
+      transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s;
     }
-    .btn-pulse { animation: btn-ring-pulse 2.2s ease-out infinite; }
+    .testi-card:hover { transform: translateY(-3px); box-shadow: 0 4px 20px rgba(15,23,42,0.07); }
 
-    /* Carousel */
+    /* ── Step number ── */
+    .step-num {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .step-line { position: absolute; top: 26px; left: calc(50% + 36px); width: calc(100% - 8px); height: 1px; background: #E2E8F0; }
+    @media (max-width: 768px) { .step-line { display: none; } }
+
+    /* ── Check icon ── */
+    .check-icon { color: #C75B2A; margin-right: 8px; flex-shrink: 0; }
+    .cross-icon { color: #CBD5E1; margin-right: 8px; flex-shrink: 0; }
+
+    /* ── Hero browser mockup ── */
+    .browser-window {
+      background: #fff;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 12px;
+      box-shadow: 0 24px 64px rgba(15,23,42,0.12), 0 4px 16px rgba(15,23,42,0.06);
+      overflow: hidden;
+    }
+    .browser-bar {
+      background: #F8FAFC;
+      border-bottom: 1px solid #E2E8F0;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .browser-dots { display: flex; gap: 5px; }
+    .browser-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .browser-url {
+      flex: 1;
+      background: #E2E8F0;
+      border-radius: 4px;
+      height: 20px;
+      margin-left: 6px;
+    }
+
+    /* ── Carousel ── */
     .carousel-outer { overflow: hidden; }
     .carousel-track {
       display: flex;
-      gap: 24px;
+      gap: 20px;
       transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: transform;
     }
     .carousel-item {
-      flex: 0 0 calc((100% - 48px) / 3);
+      flex: 0 0 calc((100% - 40px) / 3);
       min-width: 0;
     }
-    @media (max-width: 768px) {
-      .carousel-item { flex: 0 0 calc(100% - 32px); }
-    }
-    @media (min-width: 769px) and (max-width: 1023px) {
-      .carousel-item { flex: 0 0 calc((100% - 24px) / 2); }
-    }
+    @media (max-width: 768px) { .carousel-item { flex: 0 0 calc(100% - 28px); } }
+    @media (min-width: 769px) and (max-width: 1023px) { .carousel-item { flex: 0 0 calc((100% - 20px) / 2); } }
 
-    /* WhatsApp floater */
+    /* ── Mobile menu ── */
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+
+    /* ── WhatsApp floater ── */
     .wa-floater {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 500;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
+      position: fixed; bottom: 24px; right: 24px; z-index: 500;
+      width: 52px; height: 52px; border-radius: 50%;
       background: #25D366;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.4), 0 2px 8px rgba(0,0,0,0.15);
-      cursor: pointer;
-      text-decoration: none;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+      cursor: pointer; text-decoration: none;
       transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s;
     }
-    .wa-floater:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+    .wa-floater:hover { transform: scale(1.08); box-shadow: 0 8px 28px rgba(37,211,102,0.45); }
     .wa-floater:active { transform: scale(0.95); }
 
-    /* WhatsApp popup bubble */
     .wa-popup {
-      position: fixed;
-      bottom: 96px;
-      right: 28px;
-      z-index: 500;
+      position: fixed; bottom: 88px; right: 24px; z-index: 500;
       background: #fff;
-      border-radius: 16px 16px 4px 16px;
-      padding: 12px 16px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.08);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.85rem;
-      color: #1B2A4A;
-      white-space: nowrap;
-      opacity: 0;
-      transform: translateY(8px) scale(0.95);
+      border: 1px solid #E2E8F0;
+      border-radius: 12px 12px 4px 12px;
+      padding: 10px 14px;
+      box-shadow: 0 4px 20px rgba(15,23,42,0.1);
+      font-family: DM Sans, sans-serif; font-size: 0.82rem; color: #334155; white-space: nowrap;
+      opacity: 0; transform: translateY(8px) scale(0.95);
       transition: opacity 0.3s cubic-bezier(0.16,1,0.3,1), transform 0.3s cubic-bezier(0.16,1,0.3,1);
       pointer-events: none;
     }
-    .wa-popup.visible {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      pointer-events: auto;
-    }
+    .wa-popup.visible { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
     .wa-popup::after {
       content: '';
-      position: absolute;
-      bottom: -6px;
-      right: 20px;
-      width: 12px;
-      height: 12px;
+      position: absolute; bottom: -5px; right: 18px;
+      width: 10px; height: 10px;
       background: #fff;
+      border-right: 1px solid #E2E8F0;
+      border-bottom: 1px solid #E2E8F0;
       clip-path: polygon(0 0, 100% 0, 100% 100%);
+    }
+
+    /* ── Nav pulse ── */
+    @keyframes btn-pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(199,91,42,0.4), 0 1px 3px rgba(199,91,42,0.25); }
+      70%  { box-shadow: 0 0 0 8px rgba(199,91,42,0), 0 1px 3px rgba(199,91,42,0.25); }
+      100% { box-shadow: 0 0 0 0 rgba(199,91,42,0), 0 1px 3px rgba(199,91,42,0.25); }
+    }
+    .btn-pulse { animation: btn-pulse 2.4s ease-out infinite; }
+
+    /* Dark CTA section */
+    .cta-dark { background: #0F172A; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .btn-pulse { animation: none; }
+      .carousel-track { transition: none; }
     }
   </style>
 </head>
 
 <body>
 
-<!-- ═══════════════════════════════════════════
+<!-- ═══════════════════════
      NAV
-═══════════════════════════════════════════ -->
-<nav id="navbar" class="px-6 md:px-12 py-4">
-  <div class="max-w-6xl mx-auto flex items-center justify-between">
+═══════════════════════ -->
+<nav id="navbar" class="px-5 md:px-10 py-0">
+  <div class="max-w-6xl mx-auto flex items-center justify-between h-16">
+
     <!-- Logo -->
-    <a href="#" class="flex items-center gap-3 group" aria-label="CapitalBoost acasă">
-      <div class="flex items-end gap-0.5 h-7">
-        <div class="w-1.5 bg-orange rounded-sm" style="height:40%"></div>
-        <div class="w-1.5 bg-orange rounded-sm" style="height:65%"></div>
-        <div class="w-1.5 bg-orange rounded-sm" style="height:85%"></div>
+    <a href="/" class="flex items-center gap-2.5 group" aria-label="CapitalBoost acasă">
+      <div class="flex items-end gap-0.5 h-6">
+        <div class="w-1.5 bg-orange rounded-sm" style="height:38%"></div>
+        <div class="w-1.5 bg-orange rounded-sm" style="height:62%"></div>
+        <div class="w-1.5 bg-orange rounded-sm" style="height:82%"></div>
         <div class="w-1.5 bg-orange rounded-sm" style="height:100%"></div>
-        <div class="ml-1 w-3 h-3 border-t-2 border-r-2 border-orange" style="transform: rotate(45deg); margin-bottom:2px;"></div>
+        <div class="ml-0.5 w-2.5 h-2.5 border-t-2 border-r-2 border-orange" style="transform: rotate(45deg); margin-bottom:1px;"></div>
       </div>
-      <span class="font-display font-bold text-white text-xl tracking-tight leading-none">Capital<span class="text-orange">Boost</span></span>
+      <span class="font-display font-bold text-navy text-[1.15rem] tracking-tight leading-none">Capital<span class="text-orange">Boost</span></span>
     </a>
 
     <!-- Desktop links -->
-    <div class="hidden md:flex items-center gap-8">
+    <div class="hidden md:flex items-center gap-7">
       <a href="/servicii" class="nav-link">Servicii</a>
       <a href="/portofoliu" class="nav-link">Portofoliu</a>
       <a href="/despre-noi" class="nav-link">Despre noi</a>
@@ -431,91 +399,179 @@
     </div>
 
     <!-- CTA desktop -->
-    <a href="#contact" class="hidden md:inline-flex btn-orange btn-pulse text-sm py-3 px-5">
+    <a href="#contact" class="hidden md:inline-flex btn-primary btn-pulse text-sm py-2.5 px-5">
       Solicită oferta gratuită
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
 
     <!-- Mobile hamburger -->
-    <button id="menu-btn" class="md:hidden text-white p-2 rounded focus-visible:outline-2 focus-visible:outline-white" aria-label="Meniu" aria-expanded="false">
-      <svg id="icon-open" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
-      <svg id="icon-close" class="hidden" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 4l14 14M18 4L4 18" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <button id="menu-btn" class="md:hidden text-navy p-2 rounded cursor-pointer focus-visible:outline-2 focus-visible:outline-orange" aria-label="Meniu" aria-expanded="false">
+      <svg id="icon-open" width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M3 6h16M3 11h16M3 16h16" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <svg id="icon-close" class="hidden" width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4 4l14 14M18 4L4 18" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round"/></svg>
     </button>
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="md:hidden bg-navy-dark border-t border-white/10 mt-3">
-    <div class="px-6 py-5 flex flex-col gap-4">
+  <div id="mobile-menu" class="md:hidden bg-white border-t border-border">
+    <div class="px-5 py-5 flex flex-col gap-4">
       <a href="/servicii" class="nav-link text-base" onclick="closeMobileMenu()">Servicii</a>
       <a href="/portofoliu" class="nav-link text-base" onclick="closeMobileMenu()">Portofoliu</a>
       <a href="/despre-noi" class="nav-link text-base" onclick="closeMobileMenu()">Despre noi</a>
       <a href="/blog" class="nav-link text-base" onclick="closeMobileMenu()">Blog</a>
-      <a href="#contact" class="btn-orange mt-2 justify-center" onclick="closeMobileMenu()">Solicită oferta gratuită</a>
+      <a href="#contact" class="btn-primary mt-1 justify-center" onclick="closeMobileMenu()">Solicită oferta gratuită</a>
     </div>
   </div>
 </nav>
 
 
-<!-- ═══════════════════════════════════════════
+<!-- ═══════════════════════
      HERO
-═══════════════════════════════════════════ -->
-<section class="hero-bg grain relative min-h-screen flex items-center pt-24 pb-20 px-6 md:px-12 overflow-hidden">
-  <!-- Decorative circles -->
-  <div class="absolute top-1/4 right-0 w-96 h-96 rounded-full opacity-10" style="background: radial-gradient(circle, #C75B2A 0%, transparent 70%); transform: translate(30%, -20%);"></div>
-  <div class="absolute bottom-0 left-1/4 w-64 h-64 rounded-full opacity-5" style="background: radial-gradient(circle, #fff 0%, transparent 70%);"></div>
+═══════════════════════ -->
+<section class="min-h-screen flex items-center pt-16 bg-white">
+  <div class="max-w-6xl mx-auto w-full px-5 md:px-10 py-20 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-  <div class="max-w-6xl mx-auto w-full relative z-10">
-    <div class="max-w-3xl">
+    <!-- Left: text -->
+    <div>
       <!-- Tag -->
-      <div class="reveal flex items-center gap-3 mb-8">
-        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-4 py-2">
-          <span class="w-2 h-2 rounded-full bg-orange animate-pulse"></span>
-          <span class="font-body text-white/80 text-xs font-medium tracking-wide">De la €499 · Gata în 5 zile</span>
-        </div>
+      <div class="reveal pill">
+        <span class="w-2 h-2 rounded-full bg-orange animate-pulse"></span>
+        De la €499 · Livrare în 5 zile
       </div>
 
       <!-- Headline -->
-      <h1 class="reveal reveal-delay-1 font-display font-black text-white leading-tight tracking-tightest mb-6"
-          style="font-size: clamp(2.4rem, 6vw, 4.2rem);">
-        Website-ul care îți<br/>
-        <em class="not-italic text-orange">crește afacerea.</em>
+      <h1 class="font-display reveal reveal-delay-1 font-extrabold text-navy leading-tight tracking-tight2 mb-5"
+          style="font-size: clamp(2.2rem, 5.5vw, 3.8rem); line-height: 1.1;">
+        Website-ul care<br/>îți <span class="text-orange">crește afacerea.</span>
       </h1>
 
-      <!-- Subheadline -->
-      <p class="reveal reveal-delay-2 font-body text-white/70 mb-10 max-w-xl"
-         style="font-size: 1.15rem; line-height: 1.7;">
+      <!-- Sub -->
+      <p class="reveal reveal-delay-2 text-muted mb-9 max-w-lg"
+         style="font-size: 1.1rem; line-height: 1.75;">
         Construim website-uri care aduc clienți, nu doar vizitatori.
         Design profesional, SEO integrat și suport post-lansare —
         fără costuri ascunse, fără așteptări lungi.
       </p>
 
-      <!-- CTA buttons -->
-      <div class="reveal reveal-delay-3 flex flex-wrap gap-4 mb-14">
-        <a href="#contact" class="btn-orange" style="font-size:1rem; padding: 16px 32px;">
+      <!-- CTAs -->
+      <div class="reveal reveal-delay-3 flex flex-wrap gap-3 mb-12">
+        <a href="#contact" class="btn-primary" style="font-size:1rem; padding: 15px 30px;">
           Vreau oferta gratuită
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#preturi" class="btn-ghost" style="font-size:1rem; padding: 15px 28px;">
+        <a href="#preturi" class="btn-outline" style="font-size:1rem; padding: 14px 26px;">
           Vezi prețurile
         </a>
       </div>
 
-      <!-- Social proof bar -->
-      <div class="reveal reveal-delay-4 flex flex-wrap items-center gap-6 pt-8 border-t border-white/10">
+      <!-- Social proof -->
+      <div class="reveal reveal-delay-4 flex flex-wrap items-center gap-5 pt-7 border-t border-border">
         <div class="flex items-center gap-3">
           <div class="flex -space-x-2">
-            <img src="https://placehold.co/36x36/243660/ffffff?text=M" class="w-9 h-9 rounded-full border-2 border-navy object-cover" alt="" />
-            <img src="https://placehold.co/36x36/C75B2A/ffffff?text=T" class="w-9 h-9 rounded-full border-2 border-navy object-cover" alt="" />
-            <img src="https://placehold.co/36x36/3D5A8A/ffffff?text=R" class="w-9 h-9 rounded-full border-2 border-navy object-cover" alt="" />
+            <img src="https://placehold.co/36x36/0F172A/ffffff?text=M" class="w-9 h-9 rounded-full border-2 border-white object-cover" alt="" />
+            <img src="https://placehold.co/36x36/C75B2A/ffffff?text=T" class="w-9 h-9 rounded-full border-2 border-white object-cover" alt="" />
+            <img src="https://placehold.co/36x36/334155/ffffff?text=R" class="w-9 h-9 rounded-full border-2 border-white object-cover" alt="" />
           </div>
           <div>
-            <div class="flex text-orange gap-0.5 text-sm">★★★★★</div>
-            <p class="text-white/60 text-xs font-body">+50 clienți mulțumiți</p>
+            <div class="text-orange text-sm font-bold tracking-wider">★★★★★</div>
+            <p class="text-muted text-xs font-medium">+50 clienți mulțumiți</p>
           </div>
         </div>
-        <div class="w-px h-8 bg-white/15"></div>
-        <div class="text-white/60 text-xs font-body leading-relaxed">
+        <div class="w-px h-8 bg-border"></div>
+        <div class="text-muted text-xs leading-relaxed">
           Livrare garantată în 5–15 zile<br/>sau revizuiri gratuite
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: browser mockup -->
+    <div class="reveal reveal-delay-2 hidden lg:block">
+      <div class="browser-window">
+        <!-- Browser chrome -->
+        <div class="browser-bar">
+          <div class="browser-dots">
+            <div class="browser-dot bg-red-400"></div>
+            <div class="browser-dot bg-yellow-400"></div>
+            <div class="browser-dot bg-green-400"></div>
+          </div>
+          <div class="browser-url"></div>
+        </div>
+        <!-- Mock content -->
+        <div class="p-5 bg-white">
+          <!-- Mock nav -->
+          <div class="flex items-center justify-between mb-5 pb-4 border-b border-slate-100">
+            <div class="w-24 h-4 bg-slate-200 rounded-full"></div>
+            <div class="flex gap-3">
+              <div class="w-10 h-3 bg-slate-100 rounded-full"></div>
+              <div class="w-10 h-3 bg-slate-100 rounded-full"></div>
+              <div class="w-10 h-3 bg-slate-100 rounded-full"></div>
+            </div>
+            <div class="w-20 h-7 bg-orange rounded-lg"></div>
+          </div>
+          <!-- Mock hero -->
+          <div class="bg-surface rounded-xl p-6 mb-4">
+            <div class="w-16 h-3 bg-orange/30 rounded-full mb-3"></div>
+            <div class="w-48 h-5 bg-slate-300 rounded-full mb-2"></div>
+            <div class="w-36 h-5 bg-slate-200 rounded-full mb-4"></div>
+            <div class="flex gap-2 mb-5">
+              <div class="w-24 h-8 bg-orange rounded-lg"></div>
+              <div class="w-20 h-8 border-2 border-slate-200 rounded-lg"></div>
+            </div>
+            <!-- Mini stats -->
+            <div class="flex gap-4">
+              <div class="flex-1 bg-white rounded-lg p-3 border border-slate-100">
+                <div class="w-8 h-2 bg-orange/40 rounded-full mb-1.5"></div>
+                <div class="w-12 h-3 bg-slate-200 rounded-full"></div>
+              </div>
+              <div class="flex-1 bg-white rounded-lg p-3 border border-slate-100">
+                <div class="w-8 h-2 bg-orange/40 rounded-full mb-1.5"></div>
+                <div class="w-12 h-3 bg-slate-200 rounded-full"></div>
+              </div>
+              <div class="flex-1 bg-white rounded-lg p-3 border border-slate-100">
+                <div class="w-8 h-2 bg-orange/40 rounded-full mb-1.5"></div>
+                <div class="w-12 h-3 bg-slate-200 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Mock cards row -->
+          <div class="grid grid-cols-3 gap-3">
+            <div class="bg-surface rounded-xl p-4 border border-slate-100">
+              <div class="w-8 h-8 bg-orange/15 rounded-lg mb-3"></div>
+              <div class="w-full h-2.5 bg-slate-200 rounded-full mb-1.5"></div>
+              <div class="w-3/4 h-2 bg-slate-100 rounded-full"></div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 border border-slate-100">
+              <div class="w-8 h-8 bg-orange/15 rounded-lg mb-3"></div>
+              <div class="w-full h-2.5 bg-slate-200 rounded-full mb-1.5"></div>
+              <div class="w-3/4 h-2 bg-slate-100 rounded-full"></div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 border border-slate-100">
+              <div class="w-8 h-8 bg-orange/15 rounded-lg mb-3"></div>
+              <div class="w-full h-2.5 bg-slate-200 rounded-full mb-1.5"></div>
+              <div class="w-3/4 h-2 bg-slate-100 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="flex gap-3 mt-4">
+        <div class="flex items-center gap-2.5 bg-white border border-border rounded-xl px-4 py-3 shadow-sm flex-1">
+          <div class="w-8 h-8 bg-orange/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2l-5 2v4c0 3 2 5.5 5 6 3-.5 5-3 5-6V4L8 2z" stroke="#C75B2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <p class="font-mono font-bold text-navy text-base leading-none">100%</p>
+            <p class="font-body text-muted text-xs mt-0.5">Satisfacție garantată</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2.5 bg-white border border-border rounded-xl px-4 py-3 shadow-sm flex-1">
+          <div class="w-8 h-8 bg-orange/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2l1.5 4H14l-3.5 2.5 1.5 4L8 10 4 12.5l1.5-4L2 6h4.5z" stroke="#C75B2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <p class="font-mono font-bold text-navy text-base leading-none">50+</p>
+            <p class="font-body text-muted text-xs mt-0.5">Clienți mulțumiți</p>
+          </div>
         </div>
       </div>
     </div>
@@ -523,139 +579,150 @@
 </section>
 
 
-<!-- ═══════════════════════════════════════════
+<!-- ═══════════════════════
+     TRUST STATS BAR
+═══════════════════════ -->
+<div class="bg-surface border-y border-border py-8 px-5 md:px-10">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <p class="font-mono font-bold text-navy text-3xl leading-none">50+</p>
+        <p class="font-body text-muted text-sm mt-1">Proiecte livrate</p>
+      </div>
+      <div>
+        <p class="font-mono font-bold text-orange text-3xl leading-none">5★</p>
+        <p class="font-body text-muted text-sm mt-1">Rating mediu clienți</p>
+      </div>
+      <div>
+        <p class="font-mono font-bold text-navy text-3xl leading-none">5–15</p>
+        <p class="font-body text-muted text-sm mt-1">Zile livrare garantată</p>
+      </div>
+      <div>
+        <p class="font-mono font-bold text-navy text-3xl leading-none">€0</p>
+        <p class="font-body text-muted text-sm mt-1">Costuri ascunse</p>
+      </div>
+    </div>
+    <p class="text-center font-body text-muted text-xs mt-6 uppercase tracking-widest">Deja au ales CapitalBoost: Vulcanizare · Service Auto · Cabinet Stomatologic · Salon Coafură · Medic Veterinar · Agenție Imobiliară</p>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════
      PROCES
-═══════════════════════════════════════════ -->
-<section id="proces" class="bg-cloud py-24 px-6 md:px-12">
+═══════════════════════ -->
+<section id="proces" class="bg-white py-24 px-5 md:px-10">
   <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16">
-      <span class="section-label reveal">Cum funcționează</span>
-      <h2 class="reveal reveal-delay-1 font-display font-bold text-navy tracking-tighter leading-tight"
+    <div class="text-center mb-14">
+      <span class="reveal pill">Cum funcționează</span>
+      <h2 class="reveal font-display reveal-delay-1 font-extrabold text-navy tracking-tight2 leading-tight"
           style="font-size: clamp(1.8rem, 3.5vw, 2.8rem);">
         De la idee la website,<br/>în 3 pași simpli
       </h2>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8 relative">
+
       <!-- Step 1 -->
       <div class="reveal text-center relative">
-        <div class="w-14 h-14 rounded-full bg-navy flex items-center justify-center mx-auto mb-6 shadow-lg"
-             style="box-shadow: 0 4px 16px rgba(27,42,74,0.25);">
-          <span class="font-mono font-bold text-white text-lg">01</span>
-        </div>
         <div class="hidden md:block step-line"></div>
-        <h3 class="font-display font-semibold text-navy text-xl mb-3">Completezi formularul</h3>
-        <p class="font-body text-navy/60 text-sm leading-relaxed2">
+        <div class="step-num bg-navy text-white mx-auto mb-5">01</div>
+        <h3 class="font-bold font-display text-navy text-lg mb-2">Completezi formularul</h3>
+        <p class="text-muted text-sm leading-body">
           2 minute. Ne spui ce face afacerea ta, ce îți place și ce nu. Fără jargon tehnic.
         </p>
       </div>
 
       <!-- Step 2 -->
       <div class="reveal reveal-delay-2 text-center relative">
-        <div class="w-14 h-14 rounded-full bg-orange flex items-center justify-center mx-auto mb-6"
-             style="box-shadow: 0 4px 16px rgba(199,91,42,0.3);">
-          <span class="font-mono font-bold text-white text-lg">02</span>
-        </div>
         <div class="hidden md:block step-line"></div>
-        <h3 class="font-display font-semibold text-navy text-xl mb-3">Construim site-ul</h3>
-        <p class="font-body text-navy/60 text-sm leading-relaxed2">
+        <div class="step-num bg-orange text-white mx-auto mb-5">02</div>
+        <h3 class="font-bold font-display text-navy text-lg mb-2">Construim site-ul</h3>
+        <p class="text-muted text-sm leading-body">
           Echipa noastră livrează un design unic, optimizat pentru mobile și SEO, în 5–15 zile.
         </p>
       </div>
 
       <!-- Step 3 -->
       <div class="reveal reveal-delay-3 text-center">
-        <div class="w-14 h-14 rounded-full bg-navy flex items-center justify-center mx-auto mb-6"
-             style="box-shadow: 0 4px 16px rgba(27,42,74,0.25);">
-          <span class="font-mono font-bold text-white text-lg">03</span>
-        </div>
-        <h3 class="font-display font-semibold text-navy text-xl mb-3">Testezi, apoi decizi</h3>
-        <p class="font-body text-navy/60 text-sm leading-relaxed2">
+        <div class="step-num bg-navy text-white mx-auto mb-5">03</div>
+        <h3 class="font-bold font-display text-navy text-lg mb-2">Testezi, apoi decizi</h3>
+        <p class="text-muted text-sm leading-body">
           Îți prezentăm live site-ul. Dacă ești mulțumit, mergem mai departe. Revizuiri gratuite incluse.
         </p>
       </div>
+
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════════
+<!-- ═══════════════════════
      BENEFICII
-═══════════════════════════════════════════ -->
-<section id="beneficii" class="bg-white py-24 px-6 md:px-12">
+═══════════════════════ -->
+<section id="beneficii" class="bg-surface py-24 px-5 md:px-10">
   <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16">
-      <span class="section-label reveal">De ce Capital Boost</span>
-      <h2 class="reveal reveal-delay-1 font-display font-bold text-navy tracking-tighter leading-tight"
+    <div class="text-center mb-14">
+      <span class="reveal pill">De ce CapitalBoost</span>
+      <h2 class="reveal font-display reveal-delay-1 font-extrabold text-navy tracking-tight2 leading-tight"
           style="font-size: clamp(1.8rem, 3.5vw, 2.8rem);">
         Nu vindem un site.<br/>Construim un motor de creștere.
       </h2>
-      <p class="reveal reveal-delay-2 font-body text-navy/60 mt-4 max-w-xl mx-auto" style="line-height:1.7;">
+      <p class="reveal reveal-delay-2 text-muted mt-4 max-w-xl mx-auto" style="line-height:1.75;">
         Înțelegem că fiecare leu contează când ești la început. De aceea oferim calitate premium la un preț pe care orice afacere și-l poate permite.
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Rapid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+
       <div class="benefit-card reveal">
-        <div class="w-11 h-11 rounded-xl bg-orange/10 flex items-center justify-center mb-5">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2L4 13h7l-1 7 8-11h-7l1-9z" stroke="#C75B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2L4 11h6l-1 7 7-9h-6l1-9z" stroke="#C75B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3 class="font-display font-semibold text-navy text-lg mb-2">Rapid</h3>
-        <p class="font-body text-navy/60 text-sm leading-relaxed2">
-          Nu te lăsăm să aștepți. Website-ul tău e gata în 5–15 zile, nu luni de zile.
-        </p>
+        <h3 class="font-bold font-display text-navy text-base mb-1.5">Rapid</h3>
+        <p class="text-muted text-sm leading-body">Nu te lăsăm să aștepți. Website-ul tău e gata în 5–15 zile, nu luni de zile.</p>
       </div>
 
-      <!-- Accesibil -->
       <div class="benefit-card reveal reveal-delay-1">
-        <div class="w-11 h-11 rounded-xl bg-orange/10 flex items-center justify-center mb-5">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11l8-8 8 8M5 9v9a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V9" stroke="#C75B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M2 10l8-8 8 8M4 8v9a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1V8" stroke="#C75B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3 class="font-display font-semibold text-navy text-lg mb-2">Accesibil</h3>
-        <p class="font-body text-navy/60 text-sm leading-relaxed2">
-          Pachete de la €499. Știi exact cât plătești, fără surprize la final de proiect.
-        </p>
+        <h3 class="font-bold font-display text-navy text-base mb-1.5">Accesibil</h3>
+        <p class="text-muted text-sm leading-body">Pachete de la €499. Știi exact cât plătești, fără surprize la final de proiect.</p>
       </div>
 
-      <!-- Profesional -->
       <div class="benefit-card reveal reveal-delay-2">
-        <div class="w-11 h-11 rounded-xl bg-orange/10 flex items-center justify-center mb-5">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="16" height="16" rx="3" stroke="#C75B2A" stroke-width="1.7"/><path d="M7 11l3 3 5-5" stroke="#C75B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2" y="2" width="16" height="16" rx="3" stroke="#C75B2A" stroke-width="1.7"/><path d="M6 10l3 3 5-5" stroke="#C75B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3 class="font-display font-semibold text-navy text-lg mb-2">Profesional</h3>
-        <p class="font-body text-navy/60 text-sm leading-relaxed2">
-          Design modern, SEO integrat, optimizat pentru mobile. Gata să aducă clienți din prima zi.
-        </p>
+        <h3 class="font-bold font-display text-navy text-base mb-1.5">Profesional</h3>
+        <p class="text-muted text-sm leading-body">Design modern, SEO integrat, optimizat pentru mobile. Gata să aducă clienți din prima zi.</p>
       </div>
 
-      <!-- Partener -->
       <div class="benefit-card reveal reveal-delay-3">
-        <div class="w-11 h-11 rounded-xl bg-orange/10 flex items-center justify-center mb-5">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M17 20v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2" stroke="#C75B2A" stroke-width="1.7" stroke-linecap="round"/><circle cx="11" cy="8" r="4" stroke="#C75B2A" stroke-width="1.7"/></svg>
+        <div class="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 18v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" stroke="#C75B2A" stroke-width="1.7" stroke-linecap="round"/><circle cx="10" cy="7" r="4" stroke="#C75B2A" stroke-width="1.7"/></svg>
         </div>
-        <h3 class="font-display font-semibold text-navy text-lg mb-2">Partener</h3>
-        <p class="font-body text-navy/60 text-sm leading-relaxed2">
-          Nu dispărem după livrare. Suport inclus și consultanță gratuită în fiecare pachet.
-        </p>
+        <h3 class="font-bold font-display text-navy text-base mb-1.5">Partener</h3>
+        <p class="text-muted text-sm leading-body">Nu dispărem după livrare. Suport inclus și consultanță gratuită în fiecare pachet.</p>
       </div>
+
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════════
+<!-- ═══════════════════════
      PRICING
-═══════════════════════════════════════════ -->
-<section id="preturi" class="bg-cloud py-24 px-6 md:px-12">
+═══════════════════════ -->
+<section id="preturi" class="bg-white py-24 px-5 md:px-10">
   <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16">
-      <span class="section-label reveal">Prețuri transparente</span>
-      <h2 class="reveal reveal-delay-1 font-display font-bold text-navy tracking-tighter leading-tight"
+    <div class="text-center mb-14">
+      <span class="reveal pill">Prețuri transparente</span>
+      <h2 class="reveal font-display reveal-delay-1 font-extrabold text-navy tracking-tight2 leading-tight"
           style="font-size: clamp(1.8rem, 3.5vw, 2.8rem);">
         Alege pachetul potrivit<br/>pentru afacerea ta
       </h2>
-      <p class="reveal reveal-delay-2 font-body text-navy/60 mt-4 max-w-lg mx-auto" style="line-height:1.7;">
+      <p class="reveal reveal-delay-2 text-muted mt-4 max-w-lg mx-auto" style="line-height:1.75;">
         Prețuri clare, fără negocieri. Știi de la început exact ce primești.
       </p>
     </div>
@@ -665,184 +732,185 @@
       <!-- Starter -->
       <div class="price-card reveal">
         <div class="mb-6">
-          <p class="font-mono font-semibold text-navy/50 text-xs uppercase tracking-widest mb-2">Starter</p>
-          <div class="flex items-end gap-1 mb-1">
-            <span class="font-mono font-bold text-navy" style="font-size:2.8rem; line-height:1;">€499</span>
-            <span class="font-body text-navy/40 text-sm mb-2">/ proiect</span>
+          <p class="font-semibold text-muted text-xs uppercase tracking-widest mb-3">Starter</p>
+          <div class="flex items-end gap-1.5 mb-1">
+            <span class="font-mono font-extrabold text-navy" style="font-size:2.6rem; line-height:1;">€499</span>
+            <span class="text-muted text-sm mb-1.5">/ proiect</span>
           </div>
-          <p class="font-body text-navy/50 text-sm">Livrare în <strong class="text-navy">5 zile</strong></p>
+          <p class="text-muted text-sm">Livrare în <strong class="text-navy font-semibold">5 zile</strong></p>
         </div>
-        <div class="h-px bg-cloud-dark mb-6"></div>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>1–3 pagini</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Template custom</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Design responsive</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>SEO de bază</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Formular contact</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Suport 30 zile</li>
-          <li class="flex items-start font-body text-sm text-navy/30"><span class="text-navy/20 mr-2">✗</span>Blog integrat</li>
-          <li class="flex items-start font-body text-sm text-navy/30"><span class="text-navy/20 mr-2">✗</span>E-commerce</li>
+        <div class="h-px bg-border mb-6"></div>
+        <ul class="space-y-2.5 mb-8">
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>1–3 pagini</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Template custom</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Design responsive</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>SEO de bază</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Formular contact</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Suport 30 zile</li>
+          <li class="flex items-start text-sm text-slate-300"><span class="cross-icon">✗</span>Blog integrat</li>
+          <li class="flex items-start text-sm text-slate-300"><span class="cross-icon">✗</span>E-commerce</li>
         </ul>
-        <a href="#contact" class="block text-center font-body font-semibold text-sm py-3.5 px-6 rounded-lg border-2 border-navy text-navy
-           transition-colors duration-200 hover:bg-navy hover:text-white focus-visible:outline-2 focus-visible:outline-navy">
+        <a href="#contact" class="block text-center font-semibold text-sm py-3.5 px-6 rounded-lg border-2 border-navy text-navy cursor-pointer
+           transition-colors duration-200 hover:bg-navy hover:text-white focus-visible:outline-2 focus-visible:outline-orange">
           Alege Starter
         </a>
       </div>
 
       <!-- Business (featured) -->
       <div class="price-card featured reveal reveal-delay-1" style="margin-top: -8px;">
-        <!-- Badge -->
         <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-          <span class="font-mono font-semibold text-xs text-white bg-orange px-4 py-1.5 rounded-full shadow-md whitespace-nowrap"
-                style="box-shadow: 0 4px 12px rgba(199,91,42,0.4);">
-            ★ Cel mai popular
+          <span class="font-bold text-xs text-white bg-orange px-4 py-1.5 rounded-full whitespace-nowrap"
+                style="box-shadow: 0 4px 12px rgba(199,91,42,0.3);">
+            Cel mai popular
           </span>
         </div>
         <div class="mb-6 mt-2">
-          <p class="font-mono font-semibold text-orange text-xs uppercase tracking-widest mb-2">Business</p>
-          <div class="flex items-end gap-1 mb-1">
-            <span class="font-mono font-bold text-navy" style="font-size:2.8rem; line-height:1;">€999</span>
-            <span class="font-body text-navy/40 text-sm mb-2">/ proiect</span>
+          <p class="font-semibold text-orange text-xs uppercase tracking-widest mb-3">Business</p>
+          <div class="flex items-end gap-1.5 mb-1">
+            <span class="font-mono font-extrabold text-navy" style="font-size:2.6rem; line-height:1;">€999</span>
+            <span class="text-muted text-sm mb-1.5">/ proiect</span>
           </div>
-          <p class="font-body text-navy/50 text-sm">Livrare în <strong class="text-navy">10 zile</strong></p>
+          <p class="text-muted text-sm">Livrare în <strong class="text-navy font-semibold">10 zile</strong></p>
         </div>
         <div class="h-px bg-orange/20 mb-6"></div>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>5–8 pagini</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Design unic</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Design responsive</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>SEO avansat</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Formular contact</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Blog integrat</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>2 integrări</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Suport 60 zile</li>
+        <ul class="space-y-2.5 mb-8">
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>5–8 pagini</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Design unic</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Design responsive</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>SEO avansat</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Formular contact</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Blog integrat</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>2 integrări</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Suport 60 zile</li>
         </ul>
-        <a href="#contact" class="btn-orange block text-center justify-center" style="font-size:0.95rem;">
+        <a href="#contact" class="btn-primary block text-center justify-center" style="font-size:0.95rem;">
           Alege Business
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
 
       <!-- Growth -->
       <div class="price-card reveal reveal-delay-2">
         <div class="mb-6">
-          <p class="font-mono font-semibold text-navy/50 text-xs uppercase tracking-widest mb-2">Growth</p>
-          <div class="flex items-end gap-1 mb-1">
-            <span class="font-mono font-bold text-navy" style="font-size:2.8rem; line-height:1;">€1.899</span>
-            <span class="font-body text-navy/40 text-sm mb-2">/ proiect</span>
+          <p class="font-semibold text-muted text-xs uppercase tracking-widest mb-3">Growth</p>
+          <div class="flex items-end gap-1.5 mb-1">
+            <span class="font-mono font-extrabold text-navy" style="font-size:2.6rem; line-height:1;">€1.899</span>
+            <span class="text-muted text-sm mb-1.5">/ proiect</span>
           </div>
-          <p class="font-body text-navy/50 text-sm">Livrare în <strong class="text-navy">15 zile</strong></p>
+          <p class="text-muted text-sm">Livrare în <strong class="text-navy font-semibold">15 zile</strong></p>
         </div>
-        <div class="h-px bg-cloud-dark mb-6"></div>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>10–15 pagini</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Design premium</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Design responsive</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>SEO avansat</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Formular contact</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Blog integrat</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>E-commerce</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>5+ integrări</li>
-          <li class="flex items-start font-body text-sm text-navy/70"><span class="check">✓</span>Suport 90 zile</li>
+        <div class="h-px bg-border mb-6"></div>
+        <ul class="space-y-2.5 mb-8">
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>10–15 pagini</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Design premium</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Design responsive</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>SEO avansat</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Formular contact</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Blog integrat</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>E-commerce</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>5+ integrări</li>
+          <li class="flex items-start text-sm text-navy/70"><span class="check-icon">✓</span>Suport 90 zile</li>
         </ul>
-        <a href="#contact" class="block text-center font-body font-semibold text-sm py-3.5 px-6 rounded-lg border-2 border-navy text-navy
-           transition-colors duration-200 hover:bg-navy hover:text-white focus-visible:outline-2 focus-visible:outline-navy">
+        <a href="#contact" class="block text-center font-semibold text-sm py-3.5 px-6 rounded-lg border-2 border-navy text-navy cursor-pointer
+           transition-colors duration-200 hover:bg-navy hover:text-white focus-visible:outline-2 focus-visible:outline-orange">
           Alege Growth
         </a>
       </div>
+
     </div>
 
     <!-- Garantie -->
-    <div class="reveal mt-10 text-center">
-      <p class="font-body text-navy/50 text-sm">
-        🔒 Garanție 100% satisfacție — revizuiri gratuite până ești mulțumit
-      </p>
+    <div class="reveal mt-10 flex items-center justify-center gap-2 text-muted text-sm">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2l-5 2v5c0 3 2 5.5 5 6 3-.5 5-3 5-6V4L8 2z" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Garanție 100% satisfacție — revizuiri gratuite până ești mulțumit
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════════
+<!-- ═══════════════════════
      ADD-ONS
-═══════════════════════════════════════════ -->
-<section class="bg-white py-20 px-6 md:px-12">
+═══════════════════════ -->
+<section class="bg-surface py-20 px-5 md:px-10">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-12">
-      <span class="section-label reveal">Servicii extra</span>
-      <h2 class="reveal reveal-delay-1 font-display font-bold text-navy tracking-tighter"
+      <span class="reveal pill">Servicii extra</span>
+      <h2 class="reveal font-display reveal-delay-1 font-extrabold text-navy tracking-tight2"
           style="font-size: clamp(1.6rem, 3vw, 2.4rem);">
         Completează-ți pachetul
       </h2>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-4">
+    <div class="grid md:grid-cols-2 gap-3">
+
       <div class="addon-card reveal">
-        <div class="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center flex-shrink-0">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1v16M1 9h16" stroke="#1B2A4A" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <div class="w-10 h-10 rounded-xl bg-surface-2 border border-border flex items-center justify-center flex-shrink-0">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1v16M1 9h16" stroke="#334155" stroke-width="1.8" stroke-linecap="round"/></svg>
         </div>
-        <div class="flex-1">
-          <p class="font-body font-semibold text-navy text-sm">Mentenanță lunară</p>
-          <p class="font-body text-navy/50 text-xs mt-0.5">Actualizări, backup, monitorizare, suport prioritar</p>
+        <div class="flex-1 min-w-0">
+          <p class="font-semibold text-navy text-sm">Mentenanță lunară</p>
+          <p class="text-muted text-xs mt-0.5">Actualizări, backup, monitorizare, suport prioritar</p>
         </div>
-        <span class="font-mono font-bold text-orange text-base whitespace-nowrap">€49<span class="text-navy/40 font-body font-normal text-xs">/lună</span></span>
+        <span class="font-bold text-orange text-base whitespace-nowrap">€49<span class="text-muted font-normal text-xs">/lună</span></span>
       </div>
 
       <div class="addon-card reveal reveal-delay-1">
-        <div class="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center flex-shrink-0">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4h14v10a2 2 0 01-2 2H4a2 2 0 01-2-2V4z" stroke="#1B2A4A" stroke-width="1.7"/><path d="M6 4V2h6v2" stroke="#1B2A4A" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <div class="w-10 h-10 rounded-xl bg-surface-2 border border-border flex items-center justify-center flex-shrink-0">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 4h14v10a2 2 0 01-2 2H4a2 2 0 01-2-2V4z" stroke="#334155" stroke-width="1.7"/><path d="M6 4V2h6v2" stroke="#334155" stroke-width="1.7" stroke-linecap="round"/></svg>
         </div>
-        <div class="flex-1">
-          <p class="font-body font-semibold text-navy text-sm">Copywriting profesional</p>
-          <p class="font-body text-navy/50 text-xs mt-0.5">Texte scrise de copywriter pentru toate paginile</p>
+        <div class="flex-1 min-w-0">
+          <p class="font-semibold text-navy text-sm">Copywriting profesional</p>
+          <p class="text-muted text-xs mt-0.5">Texte scrise de copywriter pentru toate paginile</p>
         </div>
-        <span class="font-mono font-bold text-orange text-base">€199</span>
+        <span class="font-bold text-orange text-base">€199</span>
       </div>
 
       <div class="addon-card reveal reveal-delay-2">
-        <div class="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center flex-shrink-0">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#1B2A4A" stroke-width="1.7"/><path d="M6 9l2 2 4-4" stroke="#1B2A4A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="w-10 h-10 rounded-xl bg-surface-2 border border-border flex items-center justify-center flex-shrink-0">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="7" stroke="#334155" stroke-width="1.7"/><path d="M6 9l2 2 4-4" stroke="#334155" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="flex-1">
-          <p class="font-body font-semibold text-navy text-sm">Sesiune foto/video</p>
-          <p class="font-body text-navy/50 text-xs mt-0.5">Fotografii profesionale pentru website</p>
+        <div class="flex-1 min-w-0">
+          <p class="font-semibold text-navy text-sm">Sesiune foto/video</p>
+          <p class="text-muted text-xs mt-0.5">Fotografii profesionale pentru website</p>
         </div>
-        <span class="font-mono font-bold text-orange text-base">€299</span>
+        <span class="font-bold text-orange text-base">€299</span>
       </div>
 
       <div class="addon-card reveal reveal-delay-1">
-        <div class="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center flex-shrink-0">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15l4-4m0 0l2-6 4 4-6 2zm0 0L3 9" stroke="#1B2A4A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="w-10 h-10 rounded-xl bg-surface-2 border border-border flex items-center justify-center flex-shrink-0">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 15l4-4m0 0l2-6 4 4-6 2zm0 0L3 9" stroke="#334155" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="flex-1">
-          <p class="font-body font-semibold text-navy text-sm">Google Ads Setup</p>
-          <p class="font-body text-navy/50 text-xs mt-0.5">Campanie inițială configurată și optimizată</p>
+        <div class="flex-1 min-w-0">
+          <p class="font-semibold text-navy text-sm">Google Ads Setup</p>
+          <p class="text-muted text-xs mt-0.5">Campanie inițială configurată și optimizată</p>
         </div>
-        <span class="font-mono font-bold text-orange text-base">€149</span>
+        <span class="font-bold text-orange text-base">€149</span>
       </div>
 
       <div class="addon-card reveal md:col-span-2">
-        <div class="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center flex-shrink-0">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2l1.5 4.5H15l-3.75 2.75L12.5 14 9 11.25 5.5 14l1.25-4.75L3 6.5h4.5z" stroke="#1B2A4A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="w-10 h-10 rounded-xl bg-surface-2 border border-border flex items-center justify-center flex-shrink-0">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2l1.5 4.5H15l-3.75 2.75L12.5 14 9 11.25 5.5 14l1.25-4.75L3 6.5h4.5z" stroke="#334155" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="flex-1">
-          <p class="font-body font-semibold text-navy text-sm">Logo & Branding Basic</p>
-          <p class="font-body text-navy/50 text-xs mt-0.5">Logo, paletă de culori, identitate vizuală de bază</p>
+        <div class="flex-1 min-w-0">
+          <p class="font-semibold text-navy text-sm">Logo &amp; Branding Basic</p>
+          <p class="text-muted text-xs mt-0.5">Logo, paletă de culori, identitate vizuală de bază</p>
         </div>
-        <span class="font-mono font-bold text-orange text-base">€249</span>
+        <span class="font-bold text-orange text-base">€249</span>
       </div>
+
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════════
+<!-- ═══════════════════════
      TESTIMONIALE
-═══════════════════════════════════════════ -->
-<section id="testimoniale" class="bg-cloud py-24 px-6 md:px-12">
+═══════════════════════ -->
+<section id="testimoniale" class="bg-white py-24 px-5 md:px-10">
   <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16">
-      <span class="section-label reveal">Ce spun clienții</span>
-      <h2 class="reveal reveal-delay-1 font-display font-bold text-navy tracking-tighter"
+    <div class="text-center mb-14">
+      <span class="reveal pill">Ce spun clienții</span>
+      <h2 class="reveal font-display reveal-delay-1 font-extrabold text-navy tracking-tight2"
           style="font-size: clamp(1.8rem, 3.5vw, 2.8rem);">
         Rezultate reale.<br/>Afaceri reale.
       </h2>
@@ -851,91 +919,91 @@
     <div class="carousel-outer reveal">
       <div id="carousel-track" class="carousel-track">
 
-        <div class="carousel-item testimonial-card">
-          <div class="flex text-orange text-lg mb-4 gap-0.5">★★★★★</div>
-          <p class="font-body text-navy/70 text-sm leading-relaxed2 mb-6">
+        <div class="carousel-item testi-card">
+          <div class="text-orange font-bold text-base mb-4 tracking-wider">★★★★★</div>
+          <p class="text-navy/70 text-sm leading-body mb-6">
             "După multe planuri și direcții care nu au dus nicăieri, am ajuns printr-o recomandare la CapitalBoost și cred că a fost un punct de cotitură pentru businessul meu. Îi recomand și îi aplaud pentru profesionalism și sinceritate."
           </p>
           <div class="flex items-center gap-3">
-            <img src="https://placehold.co/44x44/1B2A4A/ffffff?text=NE" class="w-11 h-11 rounded-full object-cover" alt="Nelu" />
-            <div><p class="font-body font-semibold text-navy text-sm">Nelu</p><p class="font-body text-navy/40 text-xs">Vulcanizare Auto</p></div>
+            <img src="https://placehold.co/44x44/0F172A/ffffff?text=NE" class="w-11 h-11 rounded-full object-cover" alt="Nelu" loading="lazy" />
+            <div><p class="font-semibold text-navy text-sm">Nelu</p><p class="text-muted text-xs">Vulcanizare Auto</p></div>
           </div>
         </div>
 
-        <div class="carousel-item testimonial-card">
-          <div class="flex text-orange text-lg mb-4 gap-0.5">★★★★★</div>
-          <p class="font-body text-navy/70 text-sm leading-relaxed2 mb-6">
+        <div class="carousel-item testi-card">
+          <div class="text-orange font-bold text-base mb-4 tracking-wider">★★★★★</div>
+          <p class="text-navy/70 text-sm leading-body mb-6">
             "Comunicare și dialog — asta am apreciat în colaborarea cu ei!"
           </p>
           <div class="flex items-center gap-3">
-            <img src="https://placehold.co/44x44/C75B2A/ffffff?text=MI" class="w-11 h-11 rounded-full object-cover" alt="Mihai" />
-            <div><p class="font-body font-semibold text-navy text-sm">Mihai</p><p class="font-body text-navy/40 text-xs">Service Auto</p></div>
+            <img src="https://placehold.co/44x44/C75B2A/ffffff?text=MI" class="w-11 h-11 rounded-full object-cover" alt="Mihai" loading="lazy" />
+            <div><p class="font-semibold text-navy text-sm">Mihai</p><p class="text-muted text-xs">Service Auto</p></div>
           </div>
         </div>
 
-        <div class="carousel-item testimonial-card">
-          <div class="flex text-orange text-lg mb-4 gap-0.5">★★★★★</div>
-          <p class="font-body text-navy/70 text-sm leading-relaxed2 mb-6">
+        <div class="carousel-item testi-card">
+          <div class="text-orange font-bold text-base mb-4 tracking-wider">★★★★★</div>
+          <p class="text-navy/70 text-sm leading-body mb-6">
             "Prețuri corecte, proiect lucrat la forma dorită. Îi recomand!!"
           </p>
           <div class="flex items-center gap-3">
-            <img src="https://placehold.co/44x44/3D5A8A/ffffff?text=AN" class="w-11 h-11 rounded-full object-cover" alt="Andreea" />
-            <div><p class="font-body font-semibold text-navy text-sm">Andreea</p><p class="font-body text-navy/40 text-xs">Influencer</p></div>
+            <img src="https://placehold.co/44x44/334155/ffffff?text=AN" class="w-11 h-11 rounded-full object-cover" alt="Andreea" loading="lazy" />
+            <div><p class="font-semibold text-navy text-sm">Andreea</p><p class="text-muted text-xs">Influencer</p></div>
           </div>
         </div>
 
-        <div class="carousel-item testimonial-card">
-          <div class="flex text-orange text-lg mb-4 gap-0.5">★★★★★</div>
-          <p class="font-body text-navy/70 text-sm leading-relaxed2 mb-6">
-            "Recomand din toată inima!! Profesionalism. Seriozitate. Iar calitatea serviciilor se ridică la cele mai înalte standarde! 💯"
+        <div class="carousel-item testi-card">
+          <div class="text-orange font-bold text-base mb-4 tracking-wider">★★★★★</div>
+          <p class="text-navy/70 text-sm leading-body mb-6">
+            "Recomand din toată inima!! Profesionalism. Seriozitate. Iar calitatea serviciilor se ridică la cele mai înalte standarde!"
           </p>
           <div class="flex items-center gap-3">
-            <img src="https://placehold.co/44x44/C75B2A/ffffff?text=MR" class="w-11 h-11 rounded-full object-cover" alt="Miruna" />
-            <div><p class="font-body font-semibold text-navy text-sm">Miruna</p><p class="font-body text-navy/40 text-xs">Medic Veterinar</p></div>
+            <img src="https://placehold.co/44x44/C75B2A/ffffff?text=MR" class="w-11 h-11 rounded-full object-cover" alt="Miruna" loading="lazy" />
+            <div><p class="font-semibold text-navy text-sm">Miruna</p><p class="text-muted text-xs">Medic Veterinar</p></div>
           </div>
         </div>
 
-        <div class="carousel-item testimonial-card">
-          <div class="flex text-orange text-lg mb-4 gap-0.5">★★★★★</div>
-          <p class="font-body text-navy/70 text-sm leading-relaxed2 mb-6">
+        <div class="carousel-item testi-card">
+          <div class="text-orange font-bold text-base mb-4 tracking-wider">★★★★★</div>
+          <p class="text-navy/70 text-sm leading-body mb-6">
             "Dacă dorești un site web frumos și ieftin cred că aici găsești soluția ideală."
           </p>
           <div class="flex items-center gap-3">
-            <img src="https://placehold.co/44x44/1B2A4A/ffffff?text=MA" class="w-11 h-11 rounded-full object-cover" alt="Marius" />
-            <div><p class="font-body font-semibold text-navy text-sm">Marius</p><p class="font-body text-navy/40 text-xs">Firmă de curățenie</p></div>
+            <img src="https://placehold.co/44x44/0F172A/ffffff?text=MA" class="w-11 h-11 rounded-full object-cover" alt="Marius" loading="lazy" />
+            <div><p class="font-semibold text-navy text-sm">Marius</p><p class="text-muted text-xs">Firmă de curățenie</p></div>
           </div>
         </div>
 
-        <div class="carousel-item testimonial-card">
-          <div class="flex text-orange text-lg mb-4 gap-0.5">★★★★★</div>
-          <p class="font-body text-navy/70 text-sm leading-relaxed2 mb-6">
+        <div class="carousel-item testi-card">
+          <div class="text-orange font-bold text-base mb-4 tracking-wider">★★★★★</div>
+          <p class="text-navy/70 text-sm leading-body mb-6">
             "Tot ce am cerut a fost livrat exact cum am discutat. Oameni de cuvânt, revin cu plăcere!"
           </p>
           <div class="flex items-center gap-3">
-            <img src="https://placehold.co/44x44/2D6A4F/ffffff?text=BG" class="w-11 h-11 rounded-full object-cover" alt="Bogdan" />
-            <div><p class="font-body font-semibold text-navy text-sm">Bogdan</p><p class="font-body text-navy/40 text-xs">Cabinet Stomatologic</p></div>
+            <img src="https://placehold.co/44x44/2D6A4F/ffffff?text=BG" class="w-11 h-11 rounded-full object-cover" alt="Bogdan" loading="lazy" />
+            <div><p class="font-semibold text-navy text-sm">Bogdan</p><p class="text-muted text-xs">Cabinet Stomatologic</p></div>
           </div>
         </div>
 
-        <div class="carousel-item testimonial-card">
-          <div class="flex text-orange text-lg mb-4 gap-0.5">★★★★★</div>
-          <p class="font-body text-navy/70 text-sm leading-relaxed2 mb-6">
+        <div class="carousel-item testi-card">
+          <div class="text-orange font-bold text-base mb-4 tracking-wider">★★★★★</div>
+          <p class="text-navy/70 text-sm leading-body mb-6">
             "Am avut site-ul live în mai puțin de o săptămână. Eram sceptică, dar m-am convins rapid că știu exact ce fac."
           </p>
           <div class="flex items-center gap-3">
-            <img src="https://placehold.co/44x44/8B3A8B/ffffff?text=CR" class="w-11 h-11 rounded-full object-cover" alt="Cristina" />
-            <div><p class="font-body font-semibold text-navy text-sm">Cristina</p><p class="font-body text-navy/40 text-xs">Salon Coafură</p></div>
+            <img src="https://placehold.co/44x44/8B3A8B/ffffff?text=CR" class="w-11 h-11 rounded-full object-cover" alt="Cristina" loading="lazy" />
+            <div><p class="font-semibold text-navy text-sm">Cristina</p><p class="text-muted text-xs">Salon Coafură</p></div>
           </div>
         </div>
 
-        <div class="carousel-item testimonial-card">
-          <div class="flex text-orange text-lg mb-4 gap-0.5">★★★★★</div>
-          <p class="font-body text-navy/70 text-sm leading-relaxed2 mb-6">
+        <div class="carousel-item testi-card">
+          <div class="text-orange font-bold text-base mb-4 tracking-wider">★★★★★</div>
+          <p class="text-navy/70 text-sm leading-body mb-6">
             "Colaborare excelentă de la A la Z. Designul e modern și clienții mei au observat imediat diferența."
           </p>
           <div class="flex items-center gap-3">
-            <img src="https://placehold.co/44x44/3D5A8A/ffffff?text=AL" class="w-11 h-11 rounded-full object-cover" alt="Alexandru" />
-            <div><p class="font-body font-semibold text-navy text-sm">Alexandru</p><p class="font-body text-navy/40 text-xs">Agenție Imobiliară</p></div>
+            <img src="https://placehold.co/44x44/334155/ffffff?text=AL" class="w-11 h-11 rounded-full object-cover" alt="Alexandru" loading="lazy" />
+            <div><p class="font-semibold text-navy text-sm">Alexandru</p><p class="text-muted text-xs">Agenție Imobiliară</p></div>
           </div>
         </div>
 
@@ -945,57 +1013,62 @@
 </section>
 
 
-<!-- ═══════════════════════════════════════════
+<!-- ═══════════════════════
      CTA FINAL / CONTACT
-═══════════════════════════════════════════ -->
-<section id="contact" class="hero-bg grain relative py-28 px-6 md:px-12 overflow-hidden">
-  <div class="absolute inset-0" style="background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(199,91,42,0.12) 0%, transparent 70%);"></div>
-  <div class="max-w-3xl mx-auto text-center relative z-10">
-    <span class="section-label reveal" style="background: rgba(255,255,255,0.1); color: #fff;">Consultație gratuită</span>
-    <h2 class="reveal reveal-delay-1 font-display font-black text-white tracking-tightest leading-tight mt-2 mb-6"
-        style="font-size: clamp(2rem, 4.5vw, 3.4rem);">
-      Gata să-ți transformi<br/>afacerea online?
-    </h2>
-    <p class="reveal reveal-delay-2 font-body text-white/70 mb-10 max-w-xl mx-auto" style="font-size: 1.05rem; line-height: 1.7;">
-      Solicită o consultație gratuită de 15 minute și hai să vedem împreună cum arată website-ul tău ideal. Fără obligații, fără jargon tehnic.
-    </p>
+═══════════════════════ -->
+<section id="contact" class="cta-dark py-24 px-5 md:px-10">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="reveal inline-flex items-center gap-2 font-bold text-xs uppercase tracking-widest text-orange/80 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-5">
+        Consultație gratuită
+      </span>
+      <h2 class="reveal font-display reveal-delay-1 font-extrabold text-white tracking-tight2 leading-tight mb-4"
+          style="font-size: clamp(2rem, 4.5vw, 3.2rem);">
+        Gata să-ți transformi<br/>afacerea online?
+      </h2>
+      <p class="reveal reveal-delay-2 text-slate-400 max-w-lg mx-auto" style="font-size: 1.05rem; line-height: 1.75;">
+        Solicită o consultație gratuită de 15 minute și hai să vedem împreună cum arată website-ul tău ideal. Fără obligații, fără jargon tehnic.
+      </p>
+    </div>
 
     <!-- Contact form -->
-    <form id="contact-form" class="reveal reveal-delay-3 bg-white/5 backdrop-blur border border-white/15 rounded-2xl p-8 text-left" onsubmit="handleSubmit(event)">
+    <form id="contact-form" class="reveal reveal-delay-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-left" onsubmit="handleSubmit(event)">
       <input type="hidden" name="access_key" value="20ee7fbf-4a00-4449-8a51-e868ef5c031e" />
       <input type="hidden" name="subject" value="Cerere nouă — CapitalBoost Website" />
       <input type="hidden" name="from_name" value="CapitalBoost Website" />
-      <div class="grid md:grid-cols-2 gap-5 mb-5">
+
+      <div class="grid md:grid-cols-2 gap-4 mb-4">
         <div>
-          <label class="block font-body text-white/70 text-xs font-medium mb-2 uppercase tracking-wider">Nume</label>
-          <input type="text" name="name" placeholder="Numele tău" required
-            class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 font-body text-sm
+          <label for="inp-name" class="block text-slate-400 text-xs font-semibold mb-2 uppercase tracking-wider">Nume</label>
+          <input id="inp-name" type="text" name="name" placeholder="Numele tău" required
+            class="w-full bg-white/8 border border-white/15 rounded-lg px-4 py-3 text-white placeholder-slate-500 text-sm
                    focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 transition-colors duration-200" />
         </div>
         <div>
-          <label class="block font-body text-white/70 text-xs font-medium mb-2 uppercase tracking-wider">Nume firmă</label>
-          <input type="text" name="firma" placeholder="Numele firmei tale"
-            class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 font-body text-sm
+          <label for="inp-firma" class="block text-slate-400 text-xs font-semibold mb-2 uppercase tracking-wider">Nume firmă</label>
+          <input id="inp-firma" type="text" name="firma" placeholder="Numele firmei tale"
+            class="w-full bg-white/8 border border-white/15 rounded-lg px-4 py-3 text-white placeholder-slate-500 text-sm
                    focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 transition-colors duration-200" />
         </div>
         <div>
-          <label class="block font-body text-white/70 text-xs font-medium mb-2 uppercase tracking-wider">Număr telefon</label>
-          <input type="tel" name="telefon" placeholder="07XX XXX XXX" required
-            class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 font-body text-sm
+          <label for="inp-tel" class="block text-slate-400 text-xs font-semibold mb-2 uppercase tracking-wider">Număr telefon</label>
+          <input id="inp-tel" type="tel" name="telefon" placeholder="07XX XXX XXX" required
+            class="w-full bg-white/8 border border-white/15 rounded-lg px-4 py-3 text-white placeholder-slate-500 text-sm
                    focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 transition-colors duration-200" />
         </div>
         <div>
-          <label class="block font-body text-white/70 text-xs font-medium mb-2 uppercase tracking-wider">Email</label>
-          <input type="email" name="email" placeholder="contact@afacerea.ro" required
-            class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 font-body text-sm
+          <label for="inp-email" class="block text-slate-400 text-xs font-semibold mb-2 uppercase tracking-wider">Email</label>
+          <input id="inp-email" type="email" name="email" placeholder="contact@afacerea.ro" required
+            class="w-full bg-white/8 border border-white/15 rounded-lg px-4 py-3 text-white placeholder-slate-500 text-sm
                    focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 transition-colors duration-200" />
         </div>
       </div>
       <div class="mb-6">
-        <label class="block font-body text-white/70 text-xs font-medium mb-2 uppercase tracking-wider">Pachet de interes</label>
-        <select name="pachet" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white font-body text-sm
-                       focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 transition-colors duration-200 cursor-pointer"
-                style="background-color: rgba(27,42,74,0.8);">
+        <label for="inp-pachet" class="block text-slate-400 text-xs font-semibold mb-2 uppercase tracking-wider">Pachet de interes</label>
+        <select id="inp-pachet" name="pachet"
+                class="w-full border border-white/15 rounded-lg px-4 py-3 text-white text-sm cursor-pointer
+                       focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 transition-colors duration-200"
+                style="background-color: rgba(15,23,42,0.7);">
           <option value="">Selectează pachetul...</option>
           <option value="Starter — €499">Starter — €499</option>
           <option value="Business — €999">Business — €999</option>
@@ -1003,61 +1076,58 @@
           <option value="Nu știu încă, vreau să discut">Nu știu încă, vreau să discut</option>
         </select>
       </div>
-      <button type="submit" class="btn-orange w-full justify-center py-4 text-base">
+      <button type="submit" class="btn-primary w-full justify-center py-4 text-base">
         Vreau consultația gratuită
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <p class="text-center text-white/40 text-xs font-body mt-4">Răspundem în mai puțin de 24 de ore. Zero spam.</p>
+      <p class="text-center text-slate-500 text-xs mt-4">Răspundem în mai puțin de 24 de ore. Zero spam.</p>
     </form>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════════
+<!-- ═══════════════════════
      FOOTER
-═══════════════════════════════════════════ -->
-<footer class="bg-navy-dark py-10 px-6 md:px-12">
+═══════════════════════ -->
+<footer class="bg-navy py-8 px-5 md:px-10 border-t border-white/5">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
     <!-- Logo -->
-    <div class="flex items-center gap-3">
-      <div class="flex items-end gap-0.5 h-6">
-        <div class="w-1 bg-orange rounded-sm" style="height:40%"></div>
-        <div class="w-1 bg-orange rounded-sm" style="height:65%"></div>
-        <div class="w-1 bg-orange rounded-sm" style="height:85%"></div>
+    <div class="flex items-center gap-2.5">
+      <div class="flex items-end gap-0.5 h-5">
+        <div class="w-1 bg-orange rounded-sm" style="height:38%"></div>
+        <div class="w-1 bg-orange rounded-sm" style="height:62%"></div>
+        <div class="w-1 bg-orange rounded-sm" style="height:82%"></div>
         <div class="w-1 bg-orange rounded-sm" style="height:100%"></div>
-        <div class="ml-1 w-2.5 h-2.5 border-t-2 border-r-2 border-orange" style="transform: rotate(45deg); margin-bottom:1px;"></div>
+        <div class="ml-0.5 w-2 h-2 border-t-2 border-r-2 border-orange" style="transform: rotate(45deg); margin-bottom:1px;"></div>
       </div>
-      <span class="font-display text-white text-lg font-semibold">Capital<span class="text-orange">Boost</span></span>
+      <span class="text-white font-semibold text-base">Capital<span class="text-orange">Boost</span></span>
     </div>
 
-    <p class="font-body text-white/30 text-xs text-center">
-      Capital Boost © 2026 · Toate drepturile rezervate
-    </p>
+    <p class="text-slate-500 text-xs text-center">Capital Boost © 2026 · Toate drepturile rezervate</p>
 
     <div class="flex gap-5">
-      <a href="/termeni-si-conditii#politica-gdpr" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Politică confidențialitate</a>
-      <a href="/termeni-si-conditii#termeni" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Termeni și condiții</a>
+      <a href="/termeni-si-conditii#politica-gdpr" class="text-slate-500 text-xs hover:text-slate-300 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-orange focus-visible:rounded">Politică confidențialitate</a>
+      <a href="/termeni-si-conditii#termeni" class="text-slate-500 text-xs hover:text-slate-300 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-orange focus-visible:rounded">Termeni și condiții</a>
     </div>
   </div>
 </footer>
 
 
-<!-- ═══════════════════════════════════════════
+<!-- ═══════════════════════
      WHATSAPP FLOATER
-═══════════════════════════════════════════ -->
-<div id="wa-popup" class="wa-popup">
-  💬 Ai întrebări? Nu te sfii!
-</div>
+═══════════════════════ -->
+<div id="wa-popup" class="wa-popup">Ai întrebări? Nu te sfii!</div>
 <a id="wa-floater" href="https://wa.me/40784707404?text=Buna%20ziua!%20Sunt%20interesat%20de%20serviciile%20CapitalBoost%20si%20as%20dori%20mai%20multe%20detalii." target="_blank" rel="noopener" class="wa-floater" aria-label="Contactează-ne pe WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
     <path d="M16 2C8.268 2 2 8.268 2 16c0 2.468.666 4.876 1.932 6.994L2 30l7.246-1.898A13.944 13.944 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff"/>
     <path d="M22.5 19.5c-.3-.15-1.77-.873-2.043-.972-.273-.099-.472-.149-.67.15-.199.298-.771.972-.945 1.172-.173.199-.347.224-.645.075-.298-.15-1.258-.464-2.396-1.48-.885-.79-1.484-1.764-1.657-2.063-.173-.298-.018-.459.13-.607.133-.133.298-.347.447-.52.149-.174.199-.298.298-.497.1-.199.05-.372-.025-.52-.075-.15-.67-1.613-.917-2.21-.242-.579-.487-.5-.67-.51-.173-.009-.372-.011-.57-.011-.199 0-.52.075-.793.372-.272.298-1.04 1.017-1.04 2.48 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.272-.199-.57-.348z" fill="#25D366"/>
   </svg>
 </a>
 
-<!-- ═══════════════════════════════════════════
+
+<!-- ═══════════════════════
      JS
-═══════════════════════════════════════════ -->
+═══════════════════════ -->
 <script>
   // Nav scroll effect
   const navbar = document.getElementById('navbar');
@@ -1086,18 +1156,13 @@
     menuBtn.setAttribute('aria-expanded', 'false');
   }
 
-  // ── Testimonials carousel ──
+  // Testimonials carousel
   (function() {
     const track = document.getElementById('carousel-track');
     if (!track) return;
-
     const original = Array.from(track.children);
-    const REAL = original.length; // 8
-
-    // Clone first 3 for seamless loop
-    original.slice(0, 3).forEach(card => {
-      track.appendChild(card.cloneNode(true));
-    });
+    const REAL = original.length;
+    original.slice(0, 3).forEach(card => track.appendChild(card.cloneNode(true)));
 
     let current = 0;
     let paused = false;
@@ -1105,18 +1170,14 @@
     function getStep() {
       const outer = track.parentElement;
       const w = outer.offsetWidth;
-      const isMobile = w < 769;
-      const isTablet = w < 1024;
-      const gap = 24;
-      if (isMobile)  return w - 32 + gap;
-      if (isTablet)  return (w - gap) / 2 + gap;
+      const gap = 20;
+      if (w < 769) return w - 28 + gap;
+      if (w < 1024) return (w - gap) / 2 + gap;
       return (w - 2 * gap) / 3 + gap;
     }
 
     function goTo(index, animate) {
-      track.style.transition = animate
-        ? 'transform 0.65s cubic-bezier(0.16, 1, 0.3, 1)'
-        : 'none';
+      track.style.transition = animate ? 'transform 0.65s cubic-bezier(0.16, 1, 0.3, 1)' : 'none';
       track.style.transform = `translateX(${-index * getStep()}px)`;
     }
 
@@ -1131,34 +1192,28 @@
 
     goTo(0, false);
     let timer = setInterval(advance, 4000);
-
-    // Pause on hover
     track.addEventListener('mouseenter', () => paused = true);
     track.addEventListener('mouseleave', () => paused = false);
-
-    // Recalculate on resize
     window.addEventListener('resize', () => goTo(current, false), { passive: true });
   })();
 
-  // ── WhatsApp popup ──
+  // WhatsApp popup
   (function() {
     const popup = document.getElementById('wa-popup');
     if (!popup) return;
     const messages = [
-      '💬 Ai întrebări? Nu te sfii!',
-      '👋 Hai să discutăm despre site-ul tău!',
-      '⚡ Răspundem în câteva minute!',
-      '🎯 Ofertă gratuită în 24h — scrie-ne!',
+      'Ai întrebări? Nu te sfii!',
+      'Hai să discutăm despre site-ul tău!',
+      'Răspundem în câteva minute!',
+      'Ofertă gratuită în 24h — scrie-ne!',
     ];
     let msgIdx = 0;
-
     function showPopup() {
       popup.textContent = messages[msgIdx % messages.length];
       msgIdx++;
       popup.classList.add('visible');
       setTimeout(() => popup.classList.remove('visible'), 4000);
     }
-
     setTimeout(showPopup, 3000);
     setInterval(showPopup, 10000);
   })();
@@ -1173,7 +1228,6 @@
       }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
   reveals.forEach(el => observer.observe(el));
 
   // Form submit
@@ -1185,23 +1239,103 @@
     btn.textContent = 'Se trimite...';
 
     const data = Object.fromEntries(new FormData(form));
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(data)
-    });
-    const json = await res.json();
-
-    if (json.success) {
-      btn.textContent = '✓ Cerere trimisă! Te contactăm în 24h.';
-      btn.style.background = '#2D7A4F';
-      form.reset();
-    } else {
-      btn.textContent = 'Eroare — încearcă din nou';
-      btn.style.background = '#C0392B';
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const json = await res.json();
+      if (json.success) {
+        btn.textContent = 'Cerere trimisă! Te contactăm în 24h.';
+        btn.style.background = '#2D7A4F';
+        form.reset();
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Eroare — încearcă din nou';
+      }
+    } catch {
       btn.disabled = false;
+      btn.textContent = 'Eroare — încearcă din nou';
     }
   }
+</script>
+
+<!-- ═══════════════════════
+     COOKIE BANNER
+═══════════════════════ -->
+<div id="cookie-banner" style="
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 1000;
+  max-width: 520px;
+  background: #fff;
+  border: 1.5px solid #DDE1EA;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 8px 40px rgba(27,42,74,0.12), 0 2px 8px rgba(27,42,74,0.06);
+  font-family: 'DM Sans', sans-serif;
+">
+  <div style="display:flex; align-items:flex-start; gap:14px; margin-bottom:16px;">
+    <div style="width:36px; height:36px; background:#FFF3EE; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+        <circle cx="9" cy="9" r="7" stroke="#C75B2A" stroke-width="1.6"/>
+        <path d="M9 8v4M9 6h.01" stroke="#C75B2A" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div>
+      <p style="font-weight:700; color:#1B2A4A; font-size:0.9rem; margin:0 0 4px;">Folosim cookie-uri</p>
+      <p style="color:#64748B; font-size:0.82rem; line-height:1.6; margin:0;">
+        Site-ul nostru folosește cookie-uri esențiale pentru funcționare și cookie-uri analitice pentru a înțelege cum îl folosești.
+        Citește <a href="/termeni-si-conditii#politica-gdpr" style="color:#C75B2A; text-decoration:underline;">Politica de confidențialitate</a>.
+      </p>
+    </div>
+  </div>
+  <div style="display:flex; gap:10px; flex-wrap:wrap;">
+    <button id="cookie-accept" style="
+      flex:1; min-width:120px;
+      background:#C75B2A; color:#fff;
+      font-family:'DM Sans',sans-serif; font-weight:600; font-size:0.85rem;
+      padding:10px 20px; border-radius:8px; border:none; cursor:pointer;
+      transition: background 0.2s, transform 0.15s;
+    " onmouseover="this.style.background='#A84820'" onmouseout="this.style.background='#C75B2A'">
+      Accept toate
+    </button>
+    <button id="cookie-reject" style="
+      flex:1; min-width:120px;
+      background:transparent; color:#475569;
+      font-family:'DM Sans',sans-serif; font-weight:500; font-size:0.85rem;
+      padding:10px 20px; border-radius:8px; border:1.5px solid #DDE1EA; cursor:pointer;
+      transition: border-color 0.2s, color 0.2s;
+    " onmouseover="this.style.borderColor='#94A3B8';this.style.color='#1B2A4A'" onmouseout="this.style.borderColor='#DDE1EA';this.style.color='#475569'">
+      Doar esențiale
+    </button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const banner = document.getElementById('cookie-banner');
+    const consent = localStorage.getItem('cb_cookie_consent');
+    if (!consent) {
+      setTimeout(() => { banner.style.display = 'block'; }, 800);
+    }
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+      localStorage.setItem('cb_cookie_consent', 'all');
+      banner.style.opacity = '0';
+      banner.style.transition = 'opacity 0.3s';
+      setTimeout(() => banner.style.display = 'none', 300);
+    });
+    document.getElementById('cookie-reject').addEventListener('click', function() {
+      localStorage.setItem('cb_cookie_consent', 'essential');
+      banner.style.opacity = '0';
+      banner.style.transition = 'opacity 0.3s';
+      setTimeout(() => banner.style.display = 'none', 300);
+    });
+  })();
 </script>
 
 </body>
