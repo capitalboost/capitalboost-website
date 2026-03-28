@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ce este SEO pentru afaceri mici — În curând | CapitalBoost</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --navy: #1B2A4A; --orange: #C75B2A; }
+    body { font-family: 'Sora', sans-serif; background: #FAFAF8; color: #1a1a1a; min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* NAV */
+    #navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid #DDE1EA; padding: 0 clamp(16px,4vw,40px); }
+    #navbar-inner { max-width: 1152px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-link-new { color: #475569; font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+    .nav-link-new:hover { color: #1B2A4A; }
+    .btn-primary-new { display: inline-flex; align-items: center; gap: 8px; background: #C75B2A; color: #fff; font-weight: 600; font-size: 0.875rem; padding: 10px 20px; border-radius: 8px; text-decoration: none; transition: background 0.2s, transform 0.2s; box-shadow: 0 1px 3px rgba(199,91,42,0.25), 0 4px 12px rgba(199,91,42,0.2); }
+    .btn-primary-new:hover { background: #A84820; transform: translateY(-1px); }
+    .nav-desktop { display: none; align-items: center; gap: 28px; }
+    @media(min-width:768px) { .nav-desktop { display: flex; } #nav-hamburger-new { display: none; } }
+    #mobile-menu-new { display: none; background: #fff; border-top: 1px solid #DDE1EA; }
+    #mobile-menu-new.open { display: block; }
+
+    /* MAIN */
+    main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 100px 24px 60px; }
+    .coming-soon { text-align: center; max-width: 560px; }
+    .tag { display: inline-block; background: rgba(199,91,42,0.12); border: 1px solid rgba(199,91,42,0.3); color: #C75B2A; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 1rem; border-radius: 20px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem; }
+    .icon { font-size: 3.5rem; margin-bottom: 1.2rem; animation: bounce 2s ease-in-out infinite; }
+    @keyframes bounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+    h1 { font-family: 'Source Serif 4', serif; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 600; color: var(--navy); line-height: 1.25; margin-bottom: 1rem; }
+    .subtitle { font-size: 1.05rem; color: #6b6b6b; line-height: 1.7; margin-bottom: 2.5rem; }
+    .divider { width: 48px; height: 3px; background: var(--orange); border-radius: 2px; margin: 0 auto 2.5rem; }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--navy); font-weight: 600; font-size: 0.95rem; text-decoration: none; border: 2px solid var(--navy); padding: 0.75rem 1.8rem; border-radius: 8px; transition: background 0.2s, color 0.2s; }
+    .back-link:hover { background: var(--navy); color: #fff; }
+
+    /* FOOTER */
+    footer { background: var(--navy); color: rgba(255,255,255,0.5); text-align: center; padding: 1.5rem; font-size: 0.82rem; }
+    footer a { color: #C75B2A; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div id="navbar-inner">
+    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;" aria-label="CapitalBoost">
+      <div style="display:flex;align-items:flex-end;gap:2px;height:24px;">
+        <div style="width:6px;height:38%;background:#C75B2A;border-radius:2px;"></div>
+        <div style="width:6px;height:62%;background:#C75B2A;border-radius:2px;"></div>
+        <div style="width:6px;height:82%;background:#C75B2A;border-radius:2px;"></div>
+        <div style="width:6px;height:100%;background:#C75B2A;border-radius:2px;"></div>
+        <div style="margin-left:2px;width:10px;height:10px;border-top:2px solid #C75B2A;border-right:2px solid #C75B2A;transform:rotate(45deg);margin-bottom:1px;"></div>
+      </div>
+      <span style="font-family:'Playfair Display',serif;font-weight:700;color:#1B2A4A;font-size:1.1rem;letter-spacing:-0.02em;">Capital<span style="color:#C75B2A;">Boost</span></span>
+    </a>
+    <div class="nav-desktop">
+      <a href="/servicii" class="nav-link-new">Servicii</a>
+      <a href="/portofoliu" class="nav-link-new">Portofoliu</a>
+      <a href="/despre-noi" class="nav-link-new">Despre noi</a>
+      <a href="/blog" class="nav-link-new">Blog</a>
+    </div>
+    <a href="/contact" class="btn-primary-new nav-desktop" style="display:inline-flex;">Solicita oferta gratuita</a>
+    <button id="nav-hamburger-new" onclick="document.getElementById('mobile-menu-new').classList.toggle('open')" style="background:none;border:none;cursor:pointer;padding:4px;" aria-label="Meniu">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="#1B2A4A" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu-new">
+    <div style="padding:20px 24px;display:flex;flex-direction:column;gap:16px;">
+      <a href="/servicii" class="nav-link-new" style="font-size:1rem;">Servicii</a>
+      <a href="/portofoliu" class="nav-link-new" style="font-size:1rem;">Portofoliu</a>
+      <a href="/despre-noi" class="nav-link-new" style="font-size:1rem;">Despre noi</a>
+      <a href="/blog" class="nav-link-new" style="font-size:1rem;">Blog</a>
+      <a href="/contact" class="btn-primary-new" style="justify-content:center;margin-top:8px;">Solicita oferta gratuita</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="coming-soon">
+    <div class="tag">În curând</div>
+    <div class="icon">✍️</div>
+    <h1>Ce este SEO pentru afaceri mici?</h1>
+    <div class="divider"></div>
+    <p class="subtitle">Lucrăm la acest articol. Revino în curând pentru ghidul complet despre SEO — cum funcționează, de ce contează și ce pași concreți poți face chiar azi.</p>
+    <a href="/blog" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Înapoi la Blog
+    </a>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 <a href="/">CapitalBoost</a> · Toate drepturile rezervate</p>
+</footer>
+
+</body>
+</html>

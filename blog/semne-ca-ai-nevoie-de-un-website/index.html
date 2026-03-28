@@ -46,11 +46,6 @@
     }
     html { font-size: 16px; scroll-behavior: smooth; }
     body { font-family: 'Sora', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-    nav { background: var(--navy); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; }
-    .nav-logo { color: #fff; font-size: 1.2rem; font-weight: 700; text-decoration: none; }
-    .nav-logo span { color: var(--orange-light); }
-    .nav-cta { background: var(--orange); color: #fff; padding: 0.5rem 1.2rem; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
-    .nav-cta:hover { background: var(--orange-light); }
     .hero { background: linear-gradient(135deg, #3a1b1b 0%, #1B3A6B 100%); color: #fff; padding: 4rem 2rem 3rem; text-align: center; }
     .hero-tag { display: inline-block; background: rgba(199,91,42,0.3); border: 1px solid rgba(199,91,42,0.5); color: #ffb38a; font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.9rem; border-radius: 20px; margin-bottom: 1.2rem; letter-spacing: 0.05em; text-transform: uppercase; }
     .hero h1 { font-family: 'Source Serif 4', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.25; max-width: 780px; margin: 0 auto 1rem; }
@@ -65,7 +60,7 @@
     .content ul, .content ol { margin: 0.8rem 0 1.2rem 1.5rem; }
     .content li { margin-bottom: 0.5rem; font-size: 1.02rem; }
     .content strong { color: var(--navy); font-weight: 600; }
-    .content a { color: var(--orange); text-decoration: underline; }
+    .content a:not(.cta-btn) { color: var(--orange); text-decoration: underline; }
     .callout { background: #EEF4FF; border-left: 4px solid var(--navy); border-radius: 0 8px 8px 0; padding: 1.2rem 1.4rem; margin: 1.8rem 0; }
     .callout-orange { background: #FFF4EE; border-left-color: var(--orange); }
     .callout p { margin: 0; font-size: 0.97rem; }
@@ -86,11 +81,12 @@
     .checklist li:last-child { border-bottom: none; }
     .checklist li::before { content: '☐'; position: absolute; left: 0; color: var(--orange); font-size: 1.1rem; }
 
-    .cta-box { background: var(--navy); color: #fff; border-radius: 12px; padding: 2.5rem; text-align: center; margin: 3rem 0; }
-    .cta-box h3 { font-family: 'Source Serif 4', serif; font-size: 1.5rem; margin-bottom: 0.8rem; }
-    .cta-box p { color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; font-size: 0.95rem; }
-    .cta-btn { display: inline-block; background: var(--orange); color: #fff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; }
-    .cta-btn:hover { background: var(--orange-light); }
+    .cta-box { text-align: center; margin: 3rem 0; padding: 1rem 0; }
+    @keyframes cta-pulse { 0%{box-shadow:0 0 0 0 rgba(199,91,42,0.55),0 4px 20px rgba(199,91,42,0.35);} 60%{box-shadow:0 0 0 14px rgba(199,91,42,0),0 4px 20px rgba(199,91,42,0.35);} 100%{box-shadow:0 0 0 0 rgba(199,91,42,0),0 4px 20px rgba(199,91,42,0.35);} }
+    @keyframes cta-shimmer { 0%{transform:translateX(-100%) skewX(-15deg);} 100%{transform:translateX(260%) skewX(-15deg);} }
+    .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: #fff !important; padding: 1rem 2.4rem; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 1.05rem; letter-spacing: 0.02em; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(199,91,42,0.4); animation: cta-pulse 2.2s ease-out infinite; transition: background 0.2s, transform 0.2s; }
+    .cta-btn::before { content:''; position:absolute; inset:0; background:linear-gradient(105deg,transparent 0%,rgba(255,255,255,0.28) 50%,transparent 100%); background-size:40% 100%; animation:cta-shimmer 3s ease-in-out infinite; pointer-events:none; }
+    .cta-btn:hover { background: #B84E20; color: #fff !important; transform: translateY(-2px); text-decoration: none; }
 
     .score-box { background: var(--bg2); border: 2px solid var(--navy); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
     .score-box h3 { color: var(--navy); margin-bottom: 1rem; }
@@ -297,8 +293,6 @@
     <p>Vestea bună: un website profesional în România costă mult mai puțin decât crezi și poate fi gata în mai puțin de o săptămână.</p>
 
     <div class="cta-box">
-      <h3>Fă primul pas azi</h3>
-      <p>Completează formularul în 2 minute și primești o ofertă personalizată în 24 de ore. Fără obligații, fără jargon tehnic. Pachete de la €499, livrare în 5 zile.</p>
       <a href="https://capitalboost.ro/#contact" class="cta-btn">Vreau oferta gratuită →</a>
     </div>
 
