@@ -64,4 +64,12 @@
     <priority>0.7</priority>
   </url>
 
+
+  <url>
+    <loc>https://capitalboost.ro/termeni-si-conditii</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
