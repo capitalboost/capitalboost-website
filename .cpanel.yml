@@ -1,5 +1,4 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/capitalboost/public_html/
-    - /bin/cp -r . $DEPLOYPATH
+    - /bin/cp -r /home/capitalboost/repositories/capitalboost-website/. /home/capitalboost/public_html/
