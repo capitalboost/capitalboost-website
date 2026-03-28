@@ -352,5 +352,18 @@
   (function(){var b=document.getElementById('cookie-banner');var c=localStorage.getItem('cb_cookie_consent');if(!c){setTimeout(function(){b.style.display='block';},800);}document.getElementById('cookie-accept').addEventListener('click',function(){localStorage.setItem('cb_cookie_consent','all');b.style.opacity='0';b.style.transition='opacity 0.3s';setTimeout(function(){b.style.display='none';},300);});document.getElementById('cookie-reject').addEventListener('click',function(){localStorage.setItem('cb_cookie_consent','essential');b.style.opacity='0';b.style.transition='opacity 0.3s';setTimeout(function(){b.style.display='none';},300);});})();
 <\/script>
 
+
+<!-- WhatsApp floater -->
+<style>
+  /* WhatsApp floater */
+  .wa-floater{position:fixed;bottom:24px;right:24px;z-index:500;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.35);cursor:pointer;text-decoration:none;transition:transform 0.2s cubic-bezier(0.16,1,0.3,1),box-shadow 0.2s;}
+  .wa-floater:hover{transform:scale(1.08);box-shadow:0 8px 28px rgba(37,211,102,0.45);}
+  .wa-floater:active{transform:scale(0.95);}
+  .wa-popup{position:fixed;bottom:88px;right:24px;z-index:500;background:#fff;border:1px solid #E2E8F0;border-radius:12px 12px 4px 12px;padding:10px 14px;box-shadow:0 4px 20px rgba(15,23,42,0.1);font-family:'DM Sans',sans-serif;font-size:0.82rem;color:#334155;white-space:nowrap;opacity:0;transform:translateY(8px) scale(0.95);transition:opacity 0.3s cubic-bezier(0.16,1,0.3,1),transform 0.3s cubic-bezier(0.16,1,0.3,1);pointer-events:none;}
+  .wa-popup.visible{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
+</style>
+<div id="wa-popup" class="wa-popup">Ai întrebări? Nu te sfii!</div>
+<a id="wa-floater" href="https://wa.me/40784707404?text=Buna%20ziua!%20Sunt%20interesat%20de%20serviciile%20CapitalBoost%20si%20as%20dori%20mai%20multe%20detalii." target="_blank" rel="noopener" class="wa-floater" aria-label="Contactează-ne pe WhatsApp"><svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.468.666 4.876 1.932 6.994L2 30l7.246-1.898A13.944 13.944 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff"/><path d="M22.5 19.5c-.3-.15-1.77-.873-2.043-.972-.273-.099-.472-.149-.67.15-.199.298-.771.972-.945 1.172-.173.199-.347.224-.645.075-.298-.15-1.258-.464-2.396-1.48-.885-.79-1.484-1.764-1.657-2.063-.173-.298-.018-.459.13-.607.133-.133.298-.347.447-.52.149-.174.199-.298.298-.497.1-.199.05-.372-.025-.52-.075-.15-.67-1.613-.917-2.21-.242-.579-.487-.5-.67-.51-.173-.009-.372-.011-.57-.011-.199 0-.52.075-.793.372-.272.298-1.04 1.017-1.04 2.48 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.272-.199-.57-.348z" fill="#25D366"/></svg></a>
+<script>(function(){var p=document.getElementById('wa-popup');if(!p)return;var m=['Ai întrebări? Nu te sfii!','Hai să discutăm despre site-ul tău!','Răspundem în câteva minute!','Ofertă gratuită în 24h — scrie-ne!'];var i=0;function s(){p.textContent=m[i%m.length];i++;p.classList.add('visible');setTimeout(function(){p.classList.remove('visible');},4000);}setTimeout(s,3000);setInterval(s,10000);})()</script>
 </body>
 </html>

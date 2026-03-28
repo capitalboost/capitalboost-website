@@ -385,6 +385,41 @@
     }
     @media (max-width: 768px) {
       .btn-hero { animation: btn-hero-glow 2s ease-out infinite; }
+
+      /* Mobile: swap focus — portofoliu becomes primary, oferta becomes outline */
+      .hero-cta-porto {
+        order: -2;
+        width: 100%;
+        background: #C75B2A;
+        color: #fff;
+        border-color: #C75B2A;
+        box-shadow: 0 1px 3px rgba(199,91,42,0.25), 0 4px 12px rgba(199,91,42,0.2);
+        position: relative;
+        overflow: hidden;
+        animation: btn-hero-glow 2s ease-out infinite;
+        justify-content: center;
+      }
+      .hero-cta-porto::after {
+        content: '';
+        position: absolute;
+        top: 0; bottom: 0; left: 0; width: 40%;
+        background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.28) 50%, transparent 100%);
+        animation: btn-shimmer 2.8s ease-in-out infinite;
+        pointer-events: none;
+      }
+      .hero-cta-porto:hover { background: #B84E20; border-color: #B84E20; }
+      .hero-cta-oferta {
+        order: -1;
+        width: 100%;
+        background: transparent;
+        color: #1B2A4A;
+        border: 1.5px solid #CBD5E1;
+        box-shadow: none;
+        animation: none;
+        justify-content: center;
+      }
+      .hero-cta-oferta::after { display: none; }
+      .hero-cta-oferta:hover { background: #F7F8FA; border-color: #1B2A4A; }
     }
 
     /* Dark CTA section */
@@ -481,15 +516,15 @@
       </p>
 
       <!-- CTAs -->
-      <div class="reveal reveal-delay-3 flex flex-col sm:flex-row sm:flex-wrap gap-3 mb-12">
-        <a href="#contact" class="btn-primary btn-hero w-full sm:w-auto justify-center" style="font-size:1rem; padding: 15px 30px;">
+      <div class="reveal reveal-delay-3 flex flex-wrap gap-3 mb-12">
+        <a href="#contact" class="btn-primary btn-hero hero-cta-oferta" style="font-size:1rem; padding: 15px 30px;">
           Vreau oferta gratuită
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="/portofoliu" class="btn-outline w-full sm:w-auto justify-center" style="font-size:1rem; padding: 14px 26px;">
+        <a href="/portofoliu" class="btn-outline hero-cta-porto" style="font-size:1rem; padding: 14px 26px;">
           Vezi portofoliu
         </a>
-        <a href="#preturi" class="btn-outline w-full sm:w-auto justify-center" style="font-size:1rem; padding: 14px 26px;">
+        <a href="#preturi" class="btn-outline" style="font-size:1rem; padding: 14px 26px;">
           Vezi prețurile
         </a>
       </div>
