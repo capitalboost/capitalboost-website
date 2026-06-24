@@ -1,0 +1,20 @@
+# CapitalBoost România — Agenție Web pentru Firme Mici
+
+> Creăm website-uri profesionale și accesibile pentru firme mici din România.
+> Pachete de la €499, livrare în 5-15 zile, SEO inclus.
+
+## Servicii
+- Website Starter (€499): site de prezentare 5 pagini
+- Website Business (€999): site complet cu blog și SEO
+- Website eCommerce (€1899): magazin online complet
+
+## Pagini importante
+- [Acasă](https://capitalboost.ro/)
+- [Servicii](https://capitalboost.ro/servicii)
+- [Portofoliu](https://capitalboost.ro/portofoliu)
+- [Blog](https://capitalboost.ro/blog)
+- [Contact](https://capitalboost.ro/contact)
+
+## Contact
+- Telefon: +40784707404
+- Website: https://capitalboost.ro
