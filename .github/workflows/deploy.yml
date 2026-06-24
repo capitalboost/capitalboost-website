@@ -1,0 +1,29 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull from GitHub in cPanel
+        run: |
+          curl -s -X POST "${{ secrets.CPANEL_URL }}/execute/VersionControl/update" \
+            -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_TOKEN }}" \
+            -d "repository_root=/home/${{ secrets.CPANEL_USER }}/repositories/capitalboost-website" \
+            | tee /tmp/update_result.json
+          cat /tmp/update_result.json | python3 -c "import sys,json; d=json.load(sys.stdin); exit(0 if d.get('status')==1 else 1)"
+
+      - name: Deploy HEAD Commit in cPanel
+        run: |
+          curl -s -X POST "${{ secrets.CPANEL_URL }}/execute/VersionControlDeployment/create" \
+            -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_TOKEN }}" \
+            -d "repository_root=/home/${{ secrets.CPANEL_USER }}/repositories/capitalboost-website" \
+            | tee /tmp/deploy_result.json
+          cat /tmp/deploy_result.json | python3 -c "import sys,json; d=json.load(sys.stdin); exit(0 if d.get('status')==1 else 1)"
+
+      - name: Done
+        run: echo "Deploy finalizat cu succes!"

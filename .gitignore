@@ -6,3 +6,8 @@ serve.mjs
 temporary screenshots/
 *.docx
 node_modules/
+gen-og.mjs
+fix-blog.mjs
+.claude/
+FULL-AUDIT-REPORT.md
+ACTION-PLAN.md
