@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punct Gastronomic Local „Sus în Deal”</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bark:#3b2a1e;
+    --bark-deep:#241a12;
+    --wood:#8a5a34;
+    --wood-light:#c98a52;
+    --cream:#f6ecd9;
+    --moss:#5c6b45;
+    --moss-deep:#3f4a30;
+  }
+  * { font-family:'Manrope', sans-serif; }
+  h1,h2,h3,.display { font-family:'Fraunces', serif; letter-spacing:-0.02em; }
+  body { background-color:var(--cream); }
+  .wood-grain {
+    background-image:
+      repeating-linear-gradient(100deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 1px, transparent 1px, transparent 6px),
+      linear-gradient(135deg, var(--wood) 0%, #6e4527 100%);
+  }
+  .noise::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events:none;
+  }
+  .card-shadow{ box-shadow: 0 20px 40px -12px rgba(36,26,18,0.35), 0 4px 10px -4px rgba(36,26,18,0.25); }
+  .underline-swipe{ position:relative; }
+  .underline-swipe::after{
+    content:""; position:absolute; left:0; bottom:-6px; height:3px; width:48px;
+    background:var(--wood-light); border-radius:2px;
+  }
+  .fade-up{ animation: fadeUp 0.9s ease both; }
+  @keyframes fadeUp{ from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:translateY(0);} }
+  .delay-1{animation-delay:.15s} .delay-2{animation-delay:.3s} .delay-3{animation-delay:.45s}
+  .btn-primary{
+    background:var(--wood-light); color:var(--bark-deep); transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 10px 20px -8px rgba(201,138,82,0.6); }
+  .nav-link{ position:relative; }
+  .nav-link::after{ content:""; position:absolute; left:0; bottom:-4px; width:0%; height:2px; background:var(--wood-light); transition:width .25s ease; }
+  .nav-link:hover::after{ width:100%; }
+
+  /* Motiv tradițional românesc — bandă recreată în SVG (nu preluată din stock), inspirată din cusătura de iță */
+  .motif-row{
+    height:22px;
+    background-repeat:repeat-x;
+    background-size:40px 22px;
+    background-position:center;
+  }
+  .motif-row--diamond{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='22'%3E%3Cpolygon points='20,2 36,11 20,20 4,11' fill='none' stroke='%23b5342a' stroke-width='2.5'/%3E%3Cpolygon points='20,8 26,11 20,14 14,11' fill='%23241a12'/%3E%3C/svg%3E");
+  }
+  .motif-row--cross{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='14'%3E%3Cpath d='M4 7 L7 4 L10 7 L7 10 Z M14 7 L17 4 L20 7 L17 10 Z' fill='%23b5342a'/%3E%3C/svg%3E");
+    background-size:20px 14px;
+    height:14px;
+  }
+  .motif-band{ background:var(--cream); }
+</style>
+</head>
+<body class="text-[var(--bark-deep)]">
+
+<!-- NAV -->
+<header class="fixed top-0 w-full z-50 bg-[var(--cream)]/90 backdrop-blur-sm border-b border-[var(--wood)]/20">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <span class="display text-xl font-semibold tracking-tight">Sus în Deal</span>
+    <nav class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="#poveste" class="nav-link">Povestea noastră</a>
+      <a href="#specialitati" class="nav-link">Specialități</a>
+      <a href="#ferma" class="nav-link">Mica fermă</a>
+      <a href="#galerie" class="nav-link">Galerie</a>
+      <a href="#contact" class="nav-link">Locație &amp; Contact</a>
+    </nav>
+    <a href="tel:0721963892" class="btn-primary text-sm font-semibold px-5 py-2.5 rounded-full">0721 963 892</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative h-screen min-h-[640px] flex items-end overflow-hidden">
+  <img src="photos/hero.jpg" alt="Punct Gastronomic Local Sus în Deal" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-t from-[var(--bark-deep)] via-[var(--bark-deep)]/40 to-[var(--bark-deep)]/10"></div>
+  <div class="absolute inset-0" style="background:radial-gradient(circle at 20% 20%, rgba(201,138,82,0.25), transparent 55%);"></div>
+  <div class="relative max-w-6xl mx-auto px-6 pb-20 pt-40 w-full text-[var(--cream)]">
+    <p class="fade-up uppercase tracking-[0.25em] text-xs md:text-sm text-[var(--wood-light)] font-semibold mb-4">Punct Gastronomic Local &middot; Mică fermă tradițională</p>
+    <h1 class="fade-up delay-1 display text-5xl md:text-7xl font-semibold leading-[0.95] mb-6">Sus în Deal,<br>unde gustul vine din pământ.</h1>
+    <p class="fade-up delay-2 max-w-xl text-lg md:text-xl text-[var(--cream)]/85 mb-8 leading-relaxed">Mâncare tradițională gătită încet, din ingrediente locale și bio, după rețete transmise din generație în generație — la poalele muntelui, într-o curte cu animale și loc de joacă pentru copii.</p>
+    <div class="fade-up delay-3 flex flex-wrap gap-4">
+      <a href="#contact" class="btn-primary font-semibold px-7 py-3.5 rounded-full">Rezervă o masă</a>
+      <a href="#poveste" class="border border-[var(--cream)]/40 text-[var(--cream)] font-semibold px-7 py-3.5 rounded-full hover:bg-[var(--cream)]/10 transition">Povestea noastră</a>
+    </div>
+  </div>
+</section>
+
+<!-- BANDA MOTIV TRADITIONAL -->
+<div class="motif-band">
+  <div class="motif-row motif-row--cross" style="background-color:var(--wood-light);"></div>
+  <div class="motif-row motif-row--diamond" style="background-color:var(--cream);"></div>
+</div>
+
+<!-- POVESTE -->
+<section id="poveste" class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-14 items-center">
+  <div>
+    <p class="uppercase tracking-[0.2em] text-xs font-semibold text-[var(--moss)] mb-3">Povestea noastră</p>
+    <h2 class="underline-swipe display text-3xl md:text-4xl font-semibold mb-6 pb-3">Rețete de generații, gătite azi</h2>
+    <p class="text-[var(--bark)]/90 leading-relaxed mb-4">La „Sus în Deal” nu găsești un meniu de restaurant obișnuit — găsești masa de acasă, așa cum se gătea în satul românesc de dinainte. Legume din grădină, carne și lactate de la gospodăria proprie și de la producători din vecini, pâine coaptă în fiecare zi.</p>
+    <p class="text-[var(--bark)]/90 leading-relaxed">Totul se pregătește lent, cu răbdare — pentru gustul autentic pe care nu-l grăbești. <span class="italic">[Text de completat împreună cu proprietarul — istoricul familiei, anul înființării, povestea locului.]</span></p>
+  </div>
+  <div class="relative">
+    <div class="wood-grain rounded-2xl p-2 card-shadow">
+      <img src="photos/interior-terasa-lemn.jpg" class="rounded-xl w-full h-[420px] object-cover" alt="Interior terasă din lemn">
+    </div>
+    <div class="absolute -bottom-6 -left-6 bg-[var(--moss)] text-[var(--cream)] rounded-xl px-6 py-4 card-shadow hidden sm:block">
+      <p class="display text-2xl font-semibold">100%</p>
+      <p class="text-xs uppercase tracking-wide">ingrediente locale</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALITATI -->
+<section id="specialitati" class="relative py-24 wood-grain noise overflow-hidden">
+  <div class="relative max-w-6xl mx-auto px-6 text-[var(--cream)]">
+    <p class="uppercase tracking-[0.2em] text-xs font-semibold text-[var(--wood-light)] mb-3 text-center">Ce servim</p>
+    <h2 class="display text-3xl md:text-4xl font-semibold mb-14 text-center">Specialitățile casei</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-[var(--bark-deep)]/40 border border-[var(--cream)]/15 rounded-2xl overflow-hidden backdrop-blur-sm hover:-translate-y-1 transition">
+        <img src="photos/mamaliga-tocanita.jpg" class="w-full h-48 object-cover" alt="Mămăligă cu tocăniță">
+        <div class="p-6">
+          <p class="display text-xl font-semibold mb-2">Mămăligă cu tocăniță</p>
+          <p class="text-[var(--cream)]/75 text-sm leading-relaxed">Carne de la gospodărie, gătită la foc mic, cu mămăligă cu unt. <span class="italic">[preț de completat]</span></p>
+        </div>
+      </div>
+      <div class="bg-[var(--bark-deep)]/40 border border-[var(--cream)]/15 rounded-2xl overflow-hidden backdrop-blur-sm hover:-translate-y-1 transition">
+        <img src="photos/platou-mezeluri-branzeturi.jpg" class="w-full h-48 object-cover" alt="Platou mezeluri și brânzeturi">
+        <div class="p-6">
+          <p class="display text-xl font-semibold mb-2">Platou de casă</p>
+          <p class="text-[var(--cream)]/75 text-sm leading-relaxed">Mezeluri, brânzeturi și legume — de la fermă și de la vecini. <span class="italic">[preț de completat]</span></p>
+        </div>
+      </div>
+      <div class="bg-[var(--bark-deep)]/40 border border-[var(--cream)]/15 rounded-2xl overflow-hidden backdrop-blur-sm hover:-translate-y-1 transition">
+        <img src="photos/ciorba-paine-ceapa.jpg" class="w-full h-48 object-cover" alt="Ciorbă țărănească">
+        <div class="p-6">
+          <p class="display text-xl font-semibold mb-2">Ciorbă țărănească</p>
+          <p class="text-[var(--cream)]/75 text-sm leading-relaxed">Cu pâine de casă și ceapă roșie, cum se face la sat. <span class="italic">[preț de completat]</span></p>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-[var(--cream)]/60 text-sm mt-10 italic">Meniul complet cu prețuri se stabilește împreună cu proprietarul.</p>
+  </div>
+  <div class="motif-row motif-row--diamond mt-14" style="background-color:var(--bark-deep);"></div>
+</section>
+
+<!-- MICA FERMA -->
+<section id="ferma" class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-14 items-center">
+  <div class="order-2 md:order-1 relative">
+    <img src="photos/terasa-oaspeti.jpg" class="rounded-2xl w-full h-[420px] object-cover card-shadow" alt="Familii la masă pe terasă">
+    <p class="absolute bottom-4 left-4 right-4 text-xs text-[var(--cream)]/70 italic bg-[var(--bark-deep)]/60 rounded-lg px-3 py-2">Poză reală de pe terasă — poze cu animalele/locul de joacă urmează de la proprietar.</p>
+  </div>
+  <div class="order-1 md:order-2">
+    <p class="uppercase tracking-[0.2em] text-xs font-semibold text-[var(--moss)] mb-3">Pentru toată familia</p>
+    <h2 class="underline-swipe display text-3xl md:text-4xl font-semibold mb-6 pb-3">Mica fermă cu animale &amp; loc de joacă</h2>
+    <p class="text-[var(--bark)]/90 leading-relaxed mb-4">Copiii pot vedea și hrăni animalele din curte, iar în timp ce cei mari se bucură de masă, cei mici au propriul loc de joacă. O ieșire de familie, nu doar o masă în oraș.</p>
+    <ul class="space-y-3 text-[var(--bark)]/90">
+      <li class="flex gap-3"><span class="text-[var(--wood-light)] font-bold">✓</span> Animale de curte — vaci, capre, păsări</li>
+      <li class="flex gap-3"><span class="text-[var(--wood-light)] font-bold">✓</span> Grădină de joacă pentru copii</li>
+      <li class="flex gap-3"><span class="text-[var(--wood-light)] font-bold">✓</span> Terasă din lemn, în aer liber, cu vedere la munte</li>
+    </ul>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section id="galerie" class="max-w-6xl mx-auto px-6 pb-24">
+  <p class="uppercase tracking-[0.2em] text-xs font-semibold text-[var(--moss)] mb-3 text-center">Atmosfera locului</p>
+  <h2 class="display text-3xl md:text-4xl font-semibold mb-12 text-center">Galerie</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <img src="photos/terasa-oaspeti.jpg" class="rounded-xl h-56 w-full object-cover card-shadow col-span-2 row-span-2 h-full" alt="Terasa cu oaspeți">
+    <img src="photos/vedere-munte-terasa.jpg" class="rounded-xl h-56 w-full object-cover card-shadow" alt="Vedere spre munte">
+    <img src="photos/interior-mese-gol.jpg" class="rounded-xl h-56 w-full object-cover card-shadow" alt="Interior cu mese de lemn">
+    <img src="photos/mic-dejun-traditional.jpg" class="rounded-xl h-56 w-full object-cover card-shadow" alt="Mic dejun tradițional">
+    <img src="photos/masa-festiva.jpg" class="rounded-xl h-56 w-full object-cover card-shadow" alt="Masă festivă">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="wood-grain text-[var(--cream)]">
+  <div class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-14">
+    <div>
+      <p class="uppercase tracking-[0.2em] text-xs font-semibold text-[var(--wood-light)] mb-3">Te așteptăm</p>
+      <h2 class="display text-3xl md:text-4xl font-semibold mb-6">Locație &amp; Program</h2>
+      <div class="space-y-4 text-[var(--cream)]/90">
+        <p class="flex gap-3"><span>📍</span> <span><span class="italic">[Adresă completă — de confirmat cu proprietarul]</span><br>Zonă deal/munte, acces auto</span></p>
+        <p class="flex gap-3"><span>📞</span> <a href="tel:0721963892" class="underline hover:text-[var(--wood-light)]">0721 963 892</a></p>
+        <p class="flex gap-3"><span>🕒</span> <span class="italic">[Program de funcționare — de confirmat]</span></p>
+        <p class="flex gap-3"><span>👨‍👩‍👧</span> Recomandat pentru familii — grupuri mici, max. ~15 oaspeți</p>
+      </div>
+    </div>
+    <div class="rounded-2xl overflow-hidden card-shadow border border-[var(--cream)]/15">
+      <iframe class="w-full h-full min-h-[320px]" loading="lazy"
+        src="https://www.google.com/maps?q=45.4545415,23.4244037&z=15&output=embed">
+      </iframe>
+    </div>
+  </div>
+  <div class="motif-row motif-row--diamond" style="background-color:var(--bark-deep);"></div>
+  <div class="border-t border-[var(--cream)]/15 py-6 text-center text-xs text-[var(--cream)]/60">
+    Demo de prezentare — Punct Gastronomic Local „Sus în Deal” &middot; direcție „Rustic Montan”
+  </div>
+</section>
+
+</body>
+</html>
