@@ -1,2 +1,21 @@
-DirectoryIndex index.html
 Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Force trailing slash on directory URLs
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^ %{REQUEST_URI}/ [R=301,L]
+
+# Redirect old blog article paths (folders had spaces)
+RewriteRule ^blog/A1(%20|\ )Cat(%20|\ )costa(%20|\ )un(%20|\ )site/?$ /blog/cat-costa-un-website-in-romania-2026/ [R=301,L,NC]
+RewriteRule ^blog/A2(%20|\ )website(%20|\ )sau(%20|\ )facebook/?$ /blog/website-sau-pagina-facebook-ce-alegi/ [R=301,L,NC]
+RewriteRule ^blog/A3(%20|\ )ai(%20|\ )nevoie(%20|\ )de(%20|\ )un(%20|\ )website/?$ /blog/5-semne-ca-afacerea-ta-are-nevoie-de-website/ [R=301,L,NC]
+
+# Redirect non-existent 4th article
+RewriteRule ^blog/ce-este-seo-pentru-afaceri-mici/?$ /blog/ [R=301,L]
