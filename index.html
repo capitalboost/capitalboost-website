@@ -276,9 +276,24 @@
       font-size: 0.9rem;
       font-weight: 500;
       text-decoration: none;
+      position: relative;
       transition: color 0.2s;
     }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 1.5px;
+      background: #C75B2A;
+      border-radius: 1px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
     .nav-link:hover { color: #fff; }
+    .nav-link:hover::after { transform: scaleX(1); }
     .nav-link:focus-visible { outline: 2px solid rgba(255,255,255,0.5); outline-offset: 3px; border-radius: 3px; }
 
     /* Section label */
@@ -316,6 +331,25 @@
 
     @media (max-width: 768px) {
       .step-line { display: none; }
+    }
+
+    /* ── Staggered card entrance ── */
+    .reveal-card {
+      opacity: 0;
+      transform: translateY(52px) scale(0.97);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-card.visible { opacity: 1; transform: translateY(0) scale(1); }
+
+    /* ── Hero gradient drift ── */
+    @keyframes hero-drift-1 {
+      0%, 100% { transform: translate(30%, -20%); }
+      50%       { transform: translate(18%, -32%); }
+    }
+    @keyframes hero-drift-2 {
+      0%, 100% { transform: translate(0, 0); }
+      50%       { transform: translate(-7%, 12%); }
     }
 
     /* Nav button pulse */
@@ -460,9 +494,9 @@
      HERO
 ═══════════════════════════════════════════ -->
 <section class="hero-bg grain relative min-h-screen flex items-center pt-24 pb-20 px-6 md:px-12 overflow-hidden">
-  <!-- Decorative circles -->
-  <div class="absolute top-1/4 right-0 w-96 h-96 rounded-full opacity-10" style="background: radial-gradient(circle, #C75B2A 0%, transparent 70%); transform: translate(30%, -20%);"></div>
-  <div class="absolute bottom-0 left-1/4 w-64 h-64 rounded-full opacity-5" style="background: radial-gradient(circle, #fff 0%, transparent 70%);"></div>
+  <!-- Decorative circles — animated drift -->
+  <div class="absolute top-1/4 right-0 w-96 h-96 rounded-full opacity-10" style="background: radial-gradient(circle, #C75B2A 0%, transparent 70%); animation: hero-drift-1 20s ease-in-out infinite;"></div>
+  <div class="absolute bottom-0 left-1/4 w-64 h-64 rounded-full opacity-5" style="background: radial-gradient(circle, #fff 0%, transparent 70%); animation: hero-drift-2 28s ease-in-out infinite;"></div>
 
   <div class="max-w-6xl mx-auto w-full relative z-10">
     <div class="max-w-3xl">
@@ -490,7 +524,7 @@
 
       <!-- CTA buttons -->
       <div class="reveal reveal-delay-3 flex flex-wrap gap-4 mb-14">
-        <a href="#contact" class="btn-orange" style="font-size:1rem; padding: 16px 32px;">
+        <a href="#contact" class="btn-orange" data-magnetic style="font-size:1rem; padding: 16px 32px;">
           Vreau oferta gratuită
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -662,7 +696,7 @@
     <div class="grid md:grid-cols-3 gap-6 items-start">
 
       <!-- Starter -->
-      <div class="price-card reveal">
+      <div class="price-card reveal-card">
         <div class="mb-6">
           <p class="font-mono font-semibold text-navy/50 text-xs uppercase tracking-widest mb-2">Starter</p>
           <div class="flex items-end gap-1 mb-1">
@@ -689,7 +723,7 @@
       </div>
 
       <!-- Business (featured) -->
-      <div class="price-card featured reveal reveal-delay-1" style="margin-top: -8px;">
+      <div class="price-card featured reveal-card" style="margin-top: -8px; transition-delay: 0.15s;">
         <!-- Badge -->
         <div class="absolute -top-4 left-1/2 -translate-x-1/2">
           <span class="font-mono font-semibold text-xs text-white bg-orange px-4 py-1.5 rounded-full shadow-md whitespace-nowrap"
@@ -723,7 +757,7 @@
       </div>
 
       <!-- Growth -->
-      <div class="price-card reveal reveal-delay-2">
+      <div class="price-card reveal-card" style="transition-delay: 0.30s;">
         <div class="mb-6">
           <p class="font-mono font-semibold text-navy/50 text-xs uppercase tracking-widest mb-2">Growth</p>
           <div class="flex items-end gap-1 mb-1">
@@ -819,7 +853,7 @@
         <span class="font-mono font-bold text-orange text-base">€149</span>
       </div>
 
-      <div class="addon-card reveal md:col-span-2">
+      <div class="addon-card reveal">
         <div class="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center flex-shrink-0">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2l1.5 4.5H15l-3.75 2.75L12.5 14 9 11.25 5.5 14l1.25-4.75L3 6.5h4.5z" stroke="#1B2A4A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
@@ -828,6 +862,17 @@
           <p class="font-body text-navy/50 text-xs mt-0.5">Logo, paletă de culori, identitate vizuală de bază</p>
         </div>
         <span class="font-mono font-bold text-orange text-base">€249</span>
+      </div>
+
+      <div class="addon-card reveal reveal-delay-1">
+        <div class="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center flex-shrink-0">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="5" rx="1.5" stroke="#1B2A4A" stroke-width="1.7"/><rect x="2" y="10" width="14" height="5" rx="1.5" stroke="#1B2A4A" stroke-width="1.7"/><circle cx="14" cy="5.5" r="1" fill="#1B2A4A"/><circle cx="14" cy="12.5" r="1" fill="#1B2A4A"/></svg>
+        </div>
+        <div class="flex-1">
+          <p class="font-body font-semibold text-navy text-sm">Hosting & Mentenanță</p>
+          <p class="font-body text-navy/50 text-xs mt-0.5">Hosting rapid, domeniu inclus, backup zilnic, suport tehnic</p>
+        </div>
+        <span class="font-mono font-bold text-orange text-base whitespace-nowrap">€100<span class="text-navy/40 font-body font-normal text-xs">/lună</span></span>
       </div>
     </div>
   </div>
@@ -1048,9 +1093,9 @@
   💬 Ai întrebări? Nu te sfii!
 </div>
 <a id="wa-floater" href="https://wa.me/40784707404?text=Buna%20ziua!%20Sunt%20interesat%20de%20serviciile%20CapitalBoost%20si%20as%20dori%20mai%20multe%20detalii." target="_blank" rel="noopener" class="wa-floater" aria-label="Contactează-ne pe WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.468.666 4.876 1.932 6.994L2 30l7.246-1.898A13.944 13.944 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff"/>
-    <path d="M22.5 19.5c-.3-.15-1.77-.873-2.043-.972-.273-.099-.472-.149-.67.15-.199.298-.771.972-.945 1.172-.173.199-.347.224-.645.075-.298-.15-1.258-.464-2.396-1.48-.885-.79-1.484-1.764-1.657-2.063-.173-.298-.018-.459.13-.607.133-.133.298-.347.447-.52.149-.174.199-.298.298-.497.1-.199.05-.372-.025-.52-.075-.15-.67-1.613-.917-2.21-.242-.579-.487-.5-.67-.51-.173-.009-.372-.011-.57-.011-.199 0-.52.075-.793.372-.272.298-1.04 1.017-1.04 2.48 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.272-.199-.57-.348z" fill="#25D366"/>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M11.99 2C6.476 2 2 6.476 2 11.99c0 1.778.465 3.45 1.284 4.91L2 22l5.24-1.27A9.966 9.966 0 0011.99 22C17.504 22 22 17.524 22 12.01 22 6.496 17.504 2 11.99 2zm0 18.04c-1.653 0-3.194-.468-4.5-1.275l-.323-.19-3.115.816.832-3.035-.208-.336A7.956 7.956 0 014.04 12c0-4.38 3.57-7.95 7.95-7.95S19.96 7.62 19.96 12s-3.57 8.04-7.97 8.04z"/>
   </svg>
 </a>
 
@@ -1163,7 +1208,7 @@
   })();
 
   // Reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
+  const reveals = document.querySelectorAll('.reveal, .reveal-card');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1174,6 +1219,21 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   reveals.forEach(el => observer.observe(el));
+
+  // ── Magnetic CTA buttons ──
+  (function() {
+    document.querySelectorAll('[data-magnetic]').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const r = btn.getBoundingClientRect();
+        const dx = (e.clientX - (r.left + r.width  / 2)) * 0.28;
+        const dy = (e.clientY - (r.top  + r.height / 2)) * 0.38;
+        btn.style.transform = `translate(${dx}px, ${dy}px)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+      });
+    });
+  })();
 
   // Form submit
   async function handleSubmit(e) {
