@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+env:
+  # Trebuie sa fie identica cu "Repository Path" din cPanel > Git Version Control
+  # SI cu calea sursa din .cpanel.yml. Daca schimbi una, schimba-le pe toate trei.
+  REPO_DIR: capitalboost-web
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -13,17 +18,33 @@ jobs:
         run: |
           curl -s -X POST "${{ secrets.CPANEL_URL }}/execute/VersionControl/update" \
             -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_TOKEN }}" \
-            -d "repository_root=/home/${{ secrets.CPANEL_USER }}/repositories/capitalboost-website" \
+            -d "repository_root=/home/${{ secrets.CPANEL_USER }}/repositories/${{ env.REPO_DIR }}" \
             | tee /tmp/update_result.json
-          cat /tmp/update_result.json | python3 -c "import sys,json; d=json.load(sys.stdin); exit(0 if d.get('status')==1 else 1)"
+          echo
+          python3 -c "import sys,json; d=json.load(open('/tmp/update_result.json')); sys.exit(0 if d.get('status')==1 else 1)"
+
+      # Fara pasul asta, un pull care nu avanseaza (istorii divergente, repo
+      # gresit, branch gresit) raporteaza tot succes, iar deploy-ul rescrie la
+      # nesfarsit aceleasi fisiere vechi fara ca nimeni sa observe.
+      - name: Verify cPanel is on the pushed commit
+        run: |
+          HEAD_SHA=$(python3 -c "import json; print(json.load(open('/tmp/update_result.json'))['data']['last_update']['identifier'])")
+          echo "cPanel HEAD : $HEAD_SHA"
+          echo "GitHub SHA  : $GITHUB_SHA"
+          if [ "$HEAD_SHA" != "$GITHUB_SHA" ]; then
+            echo "::error::cPanel a ramas pe $HEAD_SHA, nu a ajuns la $GITHUB_SHA. Pull-ul nu a avansat - verifica daca repo-ul de pe server a divergat de GitHub."
+            exit 1
+          fi
+          echo "Commitul corect este pe server."
 
       - name: Deploy HEAD Commit in cPanel
         run: |
           curl -s -X POST "${{ secrets.CPANEL_URL }}/execute/VersionControlDeployment/create" \
             -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_TOKEN }}" \
-            -d "repository_root=/home/${{ secrets.CPANEL_USER }}/repositories/capitalboost-website" \
+            -d "repository_root=/home/${{ secrets.CPANEL_USER }}/repositories/${{ env.REPO_DIR }}" \
             | tee /tmp/deploy_result.json
-          cat /tmp/deploy_result.json | python3 -c "import sys,json; d=json.load(sys.stdin); exit(0 if d.get('status')==1 else 1)"
+          echo
+          python3 -c "import sys,json; d=json.load(open('/tmp/deploy_result.json')); sys.exit(0 if d.get('status')==1 else 1)"
 
       - name: Done
-        run: echo "Deploy finalizat cu succes!"
+        run: echo "Deploy trimis catre cPanel pentru commitul $GITHUB_SHA"
