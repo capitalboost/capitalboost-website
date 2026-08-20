@@ -19,3 +19,12 @@ RewriteRule ^blog/A3(%20|\ )ai(%20|\ )nevoie(%20|\ )de(%20|\ )un(%20|\ )website/
 
 # Redirect non-existent 4th article
 RewriteRule ^blog/ce-este-seo-pentru-afaceri-mici/?$ /blog/ [R=301,L]
+
+# Scriptul de consimtamant e relevant juridic, deci vizitatorii trebuie sa
+# primeasca mereu versiunea curenta. Fara asta Cloudflare il tine cache-uit
+# pana la 4 ore dupa un deploy, cu textul vechi al bannerului.
+<IfModule mod_headers.c>
+  <Files "cookie-consent.js">
+    Header set Cache-Control "public, max-age=300, must-revalidate"
+  </Files>
+</IfModule>
