@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XPHY4QCKDX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XPHY4QCKDX');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Termeni & Condiții + Politică de Confidențialitate | CapitalBoost România</title>
-  <meta name="description" content="Termeni și Condiții de utilizare și Politică de Confidențialitate GDPR — CapitalBoost SRL, agenție web design România.">
+  <!-- ===========================
+       COOKIE CONSENT + ANALYTICS (Microsoft Clarity)
+       Clarity se incarca DOAR dupa acceptul vizitatorului. Vezi /js/cookie-consent.js
+       =========================== -->
+  <script src="/js/cookie-consent.js" defer></script>
+  <title>Termeni și Condiții · Politică de Confidențialitate | CapitalBoost</title>
+  <meta name="description" content="Termenii și condițiile de utilizare a site-ului capitalboost.ro și politica de confidențialitate GDPR — ce date colectăm prin formulare, în ce scop și ce drepturi ai.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://capitalboost.ro/termeni-si-conditii">
+  <link rel="canonical" href="https://capitalboost.ro/termeni-si-conditii/">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
   <meta name="author" content="CapitalBoost">
 
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
   <meta property="og:site_name" content="CapitalBoost România">
-  <meta property="og:title" content="Termeni & Condiții + Politică GDPR | CapitalBoost">
-  <meta property="og:url" content="https://capitalboost.ro/termeni-si-conditii">
-  <meta property="og:image" content="https://capitalboost.ro/images/og-image.jpg">
+  <meta property="og:title" content="Termeni și Condiții · Politică de Confidențialitate | CapitalBoost">
+  <meta property="og:url" content="https://capitalboost.ro/termeni-si-conditii/">
   <meta property="og:locale" content="ro_RO">
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -54,43 +50,54 @@
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: #fff; color: #1B2A4A; overflow-x: hidden; }
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
-    nav.scrolled {
-      border-color: #DDE1EA;
-      box-shadow: 0 1px 20px rgba(27,42,74,0.06);
-    }
-    .nav-link { color: #475569; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
-    .nav-link:hover { color: #1B2A4A; }
-    .nav-link:focus-visible { outline: 2px solid #C75B2A; outline-offset: 3px; border-radius: 3px; }
-    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: #C75B2A; color: #fff; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 13px 26px; border-radius: 8px; cursor: pointer; border: none; text-decoration: none; transition: background 0.2s, transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s; box-shadow: 0 1px 3px rgba(199,91,42,0.25), 0 4px 12px rgba(199,91,42,0.2); }
-    .btn-primary:hover { background: #A84820; transform: translateY(-1px); box-shadow: 0 2px 6px rgba(199,91,42,0.3), 0 8px 20px rgba(199,91,42,0.2); }
-    .btn-primary:active { transform: translateY(0); }
-    .btn-primary:focus-visible { outline: 3px solid #C75B2A; outline-offset: 3px; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(27,42,74,0.97); backdrop-filter: blur(12px); box-shadow: 0 4px 32px rgba(27,42,74,0.25); }
+    .nav-link { color: rgba(255,255,255,0.75); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+    .nav-link:hover { color: #fff; }
+    .btn-orange { display: inline-flex; align-items: center; gap: 8px; background: #C75B2A; color: #fff; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 14px 28px; border-radius: 6px; cursor: pointer; border: none; box-shadow: 0 4px 16px rgba(199,91,42,0.35); transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s, background 0.2s; text-decoration: none; }
+    .btn-orange:hover { background: #D96E3D; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(199,91,42,0.45); }
+    .btn-orange:focus-visible { outline: 3px solid #C75B2A; outline-offset: 3px; }
     .section-label { display: inline-block; font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #C75B2A; background: rgba(199,91,42,0.08); padding: 6px 14px; border-radius: 100px; margin-bottom: 16px; }
 
-    /* Legal typography */
-    .legal-h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; color: #1B2A4A; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 2px solid #ECEEF2; letter-spacing: -0.02em; }
-    .legal-h2:first-of-type { margin-top: 0; }
-    .legal-h3 { font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1B2A4A; margin: 28px 0 10px; }
-    .legal-p { color: #4B5563; font-size: 0.95rem; line-height: 1.75; margin: 0 0 14px; }
-    .legal-ul { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 8px; }
-    .legal-ul li { color: #4B5563; font-size: 0.95rem; line-height: 1.7; padding-left: 20px; position: relative; }
-    .legal-ul li::before { content: '—'; position: absolute; left: 0; color: #C75B2A; font-weight: 700; }
-    .legal-strong { color: #1B2A4A; font-weight: 600; }
-    .legal-sep { height: 1px; background: linear-gradient(90deg, transparent, #ECEEF2 30%, #C75B2A40 50%, #ECEEF2 70%, transparent); margin: 48px 0; }
+    .legal h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.85rem; font-weight: 700; letter-spacing: -0.025em; color: #1B2A4A; margin: 0 0 6px; scroll-margin-top: 110px; }
+    .legal h3 { font-family: 'DM Sans', sans-serif; font-size: 1.05rem; font-weight: 600; color: #1B2A4A; margin: 32px 0 9px; }
+    .legal h4 { font-family: 'DM Sans', sans-serif; font-size: 0.94rem; font-weight: 600; color: rgba(27,42,74,0.85); margin: 20px 0 7px; }
+    .legal p { font-family: 'DM Sans', sans-serif; font-size: 0.97rem; line-height: 1.75; color: rgba(27,42,74,0.72); margin: 0 0 14px; }
+    .legal ul { margin: 0 0 16px; padding-left: 22px; }
+    .legal li { font-family: 'DM Sans', sans-serif; font-size: 0.97rem; line-height: 1.75; color: rgba(27,42,74,0.72); margin-bottom: 7px; }
+    .legal strong { color: #1B2A4A; font-weight: 600; }
+    .legal a { color: #C75B2A; text-decoration: underline; text-underline-offset: 2px; transition: color 0.2s ease; }
+    .legal a:hover { color: #D96E3D; }
+    .legal a:focus-visible { outline: 3px solid #C75B2A; outline-offset: 3px; border-radius: 2px; }
 
-    /* TOC nav */
-    .toc-link { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: #4B5563; text-decoration: none; padding: 8px 16px; border-left: 2px solid #ECEEF2; transition: border-color 0.2s, color 0.2s; }
-    .toc-link:hover { border-color: #C75B2A; color: #1B2A4A; }
-    .toc-link.active { border-color: #C75B2A; color: #C75B2A; font-weight: 500; }
+    .doc-meta { font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(27,42,74,0.4); margin: 0 0 34px; }
+    .divider { height: 1px; background: linear-gradient(to right, #ECEEF2, rgba(199,91,42,0.35), #ECEEF2); margin: 64px 0 48px; border: 0; }
 
+    /* Cuprinsul e tot un <nav>, deci trebuie scos explicit de sub regula
+       globala `nav { position: fixed }` care tine bara de meniu sus. */
+    .toc { position: static; z-index: auto; backdrop-filter: none; background: #fff; border: 1px solid #ECEEF2; border-radius: 14px; padding: 22px 24px; margin: 0 0 44px; box-shadow: 0 2px 8px rgba(27,42,74,0.04); }
+    .toc p { font-family: 'Space Grotesk', sans-serif; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.11em; text-transform: uppercase; color: rgba(27,42,74,0.45); margin: 0 0 12px; }
+    .toc ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 10px; }
+    .toc li { margin: 0; }
+    .toc a { display: inline-block; font-size: 0.85rem; text-decoration: none; color: #1B2A4A; background: #F7F8FA; border: 1px solid #ECEEF2; padding: 7px 14px; border-radius: 100px; transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), border-color 0.2s ease, color 0.2s ease; }
+    .toc a:hover { color: #C75B2A; border-color: #C75B2A; transform: translateY(-1px); }
+    .toc a:focus-visible { outline: 3px solid #C75B2A; outline-offset: 3px; }
+
+    .table-wrap { overflow-x: auto; margin: 0 0 20px; border: 1px solid #ECEEF2; border-radius: 12px; box-shadow: 0 2px 8px rgba(27,42,74,0.04); }
+    table { width: 100%; min-width: 640px; border-collapse: collapse; background: #fff; }
+    thead th { font-family: 'Space Grotesk', sans-serif; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(27,42,74,0.5); text-align: left; padding: 13px 16px; background: #F7F8FA; border-bottom: 1px solid #ECEEF2; }
+    tbody td { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; line-height: 1.6; color: rgba(27,42,74,0.72); padding: 13px 16px; border-bottom: 1px solid #F2F4F7; vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody td:first-child { color: #1B2A4A; font-weight: 500; }
+
+    .callout { background: #F7F8FA; border: 1px solid #ECEEF2; border-left: 3px solid #C75B2A; border-radius: 12px; padding: 22px 24px; margin: 0 0 22px; }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #1B2A4A; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.9rem; padding: 12px 22px; border: 1px solid #DDE1E8; border-radius: 8px; cursor: pointer; text-decoration: none; transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s ease, border-color 0.2s ease; }
+    .btn-ghost:hover { transform: translateY(-2px); border-color: #C75B2A; box-shadow: 0 6px 20px rgba(27,42,74,0.09); }
+    .btn-ghost:active { transform: translateY(0); }
+    .btn-ghost:focus-visible { outline: 3px solid #C75B2A; outline-offset: 3px; }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn-orange:hover, .btn-ghost:hover, .toc a:hover { transform: none; } }
     #mobile-menu { display: none; }
     #mobile-menu.open { display: block; }
   </style>
@@ -98,314 +105,363 @@
 <body>
 
 <!-- NAV -->
-<nav id="navbar" class="px-5 md:px-10 py-0">
-  <div class="max-w-6xl mx-auto flex items-center justify-between h-16">
-    <a href="/" class="flex items-center gap-2.5 group" aria-label="CapitalBoost acasa">
-      <div class="flex items-end gap-0.5 h-6">
-        <div class="w-1.5 bg-orange rounded-sm" style="height:38%"></div>
-        <div class="w-1.5 bg-orange rounded-sm" style="height:62%"></div>
-        <div class="w-1.5 bg-orange rounded-sm" style="height:82%"></div>
+<nav class="px-6 md:px-12 py-4">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3 group" aria-label="CapitalBoost acasă">
+      <div class="flex items-end gap-0.5 h-7">
+        <div class="w-1.5 bg-orange rounded-sm" style="height:40%"></div>
+        <div class="w-1.5 bg-orange rounded-sm" style="height:65%"></div>
+        <div class="w-1.5 bg-orange rounded-sm" style="height:85%"></div>
         <div class="w-1.5 bg-orange rounded-sm" style="height:100%"></div>
-        <div class="ml-0.5 w-2.5 h-2.5 border-t-2 border-r-2 border-orange" style="transform: rotate(45deg); margin-bottom:1px;"></div>
+        <div class="ml-1 w-3 h-3 border-t-2 border-r-2 border-orange" style="transform: rotate(45deg); margin-bottom:2px;"></div>
       </div>
-      <span class="font-bold text-navy text-[1.15rem] tracking-tight leading-none font-display">Capital<span class="text-orange">Boost</span></span>
+      <span class="font-display font-bold text-white text-xl tracking-tight leading-none">Capital<span class="text-orange">Boost</span></span>
     </a>
-    <div class="hidden md:flex items-center gap-7">
+    <div class="hidden md:flex items-center gap-8">
       <a href="/servicii" class="nav-link">Servicii</a>
       <a href="/portofoliu" class="nav-link">Portofoliu</a>
       <a href="/despre-noi" class="nav-link">Despre noi</a>
       <a href="/blog" class="nav-link">Blog</a>
     </div>
-    <a href="/contact" class="hidden md:inline-flex btn-primary text-sm py-2.5 px-5">
-      Solicita oferta gratuita
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <a href="/contact" class="hidden md:inline-flex btn-orange text-sm py-3 px-5">
+      Solicită oferta gratuită
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
-    <button id="menu-btn" class="md:hidden text-navy p-2 rounded cursor-pointer focus-visible:outline-2 focus-visible:outline-orange" aria-label="Meniu" aria-expanded="false">
-      <svg id="icon-open" width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M3 6h16M3 11h16M3 16h16" stroke="#1B2A4A" stroke-width="1.8" stroke-linecap="round"/></svg>
-      <svg id="icon-close" class="hidden" width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4 4l14 14M18 4L4 18" stroke="#1B2A4A" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <button class="md:hidden text-white p-2 rounded" aria-label="Meniu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
     </button>
   </div>
-  <div id="mobile-menu" class="md:hidden bg-white border-t border-[#DDE1EA]">
-    <div class="px-5 py-5 flex flex-col gap-4">
+  <div id="mobile-menu" class="md:hidden bg-navy-dark border-t border-white/10 mt-3">
+    <div class="px-6 py-5 flex flex-col gap-4">
       <a href="/servicii" class="nav-link text-base">Servicii</a>
       <a href="/portofoliu" class="nav-link text-base">Portofoliu</a>
       <a href="/despre-noi" class="nav-link text-base">Despre noi</a>
       <a href="/blog" class="nav-link text-base">Blog</a>
-      <a href="/contact" class="btn-primary mt-1 justify-center">Solicita oferta gratuita</a>
+      <a href="/contact" class="btn-orange mt-2 justify-center">Solicită oferta gratuită</a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="pt-20 pb-12 px-6 md:px-12" style="background: radial-gradient(ellipse 80% 60% at 70% 40%, #243660 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 20% 80%, rgba(199,91,42,0.15) 0%, transparent 60%), #1B2A4A;">
-  <div class="max-w-3xl mx-auto">
-    <span class="section-label">Legal</span>
-    <h1 class="font-display font-bold text-white text-4xl md:text-5xl leading-tight mt-2 mb-4" style="letter-spacing:-0.03em">
-      Termeni & Condiții<br><span class="text-orange">+ Politică GDPR</span>
-    </h1>
-    <p class="font-body text-white/50 text-sm">
-      Versiune: 1.0 &nbsp;·&nbsp; Data: 22.03.2026 &nbsp;·&nbsp; Operator: <span class="text-white/70">CapitalBoost SRL</span>
-    </p>
-    <!-- Jump links -->
-    <div class="flex flex-wrap gap-3 mt-8">
-      <a href="#politica-gdpr" class="font-body text-sm text-white/70 border border-white/20 px-4 py-2 rounded-full hover:border-orange hover:text-white transition-colors duration-200">
-        → Politică de Confidențialitate
-      </a>
-      <a href="#termeni" class="font-body text-sm text-white/70 border border-white/20 px-4 py-2 rounded-full hover:border-orange hover:text-white transition-colors duration-200">
-        → Termeni și Condiții
-      </a>
-    </div>
+<section class="pt-32 pb-14 px-6 md:px-12" style="background: radial-gradient(ellipse 80% 60% at 70% 40%, #243660 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 20% 80%, rgba(199,91,42,0.15) 0%, transparent 60%), #1B2A4A;">
+  <div class="max-w-3xl mx-auto text-center">
+    <span class="section-label">Informații legale</span>
+    <h1 class="font-display font-bold text-white text-4xl md:text-5xl leading-tight mt-2 mb-4" style="letter-spacing:-0.03em">Termeni, condiții<br>și confidențialitate</h1>
+    <p class="font-body text-white/70 text-lg" style="line-height:1.7">Ce date îți cerem, de ce, cât le ținem și în ce condiții folosești acest site. Fără jargon inutil.</p>
+    <p class="font-mono text-white/35 text-xs mt-6 tracking-wider uppercase">Ultima actualizare: 20 august 2026</p>
   </div>
 </section>
 
-<!-- CONTENT -->
-<main class="py-16 px-6 md:px-12">
-  <div class="max-w-3xl mx-auto">
+<!-- CONȚINUT -->
+<section class="py-16 md:py-20 px-6 md:px-12 bg-cloud">
+  <div class="max-w-3xl mx-auto legal">
 
-    <!-- ══════════════════════════════
-         POLITICĂ DE CONFIDENȚIALITATE
-    ══════════════════════════════ -->
-    <h2 class="legal-h2" id="politica-gdpr">Politică de Confidențialitate (GDPR)</h2>
+    <nav class="toc" aria-label="Cuprins">
+      <p>Cuprins</p>
+      <ul>
+        <li><a href="#politica-gdpr">Politica de confidențialitate</a></li>
+        <li><a href="#ce-date">Ce date colectăm</a></li>
+        <li><a href="#terti">Cui transmitem datele</a></li>
+        <li><a href="#drepturi">Drepturile tale</a></li>
+        <li><a href="#termeni">Termeni și condiții</a></li>
+      </ul>
+    </nav>
 
-    <h3 class="legal-h3">1. Cine suntem</h3>
-    <p class="legal-p">
-      <span class="legal-strong">CapitalBoost SRL</span> (denumită în continuare „Operatorul") este o societate comercială înregistrată în România,
-      înregistrată la Registrul Comerțului sub nr. <span class="legal-strong">J2025096752002</span>, CUI <span class="legal-strong">ROJ2025096752002</span>.
-    </p>
-    <p class="legal-p">
-      Această politică de confidențialitate se aplică site-ului web <span class="legal-strong">www.capitalboost.ro</span> și descrie modul
-      în care colectăm, utilizăm și protejăm datele cu caracter personal ale vizitatorilor și clienților noștri.
-    </p>
+    <!-- ══════════ POLITICA DE CONFIDENȚIALITATE ══════════ -->
+    <h2 id="politica-gdpr">Politica de confidențialitate (GDPR)</h2>
+    <p class="doc-meta">Versiunea 2.0 · în vigoare din 20 august 2026</p>
 
-    <h3 class="legal-h3">2. Ce date colectăm și în ce scop</h3>
-    <p class="legal-p">Colectăm date cu caracter personal exclusiv în măsura necesară pentru furnizarea serviciilor noastre:</p>
-    <p class="legal-p"><span class="legal-strong">a) Prin formularul de contact:</span></p>
-    <ul class="legal-ul">
-      <li>Nume și prenume</li>
-      <li>Adresă de e-mail</li>
-      <li>Număr de telefon</li>
-      <li>Mesajul transmis</li>
-    </ul>
-    <p class="legal-p">
-      <span class="legal-strong">Scopul:</span> răspunderea la solicitările dumneavoastră și transmiterea ofertei de servicii web design.<br>
-      <span class="legal-strong">Temeiul juridic:</span> executarea unui contract sau luarea de măsuri precontractuale (art. 6 alin. 1 lit. b) GDPR).
+    <div class="callout">
+      <p><strong>Pe scurt.</strong> Îți cerem date doar când completezi un formular sau ne scrii.
+      Le folosim ca să-ți răspundem și să-ți facem o ofertă — atât. Nu le vindem, nu le închiriem
+      și nu le folosim pentru publicitate. Le poți cere înapoi sau șterse oricând, la
+      <a href="mailto:contact@capitalboost.ro">contact@capitalboost.ro</a>.</p>
+    </div>
+
+    <h3>1. Cine este operatorul</h3>
+    <p>
+      <strong>CapitalBoost SRL</strong> („CapitalBoost", „noi"), societate înregistrată în România,
+      Registrul Comerțului nr. <strong>J2025096752002</strong>, <strong>CUI 53104509</strong>,
+      este operatorul datelor cu caracter personal colectate prin site-ul
+      <strong>capitalboost.ro</strong> și subpaginile sale.
     </p>
-    <p class="legal-p"><span class="legal-strong">b) Prin instrumente de analiză (Google Analytics, Facebook Pixel):</span></p>
-    <ul class="legal-ul">
-      <li>Date de navigare anonimizate (paginile vizitate, durata sesiunii, sursa traficului)</li>
-      <li>Date agregate despre comportamentul utilizatorilor pe site</li>
-    </ul>
-    <p class="legal-p">
-      <span class="legal-strong">Scopul:</span> îmbunătățirea performanței site-ului și optimizarea experienței utilizatorilor.<br>
-      <span class="legal-strong">Temeiul juridic:</span> interesul legitim al Operatorului (art. 6 alin. 1 lit. f) GDPR) și consimțământul
-      dumneavoastră exprimat prin acceptarea cookie-urilor.
+    <p>
+      Ne poți contacta pentru orice chestiune legată de datele tale la
+      <a href="mailto:contact@capitalboost.ro">contact@capitalboost.ro</a> sau la telefon
+      <a href="tel:+40784707404">0784 707 404</a>.
     </p>
 
-    <h3 class="legal-h3">3. Durata stocării datelor</h3>
-    <ul class="legal-ul">
-      <li>Datele din formularul de contact: maximum 2 ani de la ultima interacțiune.</li>
-      <li>Datele proiectelor și contractelor: maximum 5 ani (în scopuri contabile și juridice, conform legislației române).</li>
-      <li>Datele de analiză (Google Analytics, Facebook Pixel): conform politicilor proprii ale acestor platforme (de regulă 14–26 luni).</li>
-    </ul>
+    <h3 id="ce-date">2. Ce date colectăm și de ce</h3>
 
-    <h3 class="legal-h3">4. Cui transmitem datele</h3>
-    <p class="legal-p">Datele dumneavoastră pot fi transmise către:</p>
-    <ul class="legal-ul">
-      <li>Google LLC – pentru serviciul Google Analytics (prelucrare în UE/SUA, în baza Standard Contractual Clauses).</li>
-      <li>Meta Platforms Inc. – pentru Facebook Pixel (prelucrare în UE/SUA, în baza Standard Contractual Clauses).</li>
-      <li>Furnizori de servicii de hosting și IT care acționează în calitate de persoane împuternicite de operator, cu garanții contractuale adecvate.</li>
-      <li>Autorități publice, atunci când suntem obligați prin lege.</li>
-    </ul>
-    <p class="legal-p">Nu vindem, nu închiriem și nu cesionăm datele dumneavoastră personale unor terți în scopuri comerciale.</p>
+    <h4>a) Formularul de contact (/contact)</h4>
+    <div class="table-wrap">
+      <table>
+        <caption style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Date colectate prin formularul de contact</caption>
+        <thead>
+          <tr><th scope="col">Date</th><th scope="col">Scop</th><th scope="col">Temei juridic</th><th scope="col">Păstrare</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nume și prenume, adresă de e-mail, număr de telefon (opțional), pachetul de interes, mesajul scris de tine</td>
+            <td>Să îți răspundem la solicitare și să îți pregătim o ofertă de website.</td>
+            <td>Măsuri precontractuale la cererea ta — art. 6 alin. (1) lit. b) GDPR.</td>
+            <td>Maximum 24 de luni de la ultima interacțiune.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <h3 class="legal-h3">5. Drepturile dumneavoastră</h3>
-    <p class="legal-p">În temeiul GDPR, beneficiați de următoarele drepturi:</p>
-    <ul class="legal-ul">
-      <li><span class="legal-strong">Dreptul de acces</span> – puteți solicita o copie a datelor pe care le deținem despre dumneavoastră.</li>
-      <li><span class="legal-strong">Dreptul la rectificare</span> – puteți solicita corectarea datelor inexacte.</li>
-      <li><span class="legal-strong">Dreptul la ștergere</span> („dreptul de a fi uitat") – puteți solicita ștergerea datelor, în condițiile prevăzute de lege.</li>
-      <li><span class="legal-strong">Dreptul la restricționarea prelucrării</span> – puteți solicita limitarea modului în care utilizăm datele dumneavoastră.</li>
-      <li><span class="legal-strong">Dreptul la portabilitatea datelor</span> – puteți solicita transmiterea datelor într-un format structurat.</li>
-      <li><span class="legal-strong">Dreptul la opoziție</span> – vă puteți opune prelucrării bazate pe interesul legitim al Operatorului.</li>
-      <li><span class="legal-strong">Dreptul de a retrage consimțământul</span> – în orice moment, fără a afecta legalitatea prelucrărilor anterioare.</li>
-    </ul>
-    <p class="legal-p">
-      Pentru exercitarea acestor drepturi, ne puteți contacta la:
-      <a href="mailto:contact@capitalboost.ro" style="color:#C75B2A;font-weight:600;text-decoration:none;">contact@capitalboost.ro</a>
-    </p>
-    <p class="legal-p">
-      Aveți de asemenea dreptul de a depune o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP),
-      <a href="https://www.dataprotection.ro" target="_blank" rel="noopener" style="color:#C75B2A;font-weight:600;text-decoration:none;">www.dataprotection.ro</a>.
-    </p>
-
-    <h3 class="legal-h3">6. Securitatea datelor</h3>
-    <p class="legal-p">
-      Implementăm măsuri tehnice și organizatorice adecvate pentru protejarea datelor cu caracter personal împotriva accesului
-      neautorizat, pierderii sau distrugerii. Accesul la date este restricționat strict la personalul autorizat.
-    </p>
-
-    <h3 class="legal-h3">7. Modificarea politicii</h3>
-    <p class="legal-p">
-      Ne rezervăm dreptul de a actualiza această politică de confidențialitate în orice moment. Versiunea actualizată va fi publicată
-      pe site cu data intrării în vigoare. Continuarea utilizării site-ului după publicarea modificărilor constituie acceptul dumneavoastră.
-    </p>
-    <p class="legal-p" style="color:#9CA3AF;">Data ultimei actualizări: <span class="legal-strong" style="color:#9CA3AF;">22.03.2026</span></p>
-
-    <div class="legal-sep"></div>
-
-    <!-- ══════════════════════════════
-         TERMENI ȘI CONDIȚII
-    ══════════════════════════════ -->
-    <h2 class="legal-h2" id="termeni">Termeni și Condiții de Utilizare a Site-ului</h2>
-
-    <h3 class="legal-h3">1. Informații despre operator</h3>
-    <p class="legal-p">
-      Prezentul site web este deținut și administrat de <span class="legal-strong">CapitalBoost SRL</span>, societate înregistrată în România,
-      nr. Registrul Comerțului <span class="legal-strong">J2025096752002</span>, CUI <span class="legal-strong">ROJ2025096752002</span>,
-      e-mail: <a href="mailto:contact@capitalboost.ro" style="color:#C75B2A;font-weight:600;text-decoration:none;">contact@capitalboost.ro</a>.
+    <h4>b) Formularul de campanie (/website-gratis)</h4>
+    <div class="table-wrap">
+      <table>
+        <caption style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Date colectate prin formularul de campanie</caption>
+        <thead>
+          <tr><th scope="col">Date</th><th scope="col">Scop</th><th scope="col">Temei juridic</th><th scope="col">Păstrare</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nume și prenume, număr de telefon / WhatsApp, dacă ai deja un site, tipul afacerii, bugetul lunar estimat (opțional)</td>
+            <td>Să te contactăm telefonic sau pe WhatsApp în 24–48 de ore și să evaluăm dacă ne potrivim pentru colaborare.</td>
+            <td>Măsuri precontractuale la cererea ta — art. 6 alin. (1) lit. b) GDPR.</td>
+            <td>Maximum 24 de luni de la ultima interacțiune.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Răspunsurile acestui formular ajung într-un formular Google Forms și în foaia de calcul Google Sheets
+      asociată, la care are acces doar echipa CapitalBoost.
     </p>
 
-    <h3 class="legal-h3">2. Acceptarea termenilor</h3>
-    <p class="legal-p">
-      Prin accesarea și utilizarea acestui site, confirmați că ați citit, înțeles și acceptat în totalitate prezenții Termeni și Condiții.
-      Dacă nu sunteți de acord cu aceștia, vă rugăm să nu utilizați site-ul.
+    <h4>c) Când ne scrii direct</h4>
+    <p>
+      Dacă ne scrii pe e-mail, pe WhatsApp sau ne suni, prelucrăm datele pe care ni le dai tu în acea conversație
+      (nume, număr de telefon, adresă de e-mail, conținutul mesajului), strict ca să îți răspundem.
     </p>
 
-    <h3 class="legal-h3">3. Scopul site-ului</h3>
-    <p class="legal-p">
-      Site-ul are caracter pur informativ și prezintă serviciile oferite de CapitalBoost SRL în domeniul creării de website-uri profesionale
-      pentru firme mici și mijlocii din România. Site-ul nu constituie o ofertă fermă de contractare și nu generează obligații contractuale
-      între vizitator și Operator, cu excepția cazului în care se convine expres altfel.
+    <h4>d) Date colectate automat</h4>
+    <p>
+      Serverul de hosting înregistrează, ca orice server web, date tehnice de acces: adresa IP, tipul browserului,
+      data și ora accesării, paginile solicitate. Sunt folosite pentru funcționarea și securitatea site-ului,
+      în temeiul interesului legitim — art. 6 alin. (1) lit. f) GDPR.
     </p>
 
-    <h3 class="legal-h3">4. Prețuri orientative și oferte</h3>
-    <p class="legal-p">
-      Prețurile afișate pe site au caracter exclusiv orientativ și estimativ. Costul final al oricărui serviciu de web design va fi stabilit
-      după consultarea inițială gratuită și emiterea unei oferte scrise de către echipa noastră.
+    <h4>e) Analiză de trafic — doar cu acordul tău</h4>
+    <p>
+      Folosim <strong>Microsoft Clarity</strong> ca să înțelegem cum este folosit site-ul. Nu se încarcă
+      înainte să apeși „Accept" în bannerul de cookie-uri, iar temeiul este consimțământul tău —
+      art. 6 alin. (1) lit. a) GDPR. Toate detaliile, inclusiv lista completă de cookie-uri, sunt în
+      <a href="/politica-cookies/">politica de cookie-uri</a>.
     </p>
-    <p class="legal-p">
-      Prețul final poate diferi față de estimarea inițială în funcție de: complexitatea proiectului, funcționalitățile solicitate,
-      volumul de conținut și specificațiile tehnice ale clientului. CapitalBoost SRL nu va demara nicio lucrare fără acordul prealabil
-      scris al clientului cu privire la oferta emisă.
+    <p>
+      <button type="button" class="btn-ghost" data-cookie-settings>
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5A6.5 6.5 0 1 0 14.5 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 1.5v3.2h3.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Schimbă setările de cookie-uri
+      </button>
     </p>
 
-    <h3 class="legal-h3">5. Limitarea răspunderii</h3>
-    <p class="legal-p">
-      Informațiile prezentate pe site sunt furnizate cu bună-credință și în scop informativ. CapitalBoost SRL nu garantează că
-      acestea sunt complete, actuale sau lipsite de erori. Utilizatorul accesează și utilizează informațiile de pe site pe propria răspundere.
-    </p>
-    <p class="legal-p">CapitalBoost SRL nu este responsabilă pentru:</p>
-    <ul class="legal-ul">
-      <li>Decizii luate exclusiv pe baza informațiilor de pe site, fără o consultare directă cu echipa noastră.</li>
-      <li>Întreruperile sau erorile tehnice ale site-ului cauzate de factori externi (hosting, conexiune internet, atacuri informatice etc.).</li>
-      <li>Conținutul site-urilor terțe accesate prin link-uri de pe site-ul nostru.</li>
+    <h3>3. Ce NU facem</h3>
+    <ul>
+      <li>Nu vindem, nu închiriem și nu cedăm datele tale unor terți în scopuri comerciale.</li>
+      <li>Nu îți trimitem newsletter sau mesaje comerciale dacă nu ți-ai dat separat acordul pentru asta.</li>
+      <li>Nu folosim datele din formulare pentru publicitate sau remarketing.</li>
+      <li>Nu luăm decizii automate cu efecte juridice asupra ta și nu facem profilare.</li>
     </ul>
 
-    <h3 class="legal-h3">6. Proprietate intelectuală</h3>
-    <p class="legal-p">
-      Tot conținutul acestui site (texte, imagini, logo-uri, grafice, design) este proprietatea CapitalBoost SRL sau este utilizat
-      cu acordul deținătorilor drepturilor respective. Este interzisă reproducerea, copierea sau distribuirea oricărui conținut
-      fără acordul scris prealabil al CapitalBoost SRL.
+    <h3 id="terti">4. Cui transmitem datele</h3>
+    <p>Lucrăm cu următorii furnizori, care acționează ca persoane împuternicite de operator:</p>
+    <div class="table-wrap">
+      <table>
+        <caption style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Persoane împuternicite</caption>
+        <thead>
+          <tr><th scope="col">Furnizor</th><th scope="col">Ce face</th><th scope="col">Ce date atinge</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Google Ireland Ltd. / Google LLC</td><td>Google Forms și Google Sheets — colectarea și stocarea răspunsurilor de la formularul de campanie.</td><td>Nume, telefon, tip afacere, buget estimat.</td></tr>
+          <tr><td>Microsoft Corporation</td><td>Microsoft Clarity — analiză de trafic și înregistrări de sesiune.</td><td>Date de navigare, doar dacă ai acceptat cookie-urile.</td></tr>
+          <tr><td>Furnizorul de hosting</td><td>Găzduirea site-ului și a căsuței de e-mail.</td><td>Date tehnice de acces, e-mailurile pe care ni le trimiți.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Acolo unde acești furnizori prelucrează date în afara Spațiului Economic European, transferul se face
+      în baza clauzelor contractuale standard aprobate de Comisia Europeană.
+    </p>
+    <p>
+      Putem transmite date și autorităților publice, dar numai atunci când suntem obligați prin lege.
     </p>
 
-    <h3 class="legal-h3">7. Cookie-uri</h3>
-    <p class="legal-p">
-      Site-ul utilizează cookie-uri pentru funcționarea corectă și pentru analizarea traficului (Google Analytics, Facebook Pixel).
-      Prin acceptarea cookie-urilor, vă exprimați consimțământul pentru utilizarea acestora conform Politicii de Confidențialitate
-      disponibile pe această pagină.
+    <h3>5. Securitate</h3>
+    <p>
+      Site-ul rulează exclusiv pe HTTPS. Accesul la datele din formulare este limitat la persoanele din
+      echipa CapitalBoost care au nevoie de ele ca să îți răspundă. Aplicăm măsuri tehnice și organizatorice
+      rezonabile împotriva accesului neautorizat, pierderii sau distrugerii datelor.
     </p>
 
-    <h3 class="legal-h3">8. Legea aplicabilă și soluționarea litigiilor</h3>
-    <p class="legal-p">
-      Prezenții Termeni și Condiții sunt guvernați de legislația română în vigoare. Orice litigiu apărut în legătură cu utilizarea
-      site-ului va fi soluționat, în primul rând, pe cale amiabilă. În cazul în care acest lucru nu este posibil, competența aparține
-      instanțelor judecătorești române competente de la sediul Operatorului.
+    <h3 id="drepturi">6. Drepturile tale</h3>
+    <p>Conform GDPR, ai următoarele drepturi:</p>
+    <ul>
+      <li><strong>Acces</strong> — să afli ce date deținem despre tine și să primești o copie.</li>
+      <li><strong>Rectificare</strong> — să corectezi datele greșite sau incomplete.</li>
+      <li><strong>Ștergere</strong> („dreptul de a fi uitat") — să ceri ștergerea datelor, în condițiile legii.</li>
+      <li><strong>Restricționare</strong> — să ceri limitarea prelucrării.</li>
+      <li><strong>Portabilitate</strong> — să primești datele într-un format structurat, citibil automat.</li>
+      <li><strong>Opoziție</strong> — să te opui prelucrărilor bazate pe interesul nostru legitim.</li>
+      <li><strong>Retragerea consimțământului</strong> — oricând, fără să afecteze legalitatea prelucrării de dinainte.</li>
+    </ul>
+    <p>
+      Scrie-ne la <a href="mailto:contact@capitalboost.ro">contact@capitalboost.ro</a> și îți răspundem
+      în cel mult 30 de zile. Cererea este gratuită.
+    </p>
+    <p>
+      Dacă nu ești mulțumit de cum am tratat cererea, ai dreptul să depui plângere la Autoritatea Națională
+      de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP) —
+      <a href="https://www.dataprotection.ro" target="_blank" rel="noopener noreferrer">dataprotection.ro</a>.
     </p>
 
-    <h3 class="legal-h3">9. Modificarea termenilor</h3>
-    <p class="legal-p">
-      CapitalBoost SRL își rezervă dreptul de a modifica în orice moment prezenții Termeni și Condiții. Versiunea actualizată va fi
-      publicată pe site. Continuarea utilizării site-ului după publicarea modificărilor constituie acceptul implicit al noilor termeni.
+    <h3>7. Modificarea politicii</h3>
+    <p>
+      Actualizăm această politică ori de câte ori schimbăm ceva relevant în modul în care prelucrăm datele.
+      Versiunea în vigoare și data ei sunt afișate în capul acestei secțiuni. Dacă modificarea te privește
+      direct și semnificativ, te anunțăm.
     </p>
-    <p class="legal-p" style="color:#9CA3AF;">Data ultimei actualizări: <span class="legal-strong" style="color:#9CA3AF;">22.03.2026</span></p>
+
+    <hr class="divider">
+
+    <!-- ══════════ TERMENI ȘI CONDIȚII ══════════ -->
+    <h2 id="termeni">Termeni și condiții de utilizare</h2>
+    <p class="doc-meta">Versiunea 2.0 · în vigoare din 20 august 2026</p>
+
+    <h3>1. Cine administrează site-ul</h3>
+    <p>
+      Site-ul <strong>capitalboost.ro</strong> este deținut și administrat de <strong>CapitalBoost SRL</strong>,
+      societate înregistrată în România, Registrul Comerțului nr. <strong>J2025096752002</strong>,
+      <strong>CUI 53104509</strong>.
+      Contact: <a href="mailto:contact@capitalboost.ro">contact@capitalboost.ro</a>,
+      <a href="tel:+40784707404">0784 707 404</a>.
+    </p>
+
+    <h3>2. Acceptarea termenilor</h3>
+    <p>
+      Prin accesarea și utilizarea site-ului confirmi că ai citit, ai înțeles și accepți acești termeni.
+      Dacă nu ești de acord cu ei, te rugăm să nu folosești site-ul.
+    </p>
+
+    <h3>3. Ce oferă site-ul</h3>
+    <p>
+      Site-ul prezintă serviciile CapitalBoost în domeniul <strong>creării, găzduirii și mentenanței de website-uri</strong>
+      pentru firme mici și mijlocii. Conținutul are caracter informativ și de prezentare comercială.
+    </p>
+    <p>
+      Informațiile de pe site nu constituie o ofertă fermă de contractare în sensul art. 1188 Cod civil și nu
+      creează obligații contractuale între tine și CapitalBoost. Orice colaborare se naște doar dintr-o
+      ofertă scrisă, acceptată expres de ambele părți.
+    </p>
+
+    <h3>4. Prețuri</h3>
+    <p>
+      Prețurile afișate pe site (de exemplu „de la 499 €") sunt <strong>prețuri de pornire, orientative</strong>,
+      exprimate în euro. Prețul final al unui proiect depinde de numărul de pagini, funcționalitățile cerute,
+      integrările necesare și volumul de conținut, și se stabilește prin ofertă scrisă, după discuția inițială.
+    </p>
+    <p>
+      Ne rezervăm dreptul de a modifica prețurile afișate în orice moment. Modificarea nu afectează ofertele
+      deja acceptate.
+    </p>
+
+    <h3>5. Campanii și oferte promoționale</h3>
+    <p>
+      Ofertele promoționale (de exemplu campania „website gratuit") sunt valabile în limita locurilor sau a
+      perioadei anunțate pe pagina campaniei și se supun condițiilor specifice descrise acolo. Ne rezervăm
+      dreptul de a verifica eligibilitatea și de a refuza o cerere care nu se încadrează în condițiile campaniei.
+    </p>
+
+    <h3>6. Portofoliul și mărcile terților</h3>
+    <p>
+      Proiectele prezentate în pagina de <a href="/portofoliu/">portofoliu</a> sunt lucrări realizate de
+      CapitalBoost. Denumirile comerciale, logourile și capturile de ecran ale acestor proiecte aparțin
+      deținătorilor lor de drept și sunt afișate exclusiv în scop de referință.
+    </p>
+
+    <h3>7. Proprietate intelectuală</h3>
+    <p>
+      Conținutul acestui site — texte, imagini, grafică, logo, cod și design — aparține CapitalBoost SRL sau
+      este folosit cu acordul titularilor de drepturi. Reproducerea, copierea, distribuirea sau folosirea
+      comercială a oricărei părți fără acordul nostru scris este interzisă.
+    </p>
+
+    <h3>8. Limitarea răspunderii</h3>
+    <p>
+      Informațiile de pe site sunt oferite cu bună-credință și în scop informativ. Nu garantăm că sunt
+      complete, actuale sau lipsite de erori. Folosești site-ul pe propria răspundere.
+    </p>
+    <p>CapitalBoost nu răspunde pentru:</p>
+    <ul>
+      <li>Decizii de afaceri luate exclusiv pe baza informațiilor de pe site, fără o discuție directă cu noi.</li>
+      <li>Întreruperi sau erori tehnice cauzate de factori externi — hosting, conexiune la internet, atacuri informatice.</li>
+      <li>Conținutul site-urilor terțe accesate prin linkuri de pe site-ul nostru, inclusiv site-urile din portofoliu.</li>
+    </ul>
+
+    <h3>9. Cookie-uri</h3>
+    <p>
+      Site-ul folosește cookie-uri strict necesare și, cu acordul tău, cookie-uri de analiză.
+      Vezi <a href="/politica-cookies/">politica de cookie-uri</a> pentru lista completă.
+    </p>
+
+    <h3>10. Legea aplicabilă și litigiile</h3>
+    <p>
+      Acești termeni sunt guvernați de legea română. Orice neînțelegere se rezolvă întâi pe cale amiabilă.
+      Dacă nu reușim, competența revine instanțelor române de la sediul CapitalBoost SRL.
+    </p>
+    <p>
+      Dacă ești consumator, poți folosi și platforma europeană de soluționare online a litigiilor,
+      pusă la dispoziție de Comisia Europeană.
+    </p>
+
+    <h3>11. Modificarea termenilor</h3>
+    <p>
+      Putem modifica acești termeni oricând. Versiunea actualizată se publică pe această pagină, cu data
+      intrării în vigoare. Continuarea folosirii site-ului după publicare înseamnă acceptarea noilor termeni.
+    </p>
 
   </div>
-</main>
+</section>
 
-<footer class="bg-navy py-8 px-5 md:px-10 border-t border-white/5">
+<!-- CTA -->
+<section class="py-20 px-6 md:px-12 bg-navy text-center">
+  <div class="max-w-2xl mx-auto">
+    <span class="section-label">Ai o nelămurire?</span>
+    <h2 class="font-display font-bold text-white text-3xl md:text-4xl mt-2 mb-4" style="letter-spacing:-0.03em">Scrie-ne, îți răspundem</h2>
+    <p class="font-body text-white/60 text-lg mb-8" style="line-height:1.7">Orice întrebare despre datele tale sau despre acești termeni — un e-mail e de ajuns.</p>
+    <a href="/contact" class="btn-orange">
+      Mergi la contact
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-navy-dark py-10 px-6 md:px-12">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <div class="flex items-center gap-2.5">
-      <div class="flex items-end gap-0.5 h-5">
-        <div class="w-1 bg-orange rounded-sm" style="height:38%"></div>
-        <div class="w-1 bg-orange rounded-sm" style="height:62%"></div>
-        <div class="w-1 bg-orange rounded-sm" style="height:82%"></div>
+    <div class="flex items-center gap-3">
+      <div class="flex items-end gap-0.5 h-6">
+        <div class="w-1 bg-orange rounded-sm" style="height:40%"></div>
+        <div class="w-1 bg-orange rounded-sm" style="height:65%"></div>
+        <div class="w-1 bg-orange rounded-sm" style="height:85%"></div>
         <div class="w-1 bg-orange rounded-sm" style="height:100%"></div>
-        <div class="ml-0.5 w-2 h-2 border-t-2 border-r-2 border-orange" style="transform: rotate(45deg); margin-bottom:1px;"></div>
+        <div class="ml-1 w-2.5 h-2.5 border-t-2 border-r-2 border-orange" style="transform: rotate(45deg); margin-bottom:1px;"></div>
       </div>
-      <span class="text-white font-semibold text-base font-display">Capital<span class="text-orange">Boost</span></span>
+      <span class="font-display text-white text-lg font-semibold">Capital<span class="text-orange">Boost</span></span>
     </div>
-    <p class="text-slate-500 text-xs text-center font-body">Capital Boost &copy; 2026 &middot; Toate drepturile rezervate</p>
-    <div class="flex gap-5">
-      <a href="/termeni-si-conditii#politica-gdpr" class="text-slate-500 text-xs hover:text-slate-300 transition-colors duration-200">Politica confidentialitate</a>
-      <a href="/termeni-si-conditii#termeni" class="text-slate-500 text-xs hover:text-slate-300 transition-colors duration-200">Termeni si conditii</a>
+    <p class="font-body text-white/30 text-xs text-center">Capital Boost © 2026 · Toate drepturile rezervate</p>
+    <div class="flex flex-wrap justify-center gap-x-5 gap-y-2">
+      <a href="/termeni-si-conditii#politica-gdpr" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Politică confidențialitate</a>
+      <a href="/politica-cookies/" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Cookie-uri</a>
+      <a href="/termeni-si-conditii#termeni" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Termeni și condiții</a>
+      <a href="#" data-cookie-settings class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Setări cookie-uri</a>
     </div>
   </div>
 </footer>
 
-<script>
-  const navbar = document.getElementById('navbar');
-  if (navbar) {
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-  }
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const iconOpen = document.getElementById('icon-open');
-  const iconClose = document.getElementById('icon-close');
-  if (menuBtn) {
-    menuBtn.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.contains('open');
-      mobileMenu.classList.toggle('open', !isOpen);
-      if (iconOpen) iconOpen.classList.toggle('hidden', !isOpen);
-      if (iconClose) iconClose.classList.toggle('hidden', isOpen);
-      menuBtn.setAttribute('aria-expanded', String(!isOpen));
-    });
-  }
-</script>
-
-<!-- COOKIE BANNER -->
-<div id="cookie-banner" style="display:none;position:fixed;bottom:24px;left:24px;right:24px;z-index:1000;max-width:520px;background:#fff;border:1.5px solid #DDE1EA;border-radius:16px;padding:20px 24px;box-shadow:0 8px 40px rgba(27,42,74,0.12),0 2px 8px rgba(27,42,74,0.06);font-family:'DM Sans',sans-serif;">
-  <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;">
-    <div style="width:36px;height:36px;background:#FFF3EE;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="7" stroke="#C75B2A" stroke-width="1.6"/><path d="M9 8v4M9 6h.01" stroke="#C75B2A" stroke-width="1.6" stroke-linecap="round"/></svg>
-    </div>
-    <div>
-      <p style="font-weight:700;color:#1B2A4A;font-size:0.9rem;margin:0 0 4px;">Folosim cookie-uri</p>
-      <p style="color:#64748B;font-size:0.82rem;line-height:1.6;margin:0;">Site-ul nostru folosește cookie-uri esențiale pentru funcționare și cookie-uri analitice pentru a înțelege cum îl folosești. Citește <a href="/termeni-si-conditii#politica-gdpr" style="color:#C75B2A;text-decoration:underline;">Politica de confidențialitate</a>.</p>
-    </div>
-  </div>
-  <div style="display:flex;gap:10px;flex-wrap:wrap;">
-    <button id="cookie-accept" style="flex:1;min-width:120px;background:#C75B2A;color:#fff;font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.85rem;padding:10px 20px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;" onmouseover="this.style.background='#A84820'" onmouseout="this.style.background='#C75B2A'">Accept toate</button>
-    <button id="cookie-reject" style="flex:1;min-width:120px;background:transparent;color:#475569;font-family:'DM Sans',sans-serif;font-weight:500;font-size:0.85rem;padding:10px 20px;border-radius:8px;border:1.5px solid #DDE1EA;cursor:pointer;transition:border-color 0.2s,color 0.2s;" onmouseover="this.style.borderColor='#94A3B8';this.style.color='#1B2A4A'" onmouseout="this.style.borderColor='#DDE1EA';this.style.color='#475569'">Doar esențiale</button>
-  </div>
-</div>
-<script>
-  (function(){var b=document.getElementById('cookie-banner');var c=localStorage.getItem('cb_cookie_consent');if(!c){setTimeout(function(){b.style.display='block';},800);}document.getElementById('cookie-accept').addEventListener('click',function(){localStorage.setItem('cb_cookie_consent','all');b.style.opacity='0';b.style.transition='opacity 0.3s';setTimeout(function(){b.style.display='none';},300);});document.getElementById('cookie-reject').addEventListener('click',function(){localStorage.setItem('cb_cookie_consent','essential');b.style.opacity='0';b.style.transition='opacity 0.3s';setTimeout(function(){b.style.display='none';},300);});})();
-<\/script>
-
-
-<!-- WhatsApp floater -->
-<style>
-  /* WhatsApp floater */
-  .wa-floater{position:fixed;bottom:24px;right:24px;z-index:500;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.35);cursor:pointer;text-decoration:none;transition:transform 0.2s cubic-bezier(0.16,1,0.3,1),box-shadow 0.2s;}
-  .wa-floater:hover{transform:scale(1.08);box-shadow:0 8px 28px rgba(37,211,102,0.45);}
-  .wa-floater:active{transform:scale(0.95);}
-  .wa-popup{position:fixed;bottom:88px;right:24px;z-index:500;background:#fff;border:1px solid #E2E8F0;border-radius:12px 12px 4px 12px;padding:10px 14px;box-shadow:0 4px 20px rgba(15,23,42,0.1);font-family:'DM Sans',sans-serif;font-size:0.82rem;color:#334155;white-space:nowrap;opacity:0;transform:translateY(8px) scale(0.95);transition:opacity 0.3s cubic-bezier(0.16,1,0.3,1),transform 0.3s cubic-bezier(0.16,1,0.3,1);pointer-events:none;}
-  .wa-popup.visible{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
-</style>
-<div id="wa-popup" class="wa-popup">Ai întrebări? Nu te sfii!</div>
-<a id="wa-floater" href="https://wa.me/40784707404?text=Buna%20ziua!%20Sunt%20interesat%20de%20serviciile%20CapitalBoost%20si%20as%20dori%20mai%20multe%20detalii." target="_blank" rel="noopener" class="wa-floater" aria-label="Contactează-ne pe WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 2C6.476 2 2 6.476 2 11.99c0 1.778.465 3.45 1.284 4.91L2 22l5.24-1.27A9.966 9.966 0 0011.99 22C17.504 22 22 17.524 22 12.01 22 6.496 17.504 2 11.99 2zm0 18.04c-1.653 0-3.194-.468-4.5-1.275l-.323-.19-3.115.816.832-3.035-.208-.336A7.956 7.956 0 014.04 12c0-4.38 3.57-7.95 7.95-7.95S19.96 7.62 19.96 12s-3.57 8.04-7.97 8.04z"/></svg></a>
-<script>(function(){var p=document.getElementById('wa-popup');if(!p)return;var m=['Ai întrebări? Nu te sfii!','Hai să discutăm despre site-ul tău!','Răspundem în câteva minute!','Ofertă gratuită în 24h — scrie-ne!'];var i=0;function s(){p.textContent=m[i%m.length];i++;p.classList.add('visible');setTimeout(function(){p.classList.remove('visible');},4000);}setTimeout(s,3000);setInterval(s,10000);})()</script>
 </body>
 </html>

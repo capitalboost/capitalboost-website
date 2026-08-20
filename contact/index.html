@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ===========================
+       COOKIE CONSENT + ANALYTICS (Microsoft Clarity)
+       Clarity se incarca DOAR dupa acceptul vizitatorului. Vezi /js/cookie-consent.js
+       =========================== -->
+  <script src="/js/cookie-consent.js" defer></script>
   <title>Contact & Ofertă Gratuită — CapitalBoost | Răspuns în 24h</title>
   <meta name="description" content="Solicită o ofertă gratuită pentru website-ul tău. Răspundem în mai puțin de 24 de ore. Fără obligații, fără jargon tehnic.">
   <meta name="robots" content="index, follow">
@@ -59,6 +64,13 @@
     .form-input { width: 100%; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: #1B2A4A; background: #F7F8FA; border: 1.5px solid #ECEEF2; border-radius: 8px; padding: 12px 16px; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
     .form-input:focus { border-color: #C75B2A; box-shadow: 0 0 0 3px rgba(199,91,42,0.1); }
     .form-label { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; color: #1B2A4A; margin-bottom: 6px; }
+    .consent-row { display: flex; align-items: flex-start; gap: 11px; }
+    .consent-box { flex: 0 0 auto; width: 18px; height: 18px; margin-top: 2px; accent-color: #C75B2A; cursor: pointer; }
+    .consent-box:focus-visible { outline: 3px solid #C75B2A; outline-offset: 2px; }
+    .consent-label { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; line-height: 1.6; color: rgba(27,42,74,0.6); cursor: pointer; }
+    .consent-label a { color: #C75B2A; text-decoration: underline; text-underline-offset: 2px; transition: color 0.2s ease; }
+    .consent-label a:hover { color: #D96E3D; }
+    .consent-label a:focus-visible { outline: 3px solid #C75B2A; outline-offset: 2px; border-radius: 2px; }
     #mobile-menu { display: none; }
     #mobile-menu.open { display: block; }
   </style>
@@ -144,11 +156,18 @@
           <label for="message" class="form-label">Despre afacerea ta</label>
           <textarea id="message" name="message" rows="4" placeholder="Ce face firma ta, ce fel de website ai nevoie..." class="form-input resize-none"></textarea>
         </div>
+        <div class="consent-row">
+          <input type="checkbox" id="gdpr" name="gdpr" required class="consent-box">
+          <label for="gdpr" class="consent-label">
+            Am citit și sunt de acord cu <a href="/termeni-si-conditii#politica-gdpr">Politica de confidențialitate</a>.
+            Datele tale sunt folosite doar ca să îți răspundem și să îți pregătim oferta. *
+          </label>
+        </div>
         <button type="submit" class="btn-orange w-full justify-center">
           Trimite cererea
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
-        <p class="font-body text-navy/30 text-xs text-center">Nu folosim datele tale în alte scopuri.</p>
+        <p class="font-body text-navy/30 text-xs text-center">Nu trimitem newsletter și nu dăm datele tale nimănui.</p>
       </form>
     </div>
 
@@ -206,9 +225,11 @@
       <span class="font-display text-white text-lg font-semibold">Capital<span class="text-orange">Boost</span></span>
     </div>
     <p class="font-body text-white/30 text-xs text-center">Capital Boost © 2026 · Toate drepturile rezervate</p>
-    <div class="flex gap-5">
-      <a href="#" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Politică confidențialitate</a>
-      <a href="#" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Termeni și condiții</a>
+    <div class="flex flex-wrap justify-center gap-x-5 gap-y-2">
+      <a href="/termeni-si-conditii#politica-gdpr" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Politică confidențialitate</a>
+      <a href="/politica-cookies/" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Cookie-uri</a>
+      <a href="/termeni-si-conditii#termeni" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Termeni și condiții</a>
+      <a href="#" data-cookie-settings class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Setări cookie-uri</a>
     </div>
   </div>
 </footer>
