@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ===========================
+       COOKIE CONSENT + ANALYTICS (Microsoft Clarity)
+       Clarity se incarca DOAR dupa acceptul vizitatorului. Vezi /js/cookie-consent.js
+       =========================== -->
+  <script src="/js/cookie-consent.js" defer></script>
   <title>Portofoliu Web Design — Proiecte Realizate | CapitalBoost</title>
-  <meta name="description" content="Vezi website-urile create de CapitalBoost pentru clienți din România. Saloane, cabinete medicale, firme de curățenie și mai mult.">
+  <meta name="description" content="Vezi website-urile create de CapitalBoost pentru clienți din România: service auto, vulcanizare, magazin de materiale de construcții și landing page educațional.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://capitalboost.ro/portofoliu/">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -56,8 +61,18 @@
     .btn-orange:hover { background: #D96E3D; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(199,91,42,0.45); }
     .btn-orange:focus-visible { outline: 3px solid #C75B2A; outline-offset: 3px; }
     .section-label { display: inline-block; font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #C75B2A; background: rgba(199,91,42,0.08); padding: 6px 14px; border-radius: 100px; margin-bottom: 16px; }
-    .project-card { background: #fff; border: 1px solid #ECEEF2; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(27,42,74,0.05), 0 8px 32px rgba(27,42,74,0.03); transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s; }
+    .project-card { display: block; text-decoration: none; color: inherit; background: #fff; border: 1px solid #ECEEF2; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(27,42,74,0.05), 0 8px 32px rgba(27,42,74,0.03); transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s; }
     .project-card:hover { transform: translateY(-6px); box-shadow: 0 4px 16px rgba(27,42,74,0.1), 0 16px 48px rgba(27,42,74,0.08); }
+    .project-card:focus-visible { outline: 3px solid #C75B2A; outline-offset: 4px; }
+    .project-card:active { transform: translateY(-2px); }
+    .project-shot { transition: transform 0.5s cubic-bezier(0.16,1,0.3,1); }
+    .project-card:hover .project-shot { transform: scale(1.04); }
+    .visit-pill { position: absolute; right: 14px; bottom: 14px; display: inline-flex; align-items: center; gap: 6px; background: #C75B2A; color: #fff; font-family: 'Space Grotesk', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 14px; border-radius: 100px; box-shadow: 0 4px 16px rgba(199,91,42,0.4); opacity: 0; transform: translateY(8px); transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16,1,0.3,1); }
+    .project-card:hover .visit-pill, .project-card:focus-visible .visit-pill { opacity: 1; transform: translateY(0); }
+    @media (hover: none) { .visit-pill { opacity: 1; transform: none; } }
+    .card-domain { display: inline-flex; align-items: center; gap: 5px; margin-top: 14px; font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; color: rgba(27,42,74,0.45); }
+    .project-card:hover .card-domain { color: #C75B2A; }
+    @media (prefers-reduced-motion: reduce) { .project-card, .project-shot, .visit-pill { transition: none !important; } .project-card:hover { transform: none; } .project-card:hover .project-shot { transform: none; } }
     #mobile-menu { display: none; }
     #mobile-menu.open { display: block; }
   </style>
@@ -107,47 +122,79 @@
   <div class="max-w-6xl mx-auto text-center">
     <span class="section-label">Portofoliu</span>
     <h1 class="font-display font-bold text-white text-4xl md:text-5xl leading-tight mt-2 mb-4" style="letter-spacing:-0.03em">Website-uri reale<br>pentru afaceri reale</h1>
-    <p class="font-body text-white/70 text-lg max-w-2xl mx-auto" style="line-height:1.7">Proiecte livrate pentru clienți din toată România — saloane, cabinete medicale, firme de servicii și mai mult.</p>
+    <p class="font-body text-white/70 text-lg max-w-2xl mx-auto" style="line-height:1.7">Proiecte livrate pentru clienți din toată România — service auto, vulcanizare, materiale de construcții și proiecte educaționale.</p>
   </div>
 </section>
 
 <!-- PROIECTE -->
 <section class="py-20 px-6 md:px-12 bg-cloud">
   <div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="project-card">
-        <div class="relative overflow-hidden" style="padding-top:60%">
-          <img src="https://placehold.co/600x360/1B2A4A/C75B2A?text=Mugurel+Bricolaj" alt="Website servicii bricolaj Mugurel" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(27,42,74,0.7), transparent)"></div>
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <a href="https://autologicexpert.ro/" target="_blank" rel="noopener noreferrer" class="project-card">
+        <div class="relative overflow-hidden" style="padding-top:62.5%">
+          <img src="/images/portofoliu/autologic-expert.jpg" width="1200" height="750" loading="lazy" decoding="async" alt="Homepage-ul website-ului AutoLogic Expert — service auto autorizat Mercedes-Benz din București" class="project-shot absolute inset-0 w-full h-full object-cover object-top">
+          <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(27,42,74,0.55) 0%, rgba(27,42,74,0.05) 45%, transparent 100%)"></div>
+          <span class="visit-pill">Vezi site-ul
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 8.5L8.5 3.5M8.5 3.5H4.5M8.5 3.5V7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
         </div>
         <div class="p-6">
-          <span class="font-mono text-xs text-orange font-semibold tracking-wider uppercase">Servicii Bricolaj · Starter</span>
-          <h3 class="font-display font-semibold text-navy text-xl mt-1 mb-2">Mugurel Bricolaj</h3>
-          <p class="font-body text-navy/60 text-sm" style="line-height:1.6">Website de prezentare pentru servicii de bricolaj — montaj, reparații și amenajări interioare.</p>
+          <span class="font-mono text-xs text-orange font-semibold tracking-wider uppercase">Service auto · București</span>
+          <h3 class="font-display font-semibold text-navy text-xl mt-1 mb-2">AutoLogic Expert</h3>
+          <p class="font-body text-navy/60 text-sm" style="line-height:1.6">Website de prezentare pentru un service auto autorizat Mercedes-Benz — pagini dedicate pe servicii, tarife, blog și contact direct pe WhatsApp.</p>
+          <span class="card-domain">autologicexpert.ro</span>
         </div>
-      </div>
-      <div class="project-card">
-        <div class="relative overflow-hidden" style="padding-top:60%">
-          <img src="https://placehold.co/600x360/243660/ffffff?text=Proiect+2" alt="Proiect website cabinet medical" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(27,42,74,0.7), transparent)"></div>
-        </div>
-        <div class="p-6">
-          <span class="font-mono text-xs text-orange font-semibold tracking-wider uppercase">Cabinet medical</span>
-          <h3 class="font-display font-semibold text-navy text-xl mt-1 mb-2">Nume client</h3>
-          <p class="font-body text-navy/60 text-sm" style="line-height:1.6">Descriere scurtă a proiectului și rezultatelor obținute.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="relative overflow-hidden" style="padding-top:60%">
-          <img src="https://placehold.co/600x360/A84820/ffffff?text=Proiect+3" alt="Proiect website firma curatenie" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(27,42,74,0.7), transparent)"></div>
+      </a>
+
+      <a href="https://mugurel-bricolaj.ro/" target="_blank" rel="noopener noreferrer" class="project-card">
+        <div class="relative overflow-hidden" style="padding-top:62.5%">
+          <img src="/images/portofoliu/mugurel.jpg" width="1200" height="750" loading="lazy" decoding="async" alt="Homepage-ul website-ului Mugurel — magazin de materiale de construcții din Dăbuleni" class="project-shot absolute inset-0 w-full h-full object-cover object-top">
+          <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(27,42,74,0.55) 0%, rgba(27,42,74,0.05) 45%, transparent 100%)"></div>
+          <span class="visit-pill">Vezi site-ul
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 8.5L8.5 3.5M8.5 3.5H4.5M8.5 3.5V7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
         </div>
         <div class="p-6">
-          <span class="font-mono text-xs text-orange font-semibold tracking-wider uppercase">Firmă curățenie</span>
-          <h3 class="font-display font-semibold text-navy text-xl mt-1 mb-2">Nume client</h3>
-          <p class="font-body text-navy/60 text-sm" style="line-height:1.6">Descriere scurtă a proiectului și rezultatelor obținute.</p>
+          <span class="font-mono text-xs text-orange font-semibold tracking-wider uppercase">Materiale construcții · Dăbuleni</span>
+          <h3 class="font-display font-semibold text-navy text-xl mt-1 mb-2">Mugurel</h3>
+          <p class="font-body text-navy/60 text-sm" style="line-height:1.6">Catalog online cu peste 3.000 de produse — căutare, nouă categorii de produse și comandă rapidă pe WhatsApp.</p>
+          <span class="card-domain">mugurel-bricolaj.ro</span>
         </div>
-      </div>
+      </a>
+
+      <a href="https://vulcanizareieftinsirapid.ro/" target="_blank" rel="noopener noreferrer" class="project-card">
+        <div class="relative overflow-hidden" style="padding-top:62.5%">
+          <img src="/images/portofoliu/vulcapro.jpg" width="1200" height="750" loading="lazy" decoding="async" alt="Homepage-ul website-ului VulcaPro — vulcanizare din București" class="project-shot absolute inset-0 w-full h-full object-cover object-top">
+          <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(27,42,74,0.55) 0%, rgba(27,42,74,0.05) 45%, transparent 100%)"></div>
+          <span class="visit-pill">Vezi site-ul
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 8.5L8.5 3.5M8.5 3.5H4.5M8.5 3.5V7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+        <div class="p-6">
+          <span class="font-mono text-xs text-orange font-semibold tracking-wider uppercase">Vulcanizare · București</span>
+          <h3 class="font-display font-semibold text-navy text-xl mt-1 mb-2">VulcaPro</h3>
+          <p class="font-body text-navy/60 text-sm" style="line-height:1.6">Website pentru o vulcanizare, cu calculator de preț online, tarife transparente și programare direct din pagină.</p>
+          <span class="card-domain">vulcanizareieftinsirapid.ro</span>
+        </div>
+      </a>
+
+      <a href="https://summer-camp.younichoice.com/" target="_blank" rel="noopener noreferrer" class="project-card">
+        <div class="relative overflow-hidden" style="padding-top:62.5%">
+          <img src="/images/portofoliu/youni-summer-camp.jpg" width="1200" height="750" loading="lazy" decoding="async" alt="Homepage-ul landing page-ului Youni Summer Camp — tabără educațională pentru elevi" class="project-shot absolute inset-0 w-full h-full object-cover object-top">
+          <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(27,42,74,0.55) 0%, rgba(27,42,74,0.05) 45%, transparent 100%)"></div>
+          <span class="visit-pill">Vezi site-ul
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 8.5L8.5 3.5M8.5 3.5H4.5M8.5 3.5V7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+        <div class="p-6">
+          <span class="font-mono text-xs text-orange font-semibold tracking-wider uppercase">Tabără educațională · Landing page</span>
+          <h3 class="font-display font-semibold text-navy text-xl mt-1 mb-2">Youni Summer Camp</h3>
+          <p class="font-body text-navy/60 text-sm" style="line-height:1.6">Landing page de înscrieri pentru ediția a 2-a a taberei — program pe zile, facilități, preț și formular de înscriere.</p>
+          <span class="card-domain">summer-camp.younichoice.com</span>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -179,9 +226,11 @@
       <span class="font-display text-white text-lg font-semibold">Capital<span class="text-orange">Boost</span></span>
     </div>
     <p class="font-body text-white/30 text-xs text-center">Capital Boost © 2026 · Toate drepturile rezervate</p>
-    <div class="flex gap-5">
-      <a href="#" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Politică confidențialitate</a>
-      <a href="#" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Termeni și condiții</a>
+    <div class="flex flex-wrap justify-center gap-x-5 gap-y-2">
+      <a href="/termeni-si-conditii#politica-gdpr" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Politică confidențialitate</a>
+      <a href="/politica-cookies/" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Cookie-uri</a>
+      <a href="/termeni-si-conditii#termeni" class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Termeni și condiții</a>
+      <a href="#" data-cookie-settings class="font-body text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Setări cookie-uri</a>
     </div>
   </div>
 </footer>
