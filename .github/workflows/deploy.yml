@@ -14,28 +14,36 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Pull from GitHub in cPanel
+      # cPanel raspunde la /update inainte ca pull-ul sa se reflecte in HEAD,
+      # asa ca reincercam pana cand serverul chiar are commitul impins. Fara
+      # asta, deploy-ul care urmeaza copiaza linistit fisierele vechi si
+      # raporteaza succes - exact cum s-a intamplat pe 20 august 2026.
+      - name: Pull from GitHub in cPanel (si asteapta commitul)
         run: |
-          curl -s -X POST "${{ secrets.CPANEL_URL }}/execute/VersionControl/update" \
-            -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_TOKEN }}" \
-            -d "repository_root=/home/${{ secrets.CPANEL_USER }}/repositories/${{ env.REPO_DIR }}" \
-            | tee /tmp/update_result.json
-          echo
-          python3 -c "import sys,json; d=json.load(open('/tmp/update_result.json')); sys.exit(0 if d.get('status')==1 else 1)"
+          ROOT="/home/${{ secrets.CPANEL_USER }}/repositories/${{ env.REPO_DIR }}"
+          for i in $(seq 1 12); do
+            curl -s -X POST "${{ secrets.CPANEL_URL }}/execute/VersionControl/update" \
+              -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_TOKEN }}" \
+              -d "repository_root=$ROOT" > /tmp/update_result.json
 
-      # Fara pasul asta, un pull care nu avanseaza (istorii divergente, repo
-      # gresit, branch gresit) raporteaza tot succes, iar deploy-ul rescrie la
-      # nesfarsit aceleasi fisiere vechi fara ca nimeni sa observe.
-      - name: Verify cPanel is on the pushed commit
-        run: |
-          HEAD_SHA=$(python3 -c "import json; print(json.load(open('/tmp/update_result.json'))['data']['last_update']['identifier'])")
-          echo "cPanel HEAD : $HEAD_SHA"
-          echo "GitHub SHA  : $GITHUB_SHA"
-          if [ "$HEAD_SHA" != "$GITHUB_SHA" ]; then
-            echo "::error::cPanel a ramas pe $HEAD_SHA, nu a ajuns la $GITHUB_SHA. Pull-ul nu a avansat - verifica daca repo-ul de pe server a divergat de GitHub."
-            exit 1
-          fi
-          echo "Commitul corect este pe server."
+            if ! python3 -c "import sys,json; d=json.load(open('/tmp/update_result.json')); sys.exit(0 if d.get('status')==1 else 1)"; then
+              echo "Apelul catre cPanel a esuat:"
+              cat /tmp/update_result.json
+              exit 1
+            fi
+
+            HEAD_SHA=$(python3 -c "import json; print(json.load(open('/tmp/update_result.json'))['data']['last_update']['identifier'])")
+            echo "incercarea $i -> cPanel HEAD: $HEAD_SHA"
+
+            if [ "$HEAD_SHA" = "$GITHUB_SHA" ]; then
+              echo "cPanel este pe commitul corect."
+              exit 0
+            fi
+            sleep 5
+          done
+
+          echo "::error::cPanel a ramas pe $HEAD_SHA dupa 12 incercari, nu a ajuns la $GITHUB_SHA. Verifica daca repo-ul de pe server a divergat de GitHub sau daca REPO_DIR ($REPO_DIR) este calea corecta."
+          exit 1
 
       - name: Deploy HEAD Commit in cPanel
         run: |
