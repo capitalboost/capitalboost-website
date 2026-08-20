@@ -1,4 +1,7 @@
 ---
+# Calea sursa trebuie sa fie identica cu "Repository Path" din
+# cPanel > Git Version Control. Daca repo-ul e reclonat in alta parte,
+# actualizeaza si linia de mai jos, altfel deploy-ul copiaza din gol.
 deployment:
   tasks:
-    - /bin/cp -r /home/capitalboost/repositories/capitalboost-website/. /home/capitalboost/public_html/
+    - /bin/cp -r /home/capitalboost/repositories/capitalboost-web/. /home/capitalboost/public_html/
