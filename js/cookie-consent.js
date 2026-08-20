@@ -127,10 +127,11 @@
 
     banner.innerHTML =
       '<span class="cb-cc__label">Cookie-uri</span>' +
-      '<h2 class="cb-cc__title" id="cb-cc-title">Ne dai voie s&#259; m&#259;sur&#259;m?</h2>' +
-      '<p class="cb-cc__text" id="cb-cc-text">Folosim Microsoft Clarity ca s&#259; vedem cum e folosit site-ul ' +
-      '&#537;i s&#259;-l &#238;mbun&#259;t&#259;&#539;im. Nimic nu se &#238;ncarc&#259; f&#259;r&#259; acordul t&#259;u, iar ' +
-      'refuzul nu afecteaz&#259; cu nimic site-ul. <a href="' + POLICY_URL + '">Detalii &#238;n politica de cookie-uri</a>.</p>' +
+      '<h2 class="cb-cc__title" id="cb-cc-title">Ne aju&#539;i s&#259; &#238;mbun&#259;t&#259;&#539;im site-ul?</h2>' +
+      '<p class="cb-cc__text" id="cb-cc-text">Cu un &#8222;Accept&#8221; vedem ce func&#539;ioneaz&#259; ' +
+      '&#537;i ce nu pe site, ca s&#259;-l facem mai bun pentru tine. Nu folosim datele pentru reclame ' +
+      '&#537;i nu le d&#259;m nim&#259;nui &#8212; iar dac&#259; refuzi, nu se schimb&#259; nimic. ' +
+      '<a href="' + POLICY_URL + '">Detalii &#238;n politica de cookie-uri</a>.</p>' +
       '<div class="cb-cc__actions">' +
       '<button type="button" class="cb-cc__btn cb-cc__btn--reject" data-cb-action="reject">Refuz</button>' +
       '<button type="button" class="cb-cc__btn cb-cc__btn--accept" data-cb-action="accept">Accept</button>' +
