@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===========================
+       COOKIE CONSENT + ANALYTICS (Microsoft Clarity)
+       Clarity se incarca DOAR dupa acceptul vizitatorului. Vezi /js/cookie-consent.js
+       =========================== -->
+  <script src="/js/cookie-consent.js" defer></script>
+  <meta name="description" content="RoInstalații — concept de magazin online pentru încălzire, climatizare și apă caldă. Demo local navigabil.">
+  <meta name="theme-color" content="#cc0000">
+  <title>RoInstalații — Confortul casei tale</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Sari la conținut</a>
+  <div class="utility">
+    <div class="wrap utility-inner"><span>Magazin online de instalații <span class="demo-label">Demo local</span></span><a href="tel:+40376448030">Comenzi telefonice <strong>0376 44 80 30</strong></a></div>
+  </div>
+  <header class="site-header wrap">
+    <a class="brand" href="#/" aria-label="RoInstalații — pagina principală"><img src="assets/logo.svg" alt="RoInstalații" width="250" height="45"></a>
+    <form class="search" id="site-search" role="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+      <input id="search-query" name="q" type="search" placeholder="Caută un produs, o marcă sau un cod…" aria-label="Caută în catalogul demo-ului" autocomplete="off">
+      <button type="submit" aria-label="Caută produse"><span class="search-button-label">Caută</span><span aria-hidden="true">↗</span></button>
+    </form>
+    <a class="header-contact" href="#/contact">Ai nevoie de ajutor?</a>
+    <a class="cart-link" id="cart-link" href="#/cos" aria-label="Coșul tău, 0 produse"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h2l2.5 12h11L21 7H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span class="cart-label">Coșul tău</span><span id="cart-count" class="cart-count">0</span></a>
+  </header>
+  <nav class="main-nav" aria-label="Navigare principală">
+    <div class="wrap nav-inner">
+      <a class="nav-all" href="#/catalog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Toate produsele</a>
+      <div class="desktop-categories"><a href="#/catalog?categorie=centrale">Centrale termice</a><a href="#/catalog?categorie=pompe">Pompe de căldură</a><a href="#/catalog?categorie=aer">Aer condiționat</a><a href="#/catalog?categorie=hibride" aria-label="Boilere cu pompă de căldură">Boilere cu pompă</a><a href="#/catalog?categorie=electrice">Boilere electrice</a><a href="#/catalog?categorie=termostate">Termostate</a></div>
+      <details class="mobile-categories" id="mobile-menu"><summary>Categorii <span aria-hidden="true">⌄</span></summary><div><a href="#/catalog?categorie=centrale">Centrale termice</a><a href="#/catalog?categorie=pompe">Pompe de căldură</a><a href="#/catalog?categorie=aer">Aer condiționat</a><a href="#/catalog?categorie=hibride">Boilere cu pompă de căldură</a><a href="#/catalog?categorie=electrice">Boilere electrice</a><a href="#/catalog?categorie=termostate">Termostate</a><a href="#/contact">Contact și despre magazin</a></div></details>
+    </div>
+  </nav>
+  <main id="main-content" tabindex="-1"><noscript><div class="wrap empty-state"><h1>Activează JavaScript pentru demo.</h1><p>Catalogul, coșul și navigarea sunt disponibile cu JavaScript activat în browser.</p></div></noscript></main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand"><a href="#/" aria-label="RoInstalații — pagina principală"><img src="assets/logo.svg" alt="RoInstalații" width="240" height="44"></a><p>Încălzire, climatizare și apă caldă.<br>Echipamente pentru confortul casei tale.</p></div>
+      <div><h2>Explorează</h2><a href="#/catalog">Toate produsele</a><a href="#/catalog?categorie=centrale">Centrale termice</a><a href="#/catalog?categorie=pompe">Pompe de căldură</a><a href="#/contact">Despre magazin și contact</a></div>
+      <div><h2>Contact</h2><a href="tel:+40376448030">0376 44 80 30</a><a href="mailto:comenzi@roinstalatii.ro">comenzi@roinstalatii.ro</a><p>Str. Oxigenului nr. 4A<br>Cernica, Ilfov, 077035</p></div>
+      <div class="footer-demo"><h2>Concept de prezentare</h2><p>Selecție de <span data-product-count>24</span> produse. Prețurile și disponibilitatea sunt preluate din sursă la 18.10.2026. Comenzile sunt simulate.</p><button class="text-button" type="button" data-action="reset-demo">Resetează demo-ul <span aria-hidden="true">↺</span></button></div>
+    </div>
+    <div class="wrap footer-bottom"><span>RoInstalatii.Ro · S.C. CREATIV TOOLS S.R.L. · CUI 26199218</span><a href="https://www.roinstalatii.ro/" target="_blank" rel="noopener noreferrer">Site-ul magazinului <span aria-hidden="true">↗</span></a></div>
+  </footer>
+  <div class="toast" id="toast" hidden><span id="toast-message" role="status" aria-live="polite"></span><a href="#/cos" id="toast-link">Vezi coșul <span aria-hidden="true">↗</span></a><button id="toast-close" type="button" aria-label="Închide notificarea">×</button></div>
+  <script src="catalog-data.js"></script>
+  <script src="store-core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
