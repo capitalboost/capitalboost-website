@@ -8,31 +8,44 @@
        Clarity se incarca DOAR dupa acceptul vizitatorului. Vezi /js/cookie-consent.js
        =========================== -->
   <script src="/js/cookie-consent.js" defer></script>
-  <title>Cât costă un website în România în 2026 — Ghid complet de prețuri | CapitalBoost</title>
-  <meta name="description" content="Afli exact cât costă un website în România în 2026: de la site-uri simple la magazine online. Prețuri reale, fără surprize. Ghid complet cu toate opțiunile.">
-  <meta name="keywords" content="cat costa un website in Romania, pret website Romania 2026, cost creare site web, website ieftin Romania, pret web design Romania">
+  <title>Cât costă un site în România în 2026? Bugetul complet | CapitalBoost</title>
+  <meta name="description" content="Cât costă un site în România în 2026? Vezi ce intră în ofertă, ce costuri apar după lansare și cum compari corect două propuneri.">
+  <meta name="keywords" content="cat costa un site, pret site prezentare, cost site web Romania, cat costa un site de prezentare, pret creare site, costuri site primul an, mentenanta site pret">
   <meta name="author" content="CapitalBoost">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://capitalboost.ro/blog/cat-costa-un-website-in-romania-2026/">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Cât costă un website în România în 2026 — Ghid complet">
-  <meta property="og:description" content="Afli exact cât costă un website în România în 2026. Prețuri reale pentru toate tipurile de site-uri.">
+  <meta property="og:title" content="Cât costă un site în România în 2026? Bugetul complet pentru primul an">
+  <meta property="og:description" content="Prețul de realizare este doar o parte din cost. Vezi ce intră în ofertă, ce apare după lansare și cum compari două propuneri.">
   <meta property="og:url" content="https://capitalboost.ro/blog/cat-costa-un-website-in-romania-2026/">
   <meta property="og:site_name" content="CapitalBoost România">
   <meta property="og:locale" content="ro_RO">
   <meta property="article:published_time" content="2026-03-28">
+  <meta property="article:modified_time" content="2026-10-18">
   <meta property="article:author" content="CapitalBoost">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Cât costă un website în România în 2026 — Ghid complet de prețuri",
-    "description": "Afli exact cât costă un website în România în 2026: de la site-uri simple la magazine online.",
+    "headline": "Cât costă un site în România în 2026? Bugetul complet pentru primul an",
+    "description": "Prețul de realizare este doar o parte din costul unui site. Domeniul, găzduirea, mentenanța, conținutul și licențele schimbă bugetul primului an.",
     "author": { "@type": "Organization", "name": "CapitalBoost", "url": "https://capitalboost.ro" },
     "publisher": { "@type": "Organization", "name": "CapitalBoost", "url": "https://capitalboost.ro" },
     "datePublished": "2026-03-28",
-    "dateModified": "2026-03-28",
+    "dateModified": "2026-10-18",
+    "inLanguage": "ro-RO",
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://capitalboost.ro/blog/cat-costa-un-website-in-romania-2026/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://capitalboost.ro/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://capitalboost.ro/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Cât costă un site în România în 2026" }
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,6 +73,7 @@
     .nav-logo span { color: var(--orange-light); }
     .nav-cta { background: var(--orange); color: #fff; padding: 0.5rem 1.2rem; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; }
     .nav-cta:hover { background: var(--orange-light); }
+    .nav-cta:focus-visible { outline: 3px solid var(--orange-light); outline-offset: 3px; }
 
     /* HERO */
     .hero { background: linear-gradient(135deg, var(--navy) 0%, #2a4a8a 100%); color: #fff; padding: 4rem 2rem 3rem; text-align: center; }
@@ -81,32 +95,54 @@
     .content li { margin-bottom: 0.5rem; font-size: 1.02rem; }
     .content strong { color: var(--navy); font-weight: 600; }
     .content a { color: var(--orange); text-decoration: underline; }
+    .content a:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; border-radius: 3px; }
 
     /* CALLOUT */
     .callout { background: #EEF4FF; border-left: 4px solid var(--navy); border-radius: 0 8px 8px 0; padding: 1.2rem 1.4rem; margin: 1.8rem 0; }
     .callout-orange { background: #FFF4EE; border-left-color: var(--orange); }
     .callout p { margin: 0; font-size: 0.97rem; }
+    .callout p + p { margin-top: 0.7rem; }
     .callout strong { display: block; margin-bottom: 0.3rem; }
 
     /* PRICE TABLE */
-    .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.95rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 8px rgba(0,0,0,0.07); }
+    /* Pe ecrane mici tabelele se deruleaza lateral; degradeul din dreapta e
+       singurul indiciu ca mai exista continut dincolo de marginea ecranului. */
+    .table-scroll { overflow-x: auto; margin: 1.5rem 0 2rem; -webkit-overflow-scrolling: touch;
+      background: linear-gradient(to right, var(--bg) 30%, rgba(250,250,248,0)) left / 28px 100% no-repeat,
+                  linear-gradient(to left, var(--bg) 30%, rgba(250,250,248,0)) right / 28px 100% no-repeat,
+                  radial-gradient(farthest-side at 0 50%, rgba(27,58,107,.16), transparent) left / 12px 100% no-repeat,
+                  radial-gradient(farthest-side at 100% 50%, rgba(27,58,107,.16), transparent) right / 12px 100% no-repeat;
+      background-attachment: local, local, scroll, scroll; border-radius: 10px; }
+    .price-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 8px rgba(0,0,0,0.07); }
+    .table-scroll .price-table { margin: 0; min-width: 480px; }
     .price-table th { background: var(--navy); color: #fff; padding: 0.8rem 1rem; text-align: left; font-weight: 600; font-size: 0.9rem; }
-    .price-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--white); }
+    .price-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--white); vertical-align: top; }
     .price-table tr:last-child td { border-bottom: none; }
     .price-table tr:nth-child(even) td { background: var(--bg2); }
+    /* Coloanele de completat au nevoie de o granita vizibila intre ele, altfel
+       liniile celor doua oferte se citesc ca una singura. */
+    .price-table td.fill { width: 26%; border-left: 1px solid var(--border); background-image: linear-gradient(transparent 60%, var(--border) 60%, var(--border) 61%, transparent 61%); background-size: 100% 1.6rem; }
+    .price-table.compare th:nth-child(2), .price-table.compare th:nth-child(3) { border-left: 1px solid rgba(255,255,255,0.18); }
     .badge { display: inline-block; background: var(--orange); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px; margin-left: 0.4rem; vertical-align: middle; }
+
+    /* CHECKLIST */
+    .check-list { list-style: none; margin: 1rem 0 1.5rem; padding: 0; counter-reset: q; }
+    .check-list li { position: relative; padding-left: 2.4rem; margin-bottom: 0.65rem; counter-increment: q; }
+    .check-list li::before { content: counter(q); position: absolute; left: 0; top: 0.15rem; width: 1.65rem; height: 1.65rem; border-radius: 50%; background: var(--navy); color: #fff; font-size: 0.78rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
 
     /* CTA BOX */
     .cta-box { background: var(--navy); color: #fff; border-radius: 12px; padding: 2.5rem; text-align: center; margin: 3rem 0; }
-    .cta-box h3 { font-family: 'Source Serif 4', serif; font-size: 1.5rem; margin-bottom: 0.8rem; }
+    .cta-box h3 { font-family: 'Source Serif 4', serif; font-size: 1.5rem; margin-bottom: 0.8rem; color: #fff; }
     .cta-box p { color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; font-size: 0.95rem; }
     .cta-btn { display: inline-block; background: var(--orange); color: #fff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: background 0.2s; }
     .cta-btn:hover { background: var(--orange-light); }
+    .cta-btn:focus-visible { outline: 3px solid var(--orange-light); outline-offset: 3px; }
 
     /* FAQ */
     .faq-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 0.8rem; overflow: hidden; }
-    .faq-q { padding: 1rem 1.2rem; font-weight: 600; font-size: 0.97rem; background: var(--bg2); cursor: pointer; }
+    .faq-q { padding: 1rem 1.2rem; font-weight: 600; font-size: 0.97rem; background: var(--bg2); }
     .faq-a { padding: 1rem 1.2rem; font-size: 0.95rem; border-top: 1px solid var(--border); }
+    .faq-a p { margin: 0; font-size: 0.95rem; }
 
     /* FOOTER */
     footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem; font-size: 0.85rem; }
@@ -116,6 +152,7 @@
       .hero { padding: 3rem 1.2rem 2rem; }
       .price-table { font-size: 0.85rem; }
       .price-table th, .price-table td { padding: 0.6rem 0.7rem; }
+      .cta-box { padding: 1.8rem 1.3rem; }
     }
   </style>
 </head>
@@ -123,138 +160,306 @@
 
 <nav>
   <a href="https://capitalboost.ro" class="nav-logo">Capital<span>Boost</span></a>
-  <a href="https://capitalboost.ro/#contact" class="nav-cta">Ofertă gratuită</a>
+  <a href="/contact/" class="nav-cta">Ofertă gratuită</a>
 </nav>
 
 <div class="hero">
   <div class="hero-tag">Ghid prețuri 2026</div>
-  <h1>Cât costă un website în România în 2026 — Ghid complet de prețuri</h1>
+  <h1>Cât costă un site în România în 2026? Bugetul complet pentru primul an</h1>
   <div class="hero-meta">
     <span>CapitalBoost</span>
-    <span>28 martie 2026</span>
-    <span>8 minute de citit</span>
+    <span>Actualizat: 18 octombrie 2026</span>
+    <span>12 minute de citit</span>
   </div>
 </div>
 
 <div class="container">
   <article class="content">
 
-    <p>Una dintre primele întrebări pe care și-o pune orice antreprenor român este: <strong>„Cât costă un website?"</strong> Răspunsul corect — dar frustrant — este că depinde. Depinde de tipul site-ului, de cine îl face și de ce funcționalități ai nevoie.</p>
+    <p>Dacă vrei un răspuns scurt, un site de prezentare pentru o firmă poate costa de la câteva sute de euro la câteva mii de euro, iar proiectele cu funcții speciale pot depăși ușor aceste valori. Dar suma de pe prima ofertă nu este întotdeauna bugetul real.</p>
 
-    <p>În acest ghid îți prezentăm prețuri reale din piața românească în 2026, fără cifre umflate și fără surprize. La final vei știi exact la ce să te aștepți și cum să iei cea mai bună decizie pentru afacerea ta.</p>
+    <p>Pentru o comparație utilă trebuie să aduni cel puțin cinci componente: realizarea site-ului, domeniul, găzduirea, licențele și serviciile externe, plus mentenanța și modificările după lansare.</p>
+
+    <p>În rezultatele românești actuale pentru această căutare apar, de exemplu, intervale de aproximativ <strong>500–2.500 EUR</strong> pentru un site de prezentare, dar alte oferte coboară sau urcă semnificativ față de această zonă. Aceste intervale provin din pagini comerciale și ghiduri publicate de furnizori, nu dintr-un studiu statistic oficial al pieței din România.</p>
 
     <div class="callout">
-      <p><strong>Concluzie rapidă (dacă ești grăbit):</strong> Un website profesional pentru o firmă mică costă între €300 și €1.500 în România, în funcție de complexitate. Un magazin online serios pornește de la €1.500.</p>
+      <p><strong>Întrebarea mai bună</strong></p>
+      <p>Nu „cât costă site-ul?", ci „cât mă costă site-ul complet în primul an și ce primesc concret pentru banii respectivi?"</p>
     </div>
 
-    <h2>De ce variază atât de mult prețurile?</h2>
-    <p>Înainte să intrăm în cifre, e important să înțelegi ce influențează prețul unui website:</p>
+    <h2>De ce două site-uri cu cinci pagini pot avea prețuri complet diferite</h2>
+
+    <p>Numărul de pagini este doar unul dintre factorii care influențează oferta. Un site cu cinci pagini poate însemna:</p>
+
     <ul>
-      <li><strong>Numărul de pagini</strong> — un site de prezentare cu 3 pagini costă mult mai puțin decât unul cu 15 pagini detaliate</li>
-      <li><strong>Design custom vs. template</strong> — un design făcut de la zero pentru brandul tău costă mai mult, dar arată unic</li>
-      <li><strong>Funcționalități speciale</strong> — rezervări online, magazine, calculatoare de prețuri, integrări CRM</li>
-      <li><strong>SEO inclus sau nu</strong> — optimizarea pentru Google poate fi inclusă în preț sau poate fi un serviciu separat</li>
-      <li><strong>Cine face site-ul</strong> — freelancer, agenție mică sau agenție mare au prețuri și calitate diferite</li>
+      <li>instalarea unei teme și introducerea textelor furnizate de client;</li>
+      <li>structură și design adaptate brandului;</li>
+      <li>redactarea conținutului;</li>
+      <li>fotografii și procesarea imaginilor;</li>
+      <li>formulare și automatizări;</li>
+      <li>configurare analytics;</li>
+      <li>optimizare tehnică;</li>
+      <li>pagini pregătite pentru căutare;</li>
+      <li>conectarea unor servicii externe;</li>
+      <li>testare pe mai multe dispozitive;</li>
+      <li>instruire după predare.</li>
     </ul>
 
-    <h2>Tipuri de website-uri și prețurile lor în 2026</h2>
+    <p>Pe hârtie, ambele proiecte pot fi descrise drept „site de prezentare cu 5 pagini". Ca volum de muncă și ca rezultat livrat, pot fi însă proiecte complet diferite. Acesta este și motivul pentru care comparația exclusiv după preț poate fi înșelătoare.</p>
 
-    <h3>1. Site de prezentare simplu (1–3 pagini)</h3>
-    <p>Ideal pentru: meșteri, saloane, cabinete, restaurante, firme mici cu servicii clare.</p>
-    <table class="price-table">
-      <tr><th>Tip furnizor</th><th>Preț estimat</th><th>Timp livrare</th></tr>
-      <tr><td>Freelancer începător</td><td>€150 – €300</td><td>2–4 săptămâni</td></tr>
-      <tr><td>Freelancer cu experiență</td><td>€300 – €600</td><td>1–2 săptămâni</td></tr>
-      <tr><td>Agenție mică <span class="badge">Recomandat</span></td><td>€400 – €800</td><td>5–10 zile</td></tr>
-      <tr><td>Agenție mare</td><td>€800 – €2.000</td><td>3–6 săptămâni</td></tr>
-    </table>
+    <h2>Ce intră, de fapt, în prețul de creare a unui site</h2>
 
-    <h3>2. Site de prezentare complet (5–8 pagini)</h3>
-    <p>Ideal pentru: firme de servicii, consultanți, clinici, agenții. Include pagini de servicii detaliate, despre noi, portofoliu, blog și contact.</p>
-    <table class="price-table">
-      <tr><th>Tip furnizor</th><th>Preț estimat</th><th>Timp livrare</th></tr>
-      <tr><td>Freelancer cu experiență</td><td>€500 – €900</td><td>2–3 săptămâni</td></tr>
-      <tr><td>Agenție mică <span class="badge">Recomandat</span></td><td>€800 – €1.200</td><td>10–15 zile</td></tr>
-      <tr><td>Agenție mare</td><td>€1.500 – €4.000</td><td>4–8 săptămâni</td></tr>
-    </table>
+    <p>Înainte să compari două oferte, verifică dacă includ aceleași lucruri.</p>
 
-    <h3>3. Magazin online (e-commerce)</h3>
-    <p>Ideal pentru: produse fizice, haine, cosmetice, produse artizanale, echipamente.</p>
-    <table class="price-table">
-      <tr><th>Tip furnizor</th><th>Preț estimat</th><th>Timp livrare</th></tr>
-      <tr><td>Shopify / WooCommerce simplu</td><td>€800 – €1.500</td><td>2–3 săptămâni</td></tr>
-      <tr><td>Agenție mică <span class="badge">Recomandat</span></td><td>€1.500 – €2.500</td><td>15–20 zile</td></tr>
-      <tr><td>Soluție custom completă</td><td>€3.000 – €10.000+</td><td>2–4 luni</td></tr>
-    </table>
+    <div class="table-scroll">
+      <table class="price-table">
+        <thead>
+          <tr><th>Componentă</th><th>Întrebarea pe care merită să o pui</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Structură</td><td>Cine stabilește paginile și ordinea informației?</td></tr>
+          <tr><td>Design</td><td>Este șablon adaptat sau design realizat pentru proiect?</td></tr>
+          <tr><td>Texte</td><td>Le furnizezi tu sau sunt redactate în proiect?</td></tr>
+          <tr><td>Imagini</td><td>Sunt furnizate, cumpărate, optimizate sau create?</td></tr>
+          <tr><td>Versiune mobilă</td><td>Este verificată separat pe telefon și tabletă?</td></tr>
+          <tr><td>Formulare</td><td>Cine le configurează și cine testează mesajele?</td></tr>
+          <tr><td>SEO tehnic de bază</td><td>Ce se configurează concret?</td></tr>
+          <tr><td>Analytics</td><td>Este instalată și verificată măsurarea?</td></tr>
+          <tr><td>Administrare</td><td>Poți modifica singur textele și imaginile?</td></tr>
+          <tr><td>Testare</td><td>Ce se testează înainte de publicare?</td></tr>
+          <tr><td>Predare</td><td>Ce conturi și accesuri primești?</td></tr>
+          <tr><td>Suport</td><td>Există o perioadă inclusă după lansare?</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-    <h2>Costuri ascunse la care să fii atent</h2>
-    <p>Mulți antreprenori sunt surprinși de costuri pe care nu le-au anticipat. Iată ce trebuie să verifici înainte să semnezi cu orice furnizor:</p>
-    <ul>
-      <li><strong>Domeniu (.ro sau .com)</strong> — €10–25/an, cumpărat separat de obicei</li>
-      <li><strong>Hosting</strong> — €50–200/an în funcție de performanță</li>
-      <li><strong>Certificat SSL</strong> — gratuit la hosturi bune, dar unii îl taxează €50–100/an</li>
-      <li><strong>Mentenanță lunară</strong> — actualizări, backup, securitate: €30–100/lună</li>
-      <li><strong>Modificări după livrare</strong> — unele agenții taxează orice schimbare post-lansare</li>
-      <li><strong>Fotografii profesionale</strong> — €150–400 sesiune foto dacă nu ai imagini proprii</li>
-    </ul>
+    <p>Dacă o ofertă de 500 EUR include primele cinci elemente, iar una de 1.000 EUR include toate cele 12, nu compari două prețuri pentru același produs. Compari două proiecte diferite.</p>
+
+    <h2>Costul nr. 1: dezvoltarea inițială</h2>
+
+    <p>Aceasta este suma pe care majoritatea oamenilor o numesc simplu „prețul site-ului". Ea poate include designul, implementarea, introducerea conținutului, configurarea și testarea.</p>
+
+    <p>Prețul crește de obicei atunci când apar cerințe precum mai multe tipuri de pagini, formulare complexe, rezervări, conturi de utilizator, mai multe limbi, importuri de produse, filtre, plăți online sau conectări cu CRM, facturare și alte sisteme.</p>
+
+    <p>Un magazin online, de exemplu, nu ar trebui bugetat ca un simplu site de prezentare doar pentru că ambele sunt construite în WordPress. Fluxul de comandă, produsele, variantele, plățile, livrarea și administrarea introduc alte cerințe.</p>
+
+    <h2>Costul nr. 2: domeniul</h2>
+
+    <p>Domeniul este adresa site-ului, de exemplu <em>firma.ro</em>. Pentru un domeniu .ro, <a href="https://www.rotld.ro/" target="_blank" rel="noopener noreferrer">RoTLD</a> afișează în prezent un tarif direct de <strong>12 EUR + TVA pe an</strong> atât pentru înregistrare, cât și pentru reînnoire. Plata pentru clienții din România se face în lei la cursul BNR din data facturii.</p>
 
     <div class="callout callout-orange">
-      <p><strong>Sfat practic:</strong> Cere întotdeauna un preț all-inclusive care să includă domeniu, hosting pentru primul an și cel puțin 30 de zile de suport post-lansare. Evită furnizorii care nu menționează aceste costuri în ofertă.</p>
+      <p><strong>Important</strong></p>
+      <p>Dacă domeniul este cumpărat printr-un registrar, prețul final practicat de acel furnizor poate fi diferit. Mai important decât economia de câțiva euro este să știi <strong>în numele cui este înregistrat domeniul</strong> și cine controlează contul.</p>
     </div>
 
-    <h2>Merită să faci site-ul singur cu un builder?</h2>
-    <p>Platforme precum Wix, Squarespace sau WordPress.com îți permit să creezi un site fără să știi programare, pentru €15–30/lună. Sună tentant, dar există câteva dezavantaje importante:</p>
-    <ul>
-      <li>Arată generic și nu reflectă brandul tău</li>
-      <li>SEO limitat față de un site profesional</li>
-      <li>Viteza de încărcare e mai mică (afectează Google)</li>
-      <li>Nu ai control complet asupra datelor și codului</li>
-      <li>Dacă platforma se închide, pierzi tot</li>
-    </ul>
-    <p>Concluzia: pentru un hobby sau un proiect personal, merge. Pentru o afacere serioasă, un website profesional este o investiție care se amortizează rapid.</p>
+    <h2>Costul nr. 3: găzduirea</h2>
 
-    <h2>Cum să alegi cel mai bun raport calitate-preț</h2>
-    <p>Nu cel mai ieftin e neapărat cel mai bun. Iată criteriile cu adevărat importante:</p>
-    <ol>
-      <li><strong>Cere portofoliu</strong> — vezi site-uri reale create de ei, nu mockup-uri</li>
-      <li><strong>Verifică viteza site-urilor din portofoliu</strong> — testează cu PageSpeed Insights</li>
-      <li><strong>Întreabă despre SEO</strong> — e inclus sau e serviciu separat?</li>
-      <li><strong>Clarifică ce se întâmplă după livrare</strong> — suport, garanție, modificări</li>
-      <li><strong>Verifică recenziile</strong> — Google Reviews, Facebook, testimoniale verificabile</li>
-    </ol>
+    <p>Hostingul sau găzduirea este serviciul care ține site-ul online. Prețurile variază în funcție de resurse, trafic, spațiu, backup, suport, administrarea serverului și tehnologia site-ului.</p>
 
-    <h2>Concluzie — cât să bugetezi în 2026?</h2>
-    <p>Dacă ești la început și ai o firmă mică, bugetează <strong>€400–€800</strong> pentru un site de prezentare profesional. Acesta e intervalul în care obții calitate bună fără să plătești suprapret.</p>
-    <p>Dacă afacerea ta e mai complexă sau vrei magazin online, <strong>€1.500–€2.500</strong> este investiția corectă pentru un rezultat serios.</p>
-    <p>Important: un website bun aduce clienți. Dacă obții un singur client în plus pe lună, investiția se amortizează în câteva luni.</p>
+    <p>Pentru WordPress, nu este suficient să alegi automat cel mai ieftin abonament. <a href="https://wordpress.org/about/requirements/" target="_blank" rel="noopener noreferrer">WordPress recomandă în prezent</a> găzduire cu PHP 8.3 sau mai nou, MariaDB 10.11 sau MySQL 8.0 ori mai nou și suport HTTPS.</p>
+
+    <p>Pentru antreprenor, concluzia practică este mai simplă: întreabă ce hosting primești, cine îl administrează și ce se întâmplă dacă trebuie mutat site-ul.</p>
+
+    <h2>Costul nr. 4: mentenanța</h2>
+
+    <p>Aici apar multe dintre neclaritățile după lansare. <strong>Mentenanța nu trebuie confundată cu găzduirea.</strong></p>
+
+    <p>În funcție de contract, un serviciu de mentenanță poate include actualizări, monitorizare, backup, verificări după actualizare, intervenții la erori, suport și un anumit număr de modificări minore.</p>
+
+    <p>Dar poate să nu includă pagini noi, funcționalități noi, redesign, integrarea unor servicii, SEO, reclame sau redactarea conținutului.</p>
+
+    <p>Întrebarea bună pentru ofertă este: <em>„Ce faceți efectiv în fiecare lună și ce se facturează separat?"</em></p>
+
+    <h2>Costul nr. 5: licențe și servicii externe</h2>
+
+    <p>În funcție de site, pot apărea și costuri pentru pluginuri premium, teme, servicii de e-mail, formulare, rezervări, procesare imagini, instrumente de securitate, CRM, traduceri, servicii de cookie consent sau platforme de newsletter.</p>
+
+    <p>Nu toate site-urile au nevoie de toate acestea. Problema apare atunci când ele sunt necesare, dar nu sunt menționate în oferta inițială. Întreabă explicit: <em>„Există licențe sau servicii pe care va trebui să le reînnoiesc anual?"</em></p>
+
+    <h2>Costul nr. 6: conținutul</h2>
+
+    <p>Un site fără conținut nu este terminat. Trebuie stabilit înainte cine furnizează textele, fotografiile, logo-ul și materialele de brand, informațiile despre servicii, produsele, prețurile, documentele și datele de contact.</p>
+
+    <p>Dacă oferta spune „5 pagini", dar textele trebuie scrise integral de furnizor, volumul de lucru este diferit față de situația în care primește conținutul final și doar îl introduce. La un magazin cu sute de produse, această diferență poate deveni și mai importantă.</p>
+
+    <h2>Costul nr. 7: modificările după lansare</h2>
+
+    <p>Aproape niciun site nu rămâne neschimbat. Pot apărea servicii noi, angajați noi, prețuri actualizate, pagini noi, fotografii, promoții, formulare, modificări legislative sau integrări.</p>
+
+    <p>De aceea merită să afli de la început cum sunt tarifate lucrările care nu fac parte din mentenanța curentă. O ofertă aparent mai ieftină poate deveni mai costisitoare dacă aproape orice modificare este facturată separat.</p>
+
+    <h2>Cât costă un site CapitalBoost</h2>
+
+    <p>La verificarea din 18 octombrie 2026, acestea sunt prețurile afișate pentru <a href="/servicii/">serviciile de creare site</a> din oferta noastră:</p>
+
+    <div class="table-scroll">
+      <table class="price-table">
+        <thead>
+          <tr><th>Pachet</th><th>Preț afișat</th><th>Potrivit pentru</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="/servicii/website-starter/">Starter</a></td><td>499 EUR</td><td>Prezență online simplă, câteva pagini</td></tr>
+          <tr><td><a href="/servicii/website-business/">Business</a></td><td>999 EUR</td><td>Firmă de servicii care vrea să genereze cereri</td></tr>
+          <tr><td><a href="/servicii/website-ecommerce/">Growth</a></td><td>1.899 EUR</td><td>Magazin online sau proiect cu funcții suplimentare</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Acestea sunt prețuri CapitalBoost, nu „prețul pieței". De asemenea, serviciile și condițiile trebuie verificate în oferta valabilă în momentul contractării. Asta este și metoda corectă de a citi orice ofertă: suma nu spune suficient dacă nu vezi și lista exactă de livrabile.</p>
+
+    <h2>Cum calculezi bugetul real pentru primul an</h2>
 
     <div class="callout">
-      <p><strong>Exemplu real:</strong> Un cabinet stomatologic din București a investit €999 într-un website. În primele 3 luni a atras 14 pacienți noi exclusiv prin Google. La un pachet mediu de €200, investiția s-a amortizat de 2,8 ori în 90 de zile.</p>
+      <p><strong>Formula</strong></p>
+      <p>Cost primul an = realizare + domeniu + hosting + licențe + mentenanță + conținut + lucrări suplimentare previzibile</p>
     </div>
 
-    <h2>Întrebări frecvente despre prețul unui website</h2>
+    <p>Nu toate componentele sunt obligatorii în fiecare proiect. Unele pot fi deja incluse în ofertă. Important este să nu le numeri de două ori și să nu presupui că sunt incluse dacă oferta nu spune asta.</p>
 
-    <div class="faq-item">
-      <div class="faq-q">Pot face un site gratuit?</div>
-      <div class="faq-a">Tehnic da, cu platforme ca Wix sau WordPress.com. Dar versiunile gratuite afișează reclame, au subdomeniu (numelefirmei.wix.com) și funcționalități limitate. Nu sunt recomandate pentru afaceri serioase.</div>
+    <h3>Exemplul 1: site mic de prezentare</h3>
+
+    <p>Ai nevoie de pagina Home, Despre, Servicii și Contact, un formular, design responsive și administrare simplă.</p>
+
+    <p>În acest caz, funcționalitatea este relativ redusă. Diferența de buget va veni în principal din design, conținut, nivelul de personalizare, optimizare și suport.</p>
+
+    <h3>Exemplul 2: firmă de servicii care vrea să genereze cereri</h3>
+
+    <p>Pe lângă site, ai nevoie de pagini distincte pentru servicii, texte, proiecte sau dovezi, formulare bine structurate, măsurarea cererilor și pagini care pot fi promovate.</p>
+
+    <p>Acesta poate avea același număr de pagini ca primul exemplu, dar obiectivul și munca din spatele paginilor sunt diferite.</p>
+
+    <h3>Exemplul 3: magazin online</h3>
+
+    <p>Ai produse, categorii, variante, plăți, livrare, facturare, notificări, administrarea comenzilor și teste complete de comandă.</p>
+
+    <p>Aici întrebarea „cât costă site-ul?" devine prea generală. Trebuie bugetat întregul flux de vânzare.</p>
+
+    <h2>Cum compari două oferte fără să alegi doar după preț</h2>
+
+    <p>Cea mai simplă metodă este să transformi fiecare ofertă într-un tabel identic. Copiază-l și completează-l pentru fiecare propunere pe care o primești.</p>
+
+    <div class="table-scroll">
+      <table class="price-table compare">
+        <thead>
+          <tr><th>Criteriu</th><th>Oferta A</th><th>Oferta B</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Număr/tip de pagini</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Design</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Texte</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Imagini</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Formulare</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Versiune mobilă</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>SEO tehnic inițial</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Analytics</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Hosting</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Domeniu</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Licențe</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Mentenanță</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Suport după lansare</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Administrare/instruire</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Predarea conturilor</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Cost primul an</td><td class="fill"></td><td class="fill"></td></tr>
+          <tr><td>Cost anual ulterior</td><td class="fill"></td><td class="fill"></td></tr>
+        </tbody>
+      </table>
     </div>
-    <div class="faq-item">
-      <div class="faq-q">Cât durează să faci un website?</div>
-      <div class="faq-a">Un site simplu poate fi gata în 5 zile. Unul complet cu mai multe pagini și funcționalități avansate durează 2–4 săptămâni. Evită promisiunile de „site în 24 ore" — de obicei sunt template-uri generice fără personalizare.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Trebuie să plătesc lunar pentru website?</div>
-      <div class="faq-a">Da, există costuri recurente: hosting (~€5–15/lună) și domeniu (~€10–25/an). Mentenanța (actualizări, backup) e opțională dar recomandată — costă €30–100/lună.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Un website mai scump înseamnă automat mai bun?</div>
-      <div class="faq-a">Nu neapărat. Agențiile mari au overhead ridicat și prețuri pe măsură. O agenție mică specializată poate livra calitate superioară la un preț mai mic. Evaluează după portofoliu, nu după preț.</div>
-    </div>
+
+    <p>Abia după completarea tabelului are sens să compari suma finală.</p>
+
+    <h2>12 întrebări pe care să le trimiți înainte să accepți oferta</h2>
+
+    <ol class="check-list">
+      <li>Ce pagini sunt incluse?</li>
+      <li>Cine stabilește structura site-ului?</li>
+      <li>Cine scrie textele?</li>
+      <li>Cine furnizează sau prelucrează imaginile?</li>
+      <li>Ce funcții sunt incluse exact?</li>
+      <li>Domeniul și găzduirea sunt incluse?</li>
+      <li>Există licențe cu plată anuală?</li>
+      <li>Ce se testează înainte de lansare?</li>
+      <li>Ce se întâmplă dacă apare o problemă după publicare?</li>
+      <li>Ce include mentenanța și ce se plătește separat?</li>
+      <li>Primesc acces la domeniu, hosting, CMS și celelalte conturi?</li>
+      <li>Care este costul estimat pentru primul an și apoi pentru fiecare an următor?</li>
+    </ol>
+
+    <p>Dacă două oferte răspund diferit la aceste întrebări, diferența de preț începe de obicei să aibă mai mult sens.</p>
+
+    <h2>Un site mai scump este automat mai bun?</h2>
+
+    <p>Nu. La fel cum un site ieftin nu este automat prost. Prețul singur nu demonstrează calitatea.</p>
+
+    <p>Mai utile sunt:</p>
+
+    <ul>
+      <li><a href="/portofoliu/">proiectele similare</a> pe care furnizorul le-a livrat deja;</li>
+      <li>claritatea ofertei;</li>
+      <li>ce este inclus;</li>
+      <li>cine răspunde de fiecare etapă;</li>
+      <li>ce primești la predare;</li>
+      <li>cum funcționează suportul;</li>
+      <li>dacă furnizorul poate explica de ce recomandă o anumită soluție.</li>
+    </ul>
+
+    <p>Dacă oferta este vagă, cere clarificări înainte de a compara prețul.</p>
+
+    <h2>Ce buget ar trebui să alegi?</h2>
+
+    <p>Pornește de la ce trebuie să facă site-ul pentru afacere. Dacă ai nevoie doar de o prezență online simplă, nu are sens să plătești pentru o platformă complexă. Dacă ai nevoie de programări, comenzi, sute de produse sau integrări, un buget calculat ca pentru un site simplu de prezentare va fi probabil nerealist.</p>
+
+    <p>Și mai ales, nu consuma întregul buget pe lansare dacă știi deja că după aceea vei avea nevoie de actualizări, reclame, SEO, conținut, mentenanță sau modificări.</p>
+
+    <p>Bugetul bun este cel care acoperă proiectul pe care îl vei folosi, nu doar momentul în care îl publici.</p>
+
+    <h2>Concluzie</h2>
+
+    <p>Întrebarea „cât costă un site?" nu are un singur răspuns corect. Pentru un antreprenor, cifra utilă este <strong>costul total al primului an</strong>, împreună cu o listă clară a lucrurilor pe care le primește.</p>
+
+    <p>Înainte să accepți oferta:</p>
+
+    <ul>
+      <li>compară aceleași livrabile;</li>
+      <li>separă costurile inițiale de cele recurente;</li>
+      <li>verifică domeniul, hostingul și licențele;</li>
+      <li>clarifică mentenanța;</li>
+      <li>cere condițiile de predare;</li>
+      <li>calculează costul pentru 12 luni.</li>
+    </ul>
+
+    <p>Dacă încă te întrebi dacă ai nevoie de un site sau îți ajunge o pagină de Facebook, am scris separat despre <a href="/blog/website-sau-pagina-facebook-ce-alegi/">ce alegi între site și pagină de Facebook</a> și despre <a href="/blog/5-semne-ca-afacerea-ta-are-nevoie-de-website/">semnele că afacerea ta are nevoie de un website</a>.</p>
 
     <div class="cta-box">
-      <h3>Vrei să afli exact cât costă website-ul tău?</h3>
-      <p>Completează formularul și primești o ofertă personalizată în mai puțin de 24 de ore. Fără obligații, fără jargon tehnic.</p>
-      <a href="https://capitalboost.ro/#contact" class="cta-btn">Vreau oferta gratuită</a>
+      <h3>Ai un proiect concret?</h3>
+      <p>Trimite-ne ce tip de site vrei, paginile sau funcțiile de care ai nevoie și materialele pe care le ai deja. Îți separăm costurile între dezvoltare, servicii recurente și lucrări opționale, ca să vezi exact bugetul primului an.</p>
+      <a href="/contact/" class="cta-btn">Cere o ofertă defalcată</a>
+    </div>
+
+    <h2>Întrebări frecvente</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Cât costă un site de prezentare în România?</div>
+      <div class="faq-a"><p>Nu există un tarif oficial. În rezultatele publice românești verificate în octombrie 2026 apar frecvent oferte și estimări în jurul intervalului de 500–2.500 EUR pentru site-uri de prezentare, dar există valori atât sub, cât și peste acest nivel. Diferența vine din livrabile, personalizare, conținut, funcții și suport.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Ce costuri are un site după lansare?</div>
+      <div class="faq-a"><p>În funcție de proiect, pot exista costuri pentru domeniu, găzduire, mentenanță, licențe, servicii externe și modificări. Pentru un domeniu .ro, RoTLD afișează în prezent 12 EUR + TVA pe an pentru înregistrare sau reînnoire directă.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Hostingul și mentenanța sunt același lucru?</div>
+      <div class="faq-a"><p>Nu. Hostingul ține site-ul disponibil pe un server. Mentenanța poate include actualizări, backup, verificări, remedierea problemelor și suport, în funcție de contract.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Trebuie să plătesc mentenanță lunar?</div>
+      <div class="faq-a"><p>Nu există o regulă universală. Depinde de tehnologia site-ului, cât de des se schimbă și dacă vrei un furnizor disponibil pentru actualizări și intervenții. Important este să știi ce activități sunt incluse în abonament.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Ce trebuie să primesc la finalul proiectului?</div>
+      <div class="faq-a"><p>În funcție de soluție și contract, clarifică cel puțin accesul la domeniu, hosting, administrarea site-ului și conturile serviciilor externe, precum și ce materiale sau documentație sunt predate.</p></div>
     </div>
 
   </article>
