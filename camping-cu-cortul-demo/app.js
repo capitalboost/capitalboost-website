@@ -39,7 +39,7 @@
   function renderSummary(target){
     const v=values(),estimate=window.CampingBooking.estimateStay(v);target.replaceChildren();
     const date=s=>new Intl.DateTimeFormat('ro-RO',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(s+'T00:00:00Z'));
-    const rows=[['Perioadă',`${date(v.arrival)} – ${date(v.departure)} · ${count(estimate.nights,'noapte','nopți')}`],['Grup',`${count(v.adults,'adult','adulți')} · ${count(v.children,'copil','copii')} · ${count(v.tents,'cort','corturi')}`],['Acces',v.access||'De stabilit'],['Observații',v.notes?.trim()||'Fără observații'],['Campare adulți',`${money(estimate.camping)} orientativ. Copiii și transferul nu sunt incluși. Nu este o ofertă fermă.`]];
+    const rows=[['Perioadă',`${date(v.arrival)} – ${date(v.departure)} · ${count(estimate.nights,'noapte','nopți')}`],['Grup',`${count(v.adults,'adult','adulți')} · ${count(v.children,'copil','copii')} · ${count(v.tents,'cort','corturi')}`],['Acces',v.access||'De stabilit'],['Observații',v.notes?.trim()||'Fără observații'],['Campare adulți',`${money(estimate.camping)} orientativ. Copiii stau gratuit; transferul e separat (50 lei pe cursă). Nu este o ofertă fermă.`]];
     rows.forEach(([label,value])=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;target.append(dt,dd);});
   }
   fieldsets[0].addEventListener('input',updateEstimate);

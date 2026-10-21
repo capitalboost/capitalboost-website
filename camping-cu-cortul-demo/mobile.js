@@ -5,9 +5,9 @@
   const pathLength=line.getTotalLength();
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const scenes=[
-    {overline:'01 / DE LA DN73',title:'De aici începe<br><em>urcarea.</em>',description:'Înainte să pleci, stabilește cu gazda unde lași mașina sau de unde te preia transferul.'},
+    {overline:'01 / DE LA DN73',title:'De aici începe<br><em>urcarea.</em>',description:'La baza drumului forestier te preia transferul campingului, cu tot cu bagajele. În cerere spui doar la ce oră ajungi.'},
     {overline:'02 / PRIN PĂDURE',title:'Ultima bucată<br><em>e pe drum forestier.</em>',description:'Poți urca cu un SUV 4×4, cu transferul campingului sau pe jos. Mai jos alegi varianta potrivită pentru tine.'},
-    {overline:'03 / ÎN POIANĂ',title:'Aici ajungi.<br><em>Cu cortul tău.</em>',description:'Campingul are patru platforme amenajate. Locul potrivit și spațiul necesar cortului tău se stabilesc cu gazda.'}
+    {overline:'03 / ÎN POIANĂ',title:'Aici ajungi.<br><em>Cu cortul tău.</em>',description:'Patru platforme amenajate, cu munții în față. Alegi locul și îți montezi cortul.'}
   ];let phase=-1,scheduled=false;
   function render(p){
     const progress=Math.max(0,Math.min(1,p)),next=window.CampingMobile.travelPhase(progress);
@@ -23,7 +23,7 @@
   range.addEventListener('input',()=>go(Number(range.value)/100));$$('[data-travel-phase]').forEach(b=>b.addEventListener('click',()=>go([0,.47,.98][Number(b.dataset.travelPhase)])));
   render(0);sync();
   const form=$('#booking-form');
-  const transport={car:{value:'Transfer 4×4',title:'Cu mașina obișnuită, stabilești transferul.',description:'Nu planifica urcarea cu ea. Întreabă gazda despre parcare, preluare, bagaje și coborârea la plecare.',meta:'Transfer publicat: 50 lei / urcare sau coborâre. Organizarea curselor se confirmă.'},'4x4':{value:'SUV 4×4',title:'Cu un SUV 4×4, verifici drumul înainte.',description:'Operatorul indică aproximativ 5 minute de la asfalt. Cere indicațiile pentru ultimul segment și verifică starea drumului în ziua sosirii.',meta:'Timp orientativ. Accesul depinde de vehicul, vreme și starea drumului.'},walk:{value:'Pe jos',title:'Pe jos, pregătește bagajele pentru urcare.',description:'Campingul indică aproximativ 30 de minute de la asfalt. Confirmă punctul de plecare și ia în calcul echipamentul pe care îl duci cu tine.',meta:'Durată orientativă publicată de operator. Întreabă gazda despre condițiile din ziua sosirii.'}};
+  const transport={car:{value:'Transfer 4×4',title:'Cu mașina obișnuită? O lași jos.',description:'De la baza drumului forestier te preia transferul campingului, cu tot cu bagajele, și te urcă în circa 5 minute. La plecare te coboară la fel.',meta:'Transfer 4×4: 50 lei pe cursă, nu de persoană.'},'4x4':{value:'SUV 4×4',title:'Cu un SUV 4×4, verifici drumul înainte.',description:'Urci singur în circa 5 minute de la asfalt. Indicațiile pentru ultimul segment le primești de la gazdă.',meta:'Timp orientativ. Accesul depinde de vehicul, vreme și starea drumului.'},walk:{value:'Pe jos',title:'Pe jos, pregătește bagajele pentru urcare.',description:'Cam 30 de minute de la asfalt, prin pădure. Ia un rucsac comod pentru echipament.',meta:'Durată orientativă publicată de camping.'}};
   function selectTransport(key,update=true){const data=transport[key]||transport.car;$$('[data-transport]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.transport===key)));$('#transport-title').textContent=data.title;$('#transport-description').textContent=data.description;$('#transport-meta').textContent=data.meta;if(update&&transport[key]){const input=[...form.elements.access].find(i=>i.value===data.value);input.checked=true;input.dispatchEvent(new Event('change',{bubbles:true}));}}
   $$('[data-transport]').forEach(b=>b.addEventListener('click',()=>selectTransport(b.dataset.transport)));
   form.addEventListener('change',e=>{if(e.target.name==='access')selectTransport({'Transfer 4×4':'car','SUV 4×4':'4x4','Pe jos':'walk'}[e.target.value],false);});
