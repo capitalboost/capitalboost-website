@@ -24,7 +24,7 @@ jobs:
           for i in $(seq 1 12); do
             curl -s -X POST "${{ secrets.CPANEL_URL }}/execute/VersionControl/update" \
               -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_TOKEN }}" \
-              -d "repository_root=$ROOT" > /tmp/update_result.json
+              -d "repository_root=$ROOT" -d "branch=main" > /tmp/update_result.json
 
             if ! python3 -c "import sys,json; d=json.load(open('/tmp/update_result.json')); sys.exit(0 if d.get('status')==1 else 1)"; then
               echo "Apelul catre cPanel a esuat:"
