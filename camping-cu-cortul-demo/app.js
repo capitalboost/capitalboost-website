@@ -40,6 +40,7 @@
     const v=values(),estimate=window.CampingBooking.estimateStay(v);target.replaceChildren();
     const date=s=>new Intl.DateTimeFormat('ro-RO',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(s+'T00:00:00Z'));
     const rows=[['Perioadă',`${date(v.arrival)} – ${date(v.departure)} · ${count(estimate.nights,'noapte','nopți')}`],['Grup',`${count(v.adults,'adult','adulți')} · ${count(v.children,'copil','copii')} · ${count(v.tents,'cort','corturi')}`],['Acces',v.access||'De stabilit'],['Observații',v.notes?.trim()||'Fără observații'],['Campare adulți',`${money(estimate.camping)} orientativ. Copiii stau gratuit; transferul e separat (50 lei pe cursă). Nu este o ofertă fermă.`]];
+    if(v.phone?.trim())rows.splice(4,0,['Telefon',v.phone.trim()]);
     rows.forEach(([label,value])=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;target.append(dt,dd);});
   }
   fieldsets[0].addEventListener('input',updateEstimate);
@@ -61,9 +62,10 @@
     e.preventDefault();clearError();
     if(step!==2){if(step===0){const message=stayError();if(message){showError(message);return;}}if(step===1&&!form.elements.access.value){showError('Alege o variantă de acces.');return;}showStep(step+1);return;}
     const message=stayError();if(message){showStep(0);showError(message);return;}
-    const name=form.elements.name,email=form.elements.email,ack=form.elements.acknowledge;
+    const name=form.elements.name,email=form.elements.email,phone=form.elements.phone,ack=form.elements.acknowledge;
     if(!name.value.trim()){name.setAttribute('aria-invalid','true');showError('Completează un nume fictiv.');return;}
     if(!email.validity.valid||!email.value.trim()){email.setAttribute('aria-invalid','true');showError('Completează un email fictiv valid, de exemplu alex@example.com.');return;}
+    const digits=phone.value.replace(/\D/g,'');if(digits.length<9||digits.length>15){phone.setAttribute('aria-invalid','true');showError('Completează un telefon fictiv valid, de exemplu 0700 000 000.');return;}
     if(!ack.checked){showError('Confirmă că ai înțeles caracterul demonstrativ al cererii.');return;}
     renderSummary($('#success-summary'));form.hidden=true;$('.steps').hidden=true;$('#success').hidden=false;$('#success').focus();
   });
