@@ -9,7 +9,7 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){closeMenu();menu.focus();}});
   document.addEventListener('click',e=>{if(!e.target.closest('.header'))closeMenu();});
 
-  const photos=[
+  const photos=window.CampingPhotos||[
     {src:'assets/camping-maps.jpg',alt:'Cort montat în camping, lângă amenajarea unui grup de cercetași',caption:'Zona de corturi · Eugen Mitrica · Google Maps · fotografie afișată ca aug. 2025'},
     {src:'assets/mountain.jpg',alt:'Panoramă spre valea și munții Dragoslavelelor',caption:'Priveliștea campingului · fotografia originală din site-ul oficial'},
     {src:'assets/fire.jpg',alt:'Foc într-un grătar din zidărie',caption:'O seară în camping · Denisa Vladau · Google Maps · fotografie afișată ca mai 2026'}
