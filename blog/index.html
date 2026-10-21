@@ -63,6 +63,12 @@
     .section-label { display: inline-block; font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #C75B2A; background: rgba(199,91,42,0.08); padding: 6px 14px; border-radius: 100px; margin-bottom: 16px; }
     .article-card { background: #fff; border: 1px solid #ECEEF2; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(27,42,74,0.05), 0 8px 32px rgba(27,42,74,0.03); transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s; text-decoration: none; display: block; }
     .article-card:hover { transform: translateY(-6px); box-shadow: 0 4px 16px rgba(27,42,74,0.1), 0 16px 48px rgba(27,42,74,0.08); }
+    /* Coperta fara imagine: barele din logo pe degradeul de brand, fara text */
+    .card-cover { overflow: hidden; }
+    .card-cover-bars { position: absolute; right: 12%; bottom: 0; height: 62%; display: flex; align-items: flex-end; gap: 10px; opacity: 0.9; transition: transform 0.5s cubic-bezier(0.16,1,0.3,1); }
+    .card-cover-bars span { display: block; width: 22px; border-radius: 4px 4px 0 0; background: linear-gradient(to top, rgba(255,255,255,0.05), rgba(255,255,255,0.28)); }
+    .article-card:hover .card-cover-bars { transform: translateY(-6px); }
+    .article-card:focus-visible { outline: 3px solid #C75B2A; outline-offset: 3px; }
     #mobile-menu { display: none; }
     #mobile-menu.open { display: block; }
   </style>
@@ -150,7 +156,9 @@
       <!-- Articol 2 -->
       <a href="/blog/website-sau-pagina-facebook-ce-alegi/" class="article-card">
         <div class="relative overflow-hidden" style="padding-top:55%">
-          <img src="https://placehold.co/600x330/243660/ffffff?text=Articol+2" alt="Website sau pagina de Facebook" class="absolute inset-0 w-full h-full object-cover">
+          <div class="card-cover absolute inset-0" style="background: radial-gradient(ellipse 70% 80% at 85% 15%, rgba(199,91,42,0.35) 0%, transparent 60%), radial-gradient(ellipse 80% 70% at 10% 100%, #2E4578 0%, transparent 70%), #1B2A4A;" aria-hidden="true">
+            <div class="card-cover-bars"><span style="height:40%"></span><span style="height:65%"></span><span style="height:85%"></span><span style="height:100%"></span></div>
+          </div>
         </div>
         <div class="p-6">
           <span class="font-mono text-xs text-orange font-semibold tracking-wider uppercase">Strategie · Luna 1</span>
@@ -163,7 +171,9 @@
       <!-- Articol 3 -->
       <a href="/blog/5-semne-ca-afacerea-ta-are-nevoie-de-website/" class="article-card">
         <div class="relative overflow-hidden" style="padding-top:55%">
-          <img src="https://placehold.co/600x330/A84820/ffffff?text=Articol+3" alt="5 semne că ai nevoie de un website" class="absolute inset-0 w-full h-full object-cover">
+          <div class="card-cover absolute inset-0" style="background: radial-gradient(ellipse 70% 80% at 15% 20%, rgba(240,115,58,0.45) 0%, transparent 60%), radial-gradient(ellipse 80% 70% at 90% 100%, #1B2A4A 0%, transparent 75%), #A84820;" aria-hidden="true">
+            <div class="card-cover-bars"><span style="height:40%"></span><span style="height:65%"></span><span style="height:85%"></span><span style="height:100%"></span></div>
+          </div>
         </div>
         <div class="p-6">
           <span class="font-mono text-xs text-orange font-semibold tracking-wider uppercase">Ghid · Luna 1</span>
