@@ -129,7 +129,13 @@
 
     <!-- Form -->
     <div>
-      <form action="#" method="POST" class="space-y-6">
+      <form id="contact-form" method="POST" class="space-y-6">
+        <!-- Web3Forms: aceeasi cheie ca pe homepage. -->
+        <input type="hidden" name="access_key" value="20ee7fbf-4a00-4449-8a51-e868ef5c031e">
+        <input type="hidden" name="subject" value="Cerere nouă — pagina de Contact">
+        <input type="hidden" name="from_name" value="CapitalBoost Website">
+        <!-- Capcana anti-spam: botii completeaza orice camp, oamenii nu vad asta. -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
         <div>
           <label for="name" class="form-label">Numele tău *</label>
           <input type="text" id="name" name="name" required placeholder="Ion Popescu" class="form-input">
@@ -167,6 +173,7 @@
           Trimite cererea
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
+        <p id="form-status" class="hidden rounded-lg px-4 py-3 text-sm" role="status" aria-live="polite"></p>
         <p class="font-body text-navy/30 text-xs text-center">Nu trimitem newsletter și nu dăm datele tale nimănui.</p>
       </form>
     </div>
@@ -233,6 +240,51 @@
     </div>
   </div>
 </footer>
+
+<script>
+(function () {
+  'use strict';
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+
+  var btn = form.querySelector('button[type="submit"]');
+  var status = document.getElementById('form-status');
+  var btnHtml = btn.innerHTML;
+
+  function arata(mesaj, reusit) {
+    status.textContent = mesaj;
+    status.className = 'rounded-lg px-4 py-3 text-sm';
+    status.style.background = reusit ? '#E8F5EC' : 'rgba(199,91,42,0.10)';
+    status.style.color = reusit ? '#1E6B3A' : '#A84820';
+  }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    status.className = 'hidden';
+    btn.disabled = true;
+    btn.textContent = 'Se trimite...';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(form)))
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (!j.success) throw new Error(j.message || 'respins');
+        form.reset();
+        btn.innerHTML = btnHtml; btn.disabled = false;
+        arata('Cererea a plecat. Te contactăm în mai puțin de 24 de ore.', true);
+      })
+      .catch(function () {
+        // Fara catch, o cadere de retea lasa butonul blocat pe „Se trimite..."
+        // si omul pleaca crezand ca a trimis.
+        btn.innerHTML = btnHtml; btn.disabled = false;
+        arata('Nu am putut trimite cererea. Încearcă din nou sau scrie-ne pe WhatsApp la 0784 707 404.', false);
+      });
+  });
+})();
+</script>
 
 </body>
 </html>
