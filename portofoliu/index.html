@@ -38,7 +38,7 @@
         extend: {
           colors: {
             navy: '#1B2A4A', 'navy-dark': '#111D35', 'navy-light': '#243660',
-            orange: '#C75B2A', 'orange-light': '#D96E3D',
+            orange: '#C75B2A', 'orange-light': '#E8894F',
             cloud: '#F7F8FA', 'cloud-dark': '#ECEEF2',
           },
           fontFamily: {
@@ -60,7 +60,10 @@
     .btn-orange { display: inline-flex; align-items: center; gap: 8px; background: #C75B2A; color: #fff; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 14px 28px; border-radius: 6px; cursor: pointer; border: none; box-shadow: 0 4px 16px rgba(199,91,42,0.35); transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s, background 0.2s; text-decoration: none; }
     .btn-orange:hover { background: #D96E3D; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(199,91,42,0.45); }
     .btn-orange:focus-visible { outline: 3px solid #C75B2A; outline-offset: 3px; }
-    .section-label { display: inline-block; font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #C75B2A; background: rgba(199,91,42,0.08); padding: 6px 14px; border-radius: 100px; margin-bottom: 16px; }
+    .section-label { display: inline-block; font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84820; background: rgba(168,72,32,0.09); padding: 6px 14px; border-radius: 100px; margin-bottom: 16px; }
+    /* Aceeasi eticheta sta si pe navy, unde un portocaliu inchis ar cobori
+       contrastul la 2,4:1. Pe fundal inchis urca, nu coboara. */
+    .section-label--dark { color: #E8894F; background: rgba(232,137,79,0.16); }
     .project-card { display: block; text-decoration: none; color: inherit; background: #fff; border: 1px solid #ECEEF2; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(27,42,74,0.05), 0 8px 32px rgba(27,42,74,0.03); transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s; }
     .project-card:hover { transform: translateY(-6px); box-shadow: 0 4px 16px rgba(27,42,74,0.1), 0 16px 48px rgba(27,42,74,0.08); }
     .project-card:focus-visible { outline: 3px solid #C75B2A; outline-offset: 4px; }
@@ -120,7 +123,7 @@
 <!-- HERO -->
 <section class="pt-32 pb-16 px-6 md:px-12" style="background: radial-gradient(ellipse 80% 60% at 70% 40%, #243660 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 20% 80%, rgba(199,91,42,0.15) 0%, transparent 60%), #1B2A4A;">
   <div class="max-w-6xl mx-auto text-center">
-    <span class="section-label">Portofoliu</span>
+    <span class="section-label section-label--dark">Portofoliu</span>
     <h1 class="font-display font-bold text-white text-4xl md:text-5xl leading-tight mt-2 mb-4" style="letter-spacing:-0.03em">Website-uri reale<br>pentru afaceri reale</h1>
     <p class="font-body text-white/70 text-lg max-w-2xl mx-auto" style="line-height:1.7">Proiecte livrate pentru clienți din toată România — service auto, vulcanizare, materiale de construcții și proiecte educaționale.</p>
   </div>
@@ -140,7 +143,7 @@
           </span>
         </div>
         <div class="p-6">
-          <span class="font-mono text-xs text-orange font-semibold tracking-wider uppercase">Service auto · București</span>
+          <span class="font-mono text-xs text-orange-dark font-semibold tracking-wider uppercase">Service auto · București</span>
           <h3 class="font-display font-semibold text-navy text-xl mt-1 mb-2">AutoLogic Expert</h3>
           <p class="font-body text-navy/60 text-sm" style="line-height:1.6">Website de prezentare pentru un service auto autorizat Mercedes-Benz — pagini dedicate pe servicii, tarife, blog și contact direct pe WhatsApp.</p>
           <span class="card-domain">autologicexpert.ro</span>
@@ -156,7 +159,7 @@
           </span>
         </div>
         <div class="p-6">
-          <span class="font-mono text-xs text-orange font-semibold tracking-wider uppercase">Materiale construcții · Dăbuleni</span>
+          <span class="font-mono text-xs text-orange-dark font-semibold tracking-wider uppercase">Materiale construcții · Dăbuleni</span>
           <h3 class="font-display font-semibold text-navy text-xl mt-1 mb-2">Mugurel</h3>
           <p class="font-body text-navy/60 text-sm" style="line-height:1.6">Catalog online cu peste 3.000 de produse — căutare, nouă categorii de produse și comandă rapidă pe WhatsApp.</p>
           <span class="card-domain">mugurel-bricolaj.ro</span>
@@ -172,7 +175,7 @@
           </span>
         </div>
         <div class="p-6">
-          <span class="font-mono text-xs text-orange font-semibold tracking-wider uppercase">Vulcanizare · București</span>
+          <span class="font-mono text-xs text-orange-dark font-semibold tracking-wider uppercase">Vulcanizare · București</span>
           <h3 class="font-display font-semibold text-navy text-xl mt-1 mb-2">VulcaPro</h3>
           <p class="font-body text-navy/60 text-sm" style="line-height:1.6">Website pentru o vulcanizare, cu calculator de preț online, tarife transparente și programare direct din pagină.</p>
           <span class="card-domain">vulcanizareieftinsirapid.ro</span>
@@ -188,7 +191,7 @@
           </span>
         </div>
         <div class="p-6">
-          <span class="font-mono text-xs text-orange font-semibold tracking-wider uppercase">Tabără educațională · Landing page</span>
+          <span class="font-mono text-xs text-orange-dark font-semibold tracking-wider uppercase">Tabără educațională · Landing page</span>
           <h3 class="font-display font-semibold text-navy text-xl mt-1 mb-2">Youni Summer Camp</h3>
           <p class="font-body text-navy/60 text-sm" style="line-height:1.6">Landing page de înscrieri pentru ediția a 2-a a taberei — program pe zile, facilități, preț și formular de înscriere.</p>
           <span class="card-domain">summer-camp.younichoice.com</span>
@@ -202,7 +205,7 @@
 <!-- CTA -->
 <section class="py-20 px-6 md:px-12 bg-navy text-center">
   <div class="max-w-2xl mx-auto">
-    <span class="section-label">Urmează proiectul tău</span>
+    <span class="section-label section-label--dark">Urmează proiectul tău</span>
     <h2 class="font-display font-bold text-white text-3xl md:text-4xl mt-2 mb-4" style="letter-spacing:-0.03em">Vrei un website ca acestea?</h2>
     <p class="font-body text-white/60 text-lg mb-8" style="line-height:1.7">Solicită o ofertă gratuită și îți răspundem în mai puțin de 24 de ore.</p>
     <a href="/contact/" class="btn-orange">
@@ -223,7 +226,7 @@
         <div class="w-1 bg-orange rounded-sm" style="height:100%"></div>
         <div class="ml-1 w-2.5 h-2.5 border-t-2 border-r-2 border-orange" style="transform: rotate(45deg); margin-bottom:1px;"></div>
       </div>
-      <span class="font-display text-white text-lg font-semibold">Capital<span class="text-orange">Boost</span></span>
+      <span class="font-display text-white text-lg font-semibold">Capital<span class="text-orange-light">Boost</span></span>
     </div>
     <p class="font-body text-white/30 text-xs text-center">Capital Boost © 2026 · Toate drepturile rezervate</p>
     <div class="flex flex-wrap justify-center gap-x-5 gap-y-2">

@@ -38,7 +38,7 @@
         extend: {
           colors: {
             navy: '#1B2A4A', 'navy-dark': '#111D35', 'navy-light': '#243660',
-            orange: '#C75B2A', 'orange-light': '#D96E3D',
+            orange: '#C75B2A', 'orange-light': '#E8894F',
             cloud: '#F7F8FA', 'cloud-dark': '#ECEEF2',
           },
           fontFamily: {
@@ -60,7 +60,10 @@
     .btn-orange { display: inline-flex; align-items: center; gap: 8px; background: #C75B2A; color: #fff; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 14px 28px; border-radius: 6px; cursor: pointer; border: none; box-shadow: 0 4px 16px rgba(199,91,42,0.35); transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s, background 0.2s; text-decoration: none; }
     .btn-orange:hover { background: #D96E3D; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(199,91,42,0.45); }
     .btn-orange:focus-visible { outline: 3px solid #C75B2A; outline-offset: 3px; }
-    .section-label { display: inline-block; font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #C75B2A; background: rgba(199,91,42,0.08); padding: 6px 14px; border-radius: 100px; margin-bottom: 16px; }
+    .section-label { display: inline-block; font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84820; background: rgba(168,72,32,0.09); padding: 6px 14px; border-radius: 100px; margin-bottom: 16px; }
+    /* Aceeasi eticheta sta si pe navy, unde un portocaliu inchis ar cobori
+       contrastul la 2,4:1. Pe fundal inchis urca, nu coboara. */
+    .section-label--dark { color: #E8894F; background: rgba(232,137,79,0.16); }
     .form-input { width: 100%; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: #1B2A4A; background: #F7F8FA; border: 1.5px solid #ECEEF2; border-radius: 8px; padding: 12px 16px; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
     .form-input:focus { border-color: #C75B2A; box-shadow: 0 0 0 3px rgba(199,91,42,0.1); }
     .form-label { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; color: #1B2A4A; margin-bottom: 6px; }
@@ -68,7 +71,7 @@
     .consent-box { flex: 0 0 auto; width: 18px; height: 18px; margin-top: 2px; accent-color: #C75B2A; cursor: pointer; }
     .consent-box:focus-visible { outline: 3px solid #C75B2A; outline-offset: 2px; }
     .consent-label { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; line-height: 1.6; color: rgba(27,42,74,0.6); cursor: pointer; }
-    .consent-label a { color: #C75B2A; text-decoration: underline; text-underline-offset: 2px; transition: color 0.2s ease; }
+    .consent-label a { color: #A84820; text-decoration: underline; text-underline-offset: 2px; transition: color 0.2s ease; }
     .consent-label a:hover { color: #D96E3D; }
     .consent-label a:focus-visible { outline: 3px solid #C75B2A; outline-offset: 2px; border-radius: 2px; }
     #mobile-menu { display: none; }
@@ -117,7 +120,7 @@
 <!-- HERO -->
 <section class="pt-32 pb-16 px-6 md:px-12" style="background: radial-gradient(ellipse 80% 60% at 70% 40%, #243660 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 20% 80%, rgba(199,91,42,0.15) 0%, transparent 60%), #1B2A4A;">
   <div class="max-w-6xl mx-auto text-center">
-    <span class="section-label">Contact</span>
+    <span class="section-label section-label--dark">Contact</span>
     <h1 class="font-display font-bold text-white text-4xl md:text-5xl leading-tight mt-2 mb-4" style="letter-spacing:-0.03em">Solicită oferta gratuită</h1>
     <p class="font-body text-white/70 text-lg max-w-xl mx-auto" style="line-height:1.7">Răspundem în mai puțin de <strong class="text-white">24 de ore</strong>. Fără obligații, fără jargon tehnic.</p>
   </div>
@@ -207,10 +210,10 @@
       <div class="bg-navy rounded-2xl p-8">
         <h3 class="font-display font-semibold text-white text-xl mb-4">Cum decurge procesul</h3>
         <ol class="space-y-3">
-          <li class="flex gap-3 font-body text-white/70 text-sm"><span class="text-orange font-semibold flex-shrink-0">1.</span>Trimiți cererea — durează 2 minute</li>
-          <li class="flex gap-3 font-body text-white/70 text-sm"><span class="text-orange font-semibold flex-shrink-0">2.</span>Te sunăm în 24h cu o ofertă clară</li>
-          <li class="flex gap-3 font-body text-white/70 text-sm"><span class="text-orange font-semibold flex-shrink-0">3.</span>Dacă ești de acord, începem imediat</li>
-          <li class="flex gap-3 font-body text-white/70 text-sm"><span class="text-orange font-semibold flex-shrink-0">4.</span>Livrăm website-ul în termenul promis</li>
+          <li class="flex gap-3 font-body text-white/70 text-sm"><span class="text-orange-light font-semibold flex-shrink-0">1.</span>Trimiți cererea — durează 2 minute</li>
+          <li class="flex gap-3 font-body text-white/70 text-sm"><span class="text-orange-light font-semibold flex-shrink-0">2.</span>Te sunăm în 24h cu o ofertă clară</li>
+          <li class="flex gap-3 font-body text-white/70 text-sm"><span class="text-orange-light font-semibold flex-shrink-0">3.</span>Dacă ești de acord, începem imediat</li>
+          <li class="flex gap-3 font-body text-white/70 text-sm"><span class="text-orange-light font-semibold flex-shrink-0">4.</span>Livrăm website-ul în termenul promis</li>
         </ol>
       </div>
     </div>
@@ -229,7 +232,7 @@
         <div class="w-1 bg-orange rounded-sm" style="height:100%"></div>
         <div class="ml-1 w-2.5 h-2.5 border-t-2 border-r-2 border-orange" style="transform: rotate(45deg); margin-bottom:1px;"></div>
       </div>
-      <span class="font-display text-white text-lg font-semibold">Capital<span class="text-orange">Boost</span></span>
+      <span class="font-display text-white text-lg font-semibold">Capital<span class="text-orange-light">Boost</span></span>
     </div>
     <p class="font-body text-white/30 text-xs text-center">Capital Boost © 2026 · Toate drepturile rezervate</p>
     <div class="flex flex-wrap justify-center gap-x-5 gap-y-2">
