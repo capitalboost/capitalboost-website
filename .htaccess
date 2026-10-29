@@ -36,6 +36,14 @@ RewriteRule ^blog/website-sau-pagina-facebook/?$ /blog/website-sau-pagina-facebo
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 
+  # CSS-ul generat din Tailwind nu are hash in nume, deci un cache lung ar
+  # servi stiluri vechi peste HTML nou dupa un deploy. O ora e suficient cat
+  # sa ajute la navigare, fara riscul asta. Daca ajungem sa punem hash in
+  # nume, se poate urca la un an.
+  <FilesMatch "\.css$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+
   # Scriptul de consimtamant e relevant juridic, deci vizitatorii trebuie sa
   # primeasca mereu versiunea curenta. Fara asta Cloudflare il tine cache-uit
   # pana la 4 ore dupa un deploy, cu textul vechi al bannerului.
