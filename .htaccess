@@ -20,6 +20,9 @@ RewriteRule ^blog/A3(%20|\ )ai(%20|\ )nevoie(%20|\ )de(%20|\ )un(%20|\ )website/
 # Redirect non-existent 4th article
 RewriteRule ^blog/ce-este-seo-pentru-afaceri-mici/?$ /blog/ [R=301,L]
 
+# Slug scurtat, raportat de Search Console ca 404. Exista un link extern catre el.
+RewriteRule ^blog/website-sau-pagina-facebook/?$ /blog/website-sau-pagina-facebook-ce-alegi/ [R=301,L,NC]
+
 # Scriptul de consimtamant e relevant juridic, deci vizitatorii trebuie sa
 # primeasca mereu versiunea curenta. Fara asta Cloudflare il tine cache-uit
 # pana la 4 ore dupa un deploy, cu textul vechi al bannerului.
